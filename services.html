@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services - Sailor Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+
+    <script src="../assets/js/color-modes.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/pricing.css" rel="stylesheet">
+ <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+</head>
+
+<body>
+ 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Sailor</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<div class="container py-3">
+
+
+  <main>
+ 
+    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="../assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
+        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2024</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+  <main id="main">
+ 
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Services</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Services</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+
+ <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="bi bi-briefcase"></i>
+              <h4><a href="#">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <h4><a href="#">Dolor Sitema</a></h4>
+              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <h4><a href="#">Sed ut perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <h4><a href="#">Nemo Enim</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-brightness-high"></i>
+              <h4><a href="#">Magni Dolore</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-calendar4-week"></i>
+              <h4><a href="#">Eiusmod Tempor</a></h4>
+              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>Check our Features</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                   
+
+<div  class="container py-3">
+  <main>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+</div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                 
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                   <div  class="container py-3">
+  <main>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+</div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                                   </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <div  class="container py-3">
+  <main>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+</div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                  <div  class="container py-3">
+  <main>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+</div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                  <div  class="container py-3">
+  <main>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+</div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Sailor</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sailor</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+      
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
