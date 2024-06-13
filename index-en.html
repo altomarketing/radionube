@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Servicio Streaming</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+<style>
+.about {
+background-image: url("assets/img/15439.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.testimonials {
+background-image: url("assets/img/map.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+#proyect {
+background-color:#cf2e2e;padding:100px 100px 10px 100px;border-radius:50px;
+}
+
+@media screen and (max-width: 400px) {
+ #proyect {
+background-color:#cf2e2e;
+padding:50px 10px 50px 10px;
+border-radius:25px;
+margin:20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+    <!--  <h1 class="logo me-auto"><a href="index.html">Sailor</a></h1>
+       Uncomment below if you prefer to use an image logo -->
+       <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+       
+
+        <!--    <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>-->
+		     <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Audio</a></li>
+          <li><a href="portfolio.html">Video</a></li>
+          <li><a href="pricing.html">Webs</a></li>
+          <li><a href="blog.html">Apps</a></li>
+          <li><a href="contact.html">UPTIME</a></li>
+          <li><a href="index.html" class="getstarted">Let´s Talk</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+ <!-- <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+   
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section style="margin-top: 150px;" id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2 style="color:#fff;">Audio and Video Streaming.</h2>
+            <h3 style="color:#fff;">Have your Streaming active in minutes, your own media transmitting 24 hours a day from your computer, phone or even automated from the Cloud.</h3>
+			 <div class="row">
+		
+            <div class="col-md-6">  <ul> 	 <li style="color:#fff;"><i class="ri-check-double-line"></i> No contracts</li>  </ul> </div>
+             <div class="col-md-6"> <ul>   <li style="color:#fff;"><i class="ri-check-double-line"></i> Activation in 5 minutes</li>  </ul> </div>
+                     
+					   </div>
+					    <h3 style="color:#fff;">Fully compatible with:</h3>
+						 <div class="row">
+						  <div class="col-md-6">
+						   <ul>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> Zararadio</li>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> RadioBoss</li>
+			    <li style="color:#fff;"><i class="ri-check-double-line"></i> SamBroadcaster</li>
+                       </ul>
+					   </div>
+					     <div class="col-md-6">
+					      <ul>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> OBS STUDIO</li>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> VMIX Software</li>
+			    <li style="color:#fff;"><i class="ri-check-double-line"></i> and more…</li>
+                       </ul>
+					   </div>
+					    </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/xJ_OL1JPURo?si=X8xnTfU4HBpKIpSF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg" style="padding-top:50px;">
+      <div class="container">
+<h3 style="text-align:center;color:#cf2e2e;">Compatible with all these brands</h3>
+            <h5 style="text-align:center;">Our service is fully compatible and<br/> you can use any of these programs on the market:</h5><br/><br/>
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/zr.webp" class="img-fluid" alt="">
+          </div>
+
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/vmix.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/obs.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/radioboss.gif" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/sb.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/vdj.jpg" class="img-fluid" alt="">
+          </div>
+		  
+		
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services" style="margin-top:50px;">
+      <div class="container">
+ <h3 style="text-align:center;color:#cf2e2e;">Everything you need to get started with your own Audio or Video Streaming</h3><br/>
+            <h5 style="text-align:center;">A single provider that will give you everything you need to have your <br/> Radio, TV or Media online with Streaming 24 hours a day.</h5><br/><br/>
+        <div class="row">
+          <div class="col-md-4 mt-3 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-broadcast"></i>
+              <h4><a href="#">Streaming Servers</a></h4>
+              <p>With 99% online servers you will have links and technical support to support you 24 hours a day</p>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-file-earmark-lock2"></i>
+              <h4><a href="#">A website with SSL</a></h4>
+              <p>Various models from simple web to automatic news portals</p>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-app-indicator"></i>
+              <h4><a href="#">Android and iPhone App</a></h4>
+              <p>Exclusive self-managed apps with your logo already published in stores</p>
+            </div>
+          </div>
+      
+        
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+	
+	 <!-- ======= About Section ======= -->
+    <section style="margin-top: 50px;  background: rgb(62,11,11);
+background: linear-gradient(0deg, rgba(62,11,11,1) 0%, rgba(135,42,42,1) 35%, rgba(207,46,46,1) 100%);  " class="about">
+      <div class="container">
+
+        <div class="row content">
+		  <div class="col-lg-6 pt-4 pt-lg-0">
+     <img style="width:80%;" src="assets/img/radios-975x1024.png" />
+          </div>
+          <div class="col-lg-6">
+           
+			 <div class="row">
+		<h2 style="color:#fff;">Your Radio and TV always working as a guaranteed priority</h2>
+		<p style="color:#fff;">Our servers are externally audited by a recognized company <a style="color:#fff;" target="_blank" href="https://stats.uptimerobot.com/kw225UnE0X"><strong>UptimeRobot</strong></a>, which not only guarantees the uptime of our services, but you can also monitor it yourself 24 hours a day.</p>
+            <div class="col-md-6"> <h1 style="color:#fff;"><strong>99.99%</strong></h1>​<span style="color:#fff;">Audio Radio<br/> Server Uptime</span></div>
+            <div class="col-md-6"> <h1 style="color:#fff;"><strong>99.5%​</strong> </h1>​​<span style="color:#fff;">VideoStreaming<br/> Server Uptime</span></div>
+                     
+					   </div>
+				
+          </div>
+        
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+	
+	 <!-- ======= About Section ======= -->
+    <section style="margin-top: 100px;background:none;" id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2 style="color:#cf2e2e;">A complete and <br/>comprehensive service</h2>
+            <p style="color:#556270;"><strong>A single plan that can include a toolkit to have your Media complete and functional</strong></p>
+			 <div class="row">
+		
+            <div class="col-md-6"> 
+			<ul> 
+			<li style="color:#556270;"><i class="ri-check-double-line"></i> Audio Streaming</li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i> Video Streaming</li> 		
+			<li style="color:#556270;"><i class="ri-check-double-line"></i> Website with Player</li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i> Voiceover Packs</li>  
+ </ul>
+ </div>
+             <div class="col-md-6"> <ul> 
+					<li style="color:#556270;"><i class="ri-check-double-line"></i> News Portal</li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i> Android App</li> 		
+			<li style="color:#556270;"><i class="ri-check-double-line"></i> IPhone App </li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i> Seasonal Jingles</li>  
+			 </ul>
+			 </div>
+                     
+					   </div>
+					
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+      <img style="min-width: 250px;  max-width: 477px;width:100%;"  src="assets/img/agent-device.png" />
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+	
+	
+		 <!-- ======= About Section ======= -->
+    <section style="margin-top: 50px;  background: rgb(62,11,11);
+background: linear-gradient(0deg, rgba(62,11,11,1) 0%, rgba(135,42,42,1) 35%, rgba(207,46,46,1) 100%);  " class="about">
+      <div class="container">
+
+        <div class="row content">
+		  <div class="col-lg-6 pt-4 pt-lg-0">
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/Rl543gAHhwc?si=tMTN5QMubqsrzlTa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6">
+           
+			 <div class="row">
+		<h2 style="color:#fff;">Automatic Daily Audios</h2>
+		<p style="color:#fff;">How about we automate your radio with daily news, weather, and anniversaries broadcasts. And they go down automatically at the same time, without your manual intervention, it's great!</p>
+           <div class="col-md-6"> <ul> 
+					<li style="color:#556270;"><i class="ri-check-double-line"></i> <span style="color:#fff;">Daily news from your country</span> </li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i>  <span style="color:#fff;">Seasonal Audios</span> </li> 		
+						 </ul>
+			 </div>
+             <div class="col-md-6"> <ul> 
+					<li style="color:#556270;"><i class="ri-check-double-line"></i> <span style="color:#fff;"> Anniversaries of the day</span> </li> 
+ <li style="color:#556270;"><i class="ri-check-double-line"></i>  <span style="color:#fff;">Christmas, weather and more</span> </li> 		
+					 </ul>
+			 </div>
+                     
+					   </div>
+				
+          </div>
+        
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+	
+	
+	    <!-- ======= Services Section ======= -->
+   <section id="testimonials" class="testimonials" >
+      <div class="container" style="padding-top:50px;padding-bottom:50px;">
+ <h3 style="text-align:center;color:#cf2e2e;">Testimonials from real clients</h3><br/>
+            <h5 style="text-align:center;">We also have Perfect Score 5 🌟🌟🌟🌟🌟<br/>
+in user recommendations on Social Networks</h5><br/>
+<div class="btn-wrap" style="text-align: center;"><a href="#" style="background: #cf2e2e;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;">Verify it on Social Networkss</a></div>
+<br/><br/>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/alvaro.jpg" class="testimonial-img" alt="">
+              <h3>Alvaro Natib Benabides</h3>
+			  🌟🌟🌟🌟🌟
+                           <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Excellent service and remote support from Ignacio
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+		  
+		  
+          <div class="col-lg-4">
+            <div class="testimonial-item mt-4 mt-lg-0">
+              <img src="assets/img/testimonials/juan.jpg" class="testimonial-img" alt="">
+              <h3>Juan Carlos Hernandez</h3>
+			  🌟🌟🌟🌟🌟
+                          <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Excellent service <br/>100% recommended
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="testimonial-item ">
+              <img src="assets/img/testimonials/villa.jpg" class="testimonial-img" alt="">
+              <h3>Villa Guerrero</h3>
+			  🌟🌟🌟🌟🌟
+                           <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+It is a good remote control service
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+      
+        
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+	
+	
+	 <section id="testimonials" class="" >
+      <div class="container" style="padding-top:50px;padding-bottom:50px;">
+ <h3 style="text-align:center;color:#cf2e2e;">Streaming Plans For each type of client</h3><br/>
+           
+<section id="pricing" class="pricing">
+
+      <div class="container">
+
+        <div class="row">
+
+       
+
+          <div class="col-lg-4 col-md-4 mt-3 mt-md-0">
+            <div class="box featured">
+              <h3>Audio
+<br/>
+RadioStreaming FULL</h3>
+           <!--   <h4><sup>$</sup>19<span> / month</span></h4>-->
+              <ul>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Simultaneous listeners: 199 thousand</li>
+              	<li style="color:#556270;"><i class="ri-check-double-line"></i>AutoDJ: 50 GB</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>News or Builder</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Android App: Modern App</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>15 Daily Audios News</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Monthly Audio Pack</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Broadcast to FB and Youtube</li>
+									<li style="color:#556270;"></li>
+											<li style="color:#556270;"></li>
+									            <!--    <li class="na">Massa ultricies mi</li>-->
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">VIEW PRICES</a>
+              </div>
+            </div>
+          </div>
+
+    
+
+          <div class="col-lg-4 col-md-4 mt-3 mt-lg-0">
+            <div class="box">
+              <span class="advanced">Popular</span>
+              <h3>Video
+<br/>
+WEBTV Full</h3>
+               <!--   <h4><sup>$</sup>19<span> / month</span></h4>-->
+           <ul>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Live video</li>
+              	<li style="color:#556270;"><i class="ri-check-double-line"></i>Webtv = mp4 in the cloud</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Viewers 2000 on the web</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>HD resolution 1024 kbps</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Youtube broadcast</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Facebook broadcast</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Integrated in your App</li>
+					<li style="color:#556270;"><i class="ri-check-double-line"></i>Unlimited transfer</li>
+            <!--    <li class="na">Massa ultricies mi</li>-->
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">VIEW PRICES</a>
+              </div>
+            </div>
+          </div>
+		  
+		        <div class="col-lg-4 col-md-4 mt-3 mt-lg-0">
+            <div class="box">
+              <h3>Webs
+<br/>
+Automatic News</h3>
+               <!--   <h4><sup>$</sup>19<span> / month</span></h4>-->
+            <ul>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Web Design: Templates</li>
+              	<li style="color:#556270;"><i class="ri-check-double-line"></i>Constructor</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Self-manageable</li>
+               	<li style="color:#556270;"><i class="ri-check-double-line"></i>Own domain</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>Host: 5 Gig SSD</li>
+				<li style="color:#556270;"><i class="ri-check-double-line"></i>You can upgrade your plan</li>
+					<li style="color:#556270;"></li>
+											<li style="color:#556270;"></li>
+												<li style="color:#556270;"></li>
+											<li style="color:#556270;"></li>
+																            <!--    <li class="na">Massa ultricies mi</li>-->
+              </ul>
+              <div class="btn-wrap">
+            <a href="#" class="btn-buy">VIEW PRICES</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section  id="about" style="padding-top:0;">
+      <div class="container">
+
+        <div id="proyect" class="row content">
+          <div class="col-lg-6">
+            <h2 style="color:#fff;">We create custom projects</h2>
+            <h3 style="color:#fff;">With years of experience, creating online Radio, Press and TV, we have what you need to take your Media to the world.
+<br/><br/>
+Contact us today to start your project!</h3>
+			
+					  
+						 <div class="row">
+						  <div class="col-md-6">
+						   <ul>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> Massive events</li>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> Video Ecommerce </li>
+			   
+                       </ul>
+					   </div>
+					     <div class="col-md-6">
+					      <ul>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> Cloudflare CDN</li>
+              <li style="color:#fff;"><i class="ri-check-double-line"></i> Custom apps</li>
+			
+                       </ul>
+					   </div>
+					    </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+     <img style="min-width: 250px;  max-width: 550px;width:100%;" src="assets/img/image-1-min.png" />
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div  class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+               <a href="index.html" class="logo me-auto"><img style="height:70px;" src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                          <!-- <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://serviciostreaming.com/apps-para-radios/">Apps</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://serviciostreaming.com/radio-planes-de-streaming/">Audio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://serviciostreaming.com/video-streaming-off/">Video Streaming</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://serviciostreaming.com/web-para-radios/">Webs</a></li>
+                       </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>RESOURCES</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="/manual/">USER MANUAL</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://www.youtube.com/@Altomarketing/playlists">VIDEO TUTORIALS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://paneldecliente.com/">CUSTOMER PANEL</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://serviciostreaming.com/soporte/">CHAT WITH CUSTOMERS</a></li>
+                          </ul>
+          </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>A COMPANY OF:</h4>
+            <p>ALTOMARKETING LLC.</p>
+  <strong> Address:</strong> 651 n Broad St, Suite 206, city MIddletown, Zip 19709   , New Castle Delaware <br><br>
+   <strong>Email:</strong> ventas@serviciostreaming.com<br>            
+			<strong>Phone:</strong> +14708261410<br>
+                    </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div  class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Servicio Streaming</span></strong>. All rights reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        A company of <a target="_blank" href="https://altomarketing.com">altomarketing.com</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
