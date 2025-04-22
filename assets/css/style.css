@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 a:hover {
@@ -43,7 +43,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #cf2e2e;
+  background: #16364f;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -57,7 +57,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #e1444d;
+  background: #3aabcd ;
   color: #fff;
 }
 
@@ -70,7 +70,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: white;
+  background: #16364f;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -99,7 +99,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 90px;
+  max-height: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -133,7 +133,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #556270;
+  color: #fff;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -149,12 +149,12 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #cf2e2e;
+  color: #3aabcd ;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #cf2e2e;
+  background: #3aabcd ;
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
@@ -165,7 +165,7 @@ h6 {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #e1444d;
+  background: #3aabcd ;
 }
 
 .navbar .dropdown ul {
@@ -201,7 +201,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .navbar .dropdown:hover>ul {
@@ -300,7 +300,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .navbar-mobile .getstarted,
@@ -335,7 +335,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -468,7 +468,7 @@ h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 #hero .btn-get-started {
@@ -483,7 +483,7 @@ h6 {
   line-height: 1;
   color: #fff;
   animation-delay: 0.8s;
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 #hero .btn-get-started:hover {
@@ -524,7 +524,8 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 50px 0;
+  padding-bottom: 50px;
+  padding-top: 30px;
   overflow: hidden;
 }
 
@@ -658,7 +659,7 @@ section {
   top: 7px;
   position: absolute;
   font-size: 20px;
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .about .content p:last-child {
@@ -703,7 +704,7 @@ section {
 
 .services .icon-box i {
   float: left;
-  color: #cf2e2e;
+  color: #16364f;
   font-size: 40px;
 }
 
@@ -726,7 +727,7 @@ section {
 }
 
 .services .icon-box:hover h4 a {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 /*--------------------------------------------------------------
@@ -760,7 +761,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -873,11 +874,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #cf2e2e;
+  border: 1px solid #16364f;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #cf2e2e;
+  background-color: #16364f;
 }
 
 .portfolio-details .portfolio-info {
@@ -1002,7 +1003,7 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 .team .member .social a+a {
@@ -1068,12 +1069,12 @@ section {
 }
 
 .features .nav-link:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .features .nav-link.active {
-  color: #cf2e2e;
-  border-color: #cf2e2e;
+  color: #16364f;
+  border-color: #16364f;
 }
 
 .features .tab-pane.active {
@@ -1103,7 +1104,7 @@ section {
 
   .features .nav-link.active {
     color: #fff;
-    background: #cf2e2e;
+    background: #16364f;
   }
 }
 
@@ -1132,7 +1133,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #cf2e2e;
+  color: #16364f;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1160,11 +1161,11 @@ section {
 }
 
 .pricing ul li {
-  padding-bottom: 16px;
+  padding-bottom: 0;
 }
 
 .pricing ul i {
-  color: #cf2e2e;
+  color: #16364f;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1175,14 +1176,13 @@ section {
 }
 
 .pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  padding: 20px 15px;
-  background: #f8f8f8;
+ margin: 20px 20px;
+
   text-align: center;
 }
 
 .pricing .btn-buy {
-  background: #cf2e2e;
+  background: #16364f;
   display: inline-block;
   padding: 8px 35px 9px 35px;
   border-radius: 4px;
@@ -1196,12 +1196,12 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: #e1444d;
+  background: #3aabcd ;
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 .pricing .advanced {
@@ -1213,7 +1213,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #cf2e2e;
+  background: #16364f;
   color: #fff;
 }
 
@@ -1418,7 +1418,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #cf2e2e;
+  border-color: #16364f;
 }
 
 .contact .php-email-form input {
@@ -1430,7 +1430,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #cf2e2e;
+  background: #16364f;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1484,7 +1484,7 @@ section {
 }
 
 .blog .entry .entry-title a:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .blog .entry .entry-meta {
@@ -1529,7 +1529,7 @@ section {
 
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  background: #cf2e2e;
+  background: #16364f;
   color: #fff;
   padding: 6px 20px;
   transition: 0.3s;
@@ -1593,7 +1593,7 @@ section {
 }
 
 .blog .entry .entry-footer a:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .blog .entry .entry-footer .cats {
@@ -1702,7 +1702,7 @@ section {
 }
 
 .blog .blog-comments .comment h5 a:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .blog .blog-comments .comment h5 .reply {
@@ -1803,7 +1803,7 @@ section {
 
 .blog .blog-pagination li.active,
 .blog .blog-pagination li:hover {
-  background: #cf2e2e;
+  background: #16364f;
 }
 
 .blog .blog-pagination li.active a,
@@ -1854,7 +1854,7 @@ section {
   font-size: 16px;
   padding: 0 15px;
   margin: -1px;
-  background: #cf2e2e;
+  background: #16364f;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1884,7 +1884,7 @@ section {
 }
 
 .blog .sidebar .categories ul a:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .blog .sidebar .categories ul a span {
@@ -1914,7 +1914,7 @@ section {
 }
 
 .blog .sidebar .recent-posts h4 a:hover {
-  color: #cf2e2e;
+  color: #16364f;
 }
 
 .blog .sidebar .recent-posts time {
@@ -1950,8 +1950,8 @@ section {
 
 .blog .sidebar .tags ul a:hover {
   color: #fff;
-  border: 1px solid #cf2e2e;
-  background: #cf2e2e;
+  border: 1px solid #16364f;
+  background: #16364f;
 }
 
 .blog .sidebar .tags ul a span {
@@ -1964,7 +1964,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #cf2e2e;
+  background: #16364f;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2011,7 +2011,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #cf2e2e;
+  background: #16364f;
   color: #fff;
   text-decoration: none;
 }
@@ -2085,7 +2085,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #cf2e2e;
+  background: #16364f;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
