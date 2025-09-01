@@ -523,7 +523,26 @@ Contactenos hoy mismo para comenzar su proyecto!</h5>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- chat -->
+
+	<script>
+  (function(d,t) {
+    var BASE_URL="https://chat.altomarketing.com.ar";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'yLU3kHCmDnuaHJZTJVH7Gyck',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
 
 </body>
+
 
 </html>
