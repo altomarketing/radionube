@@ -166,6 +166,42 @@
   });
 
   /**
+   * Facebook reviews slider
+   */
+  if (select('.facebook-slider')) {
+    new Swiper('.facebook-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      slidesPerView: 1,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: '.facebook-arrow-next',
+        prevEl: '.facebook-arrow-prev'
+      },
+      pagination: {
+        el: '.facebook-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 28
+        }
+      }
+    });
+  }
+
+  /**
    * Trustpilot reviews slider
    */
   if (select('.trustpilot-slider')) {
