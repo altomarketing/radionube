@@ -166,6 +166,42 @@
   });
 
   /**
+   * Trustpilot reviews slider
+   */
+  if (select('.trustpilot-slider')) {
+    new Swiper('.trustpilot-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      slidesPerView: 1,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: '.trustpilot-arrow-next',
+        prevEl: '.trustpilot-arrow-prev'
+      },
+      pagination: {
+        el: '.trustpilot-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 28
+        }
+      }
+    });
+  }
+
+  /**
    * Skills animation
    */
   let skilsContent = select('.skills-content');

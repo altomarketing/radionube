@@ -9,6 +9,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -102,6 +106,10 @@ h6 {
   max-height: 60px;
 }
 
+#footer .logo img {
+  max-height: 140px;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -129,10 +137,10 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 26px;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
@@ -155,11 +163,13 @@ h6 {
 .navbar .getstarted,
 .navbar .getstarted:focus {
   background: #3aabcd ;
-  padding: 8px 25px;
-  margin-left: 30px;
-  border-radius: 4px;
-  font-weight: 400;
+  padding: 10px 26px;
+  margin-left: 26px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
+  box-shadow: 0 4px 15px rgba(58, 171, 205, 0.3);
 }
 
 .navbar .getstarted:hover,
@@ -292,8 +302,9 @@ h6 {
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: 600;
   color: #556270;
 }
 
@@ -628,8 +639,38 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About
+# About / Hero Video
 --------------------------------------------------------------*/
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 34, 53, 0.72);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 48px;
@@ -1214,6 +1255,659 @@ section {
   font-size: 14px;
   padding: 1px 0 3px 0;
   background: #16364f;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Modern Pricing Cards
+--------------------------------------------------------------*/
+.modern-pricing-wrapper {
+  padding: 30px 0 50px 0;
+}
+
+.modern-pricing-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(22, 54, 79, 0.1);
+  box-shadow: 0 10px 30px rgba(22, 54, 79, 0.07);
+  padding: 36px 26px 30px 26px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modern-pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(22, 54, 79, 0.15);
+}
+
+.modern-pricing-card.featured {
+  border: 2px solid #2187b1;
+  box-shadow: 0 16px 40px rgba(33, 135, 177, 0.2);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.modern-pricing-card.featured:hover {
+  transform: scale(1.02) translateY(-8px);
+  box-shadow: 0 25px 50px rgba(33, 135, 177, 0.28);
+}
+
+.pricing-badge-popular {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #2187b1 0%, #3aabcd 100%);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(33, 135, 177, 0.35);
+  white-space: nowrap;
+}
+
+.pricing-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(22, 54, 79, 0.08);
+  margin-bottom: 22px;
+}
+
+.pricing-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #16364f;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.pricing-subtitle {
+  font-size: 13px;
+  color: #7a8a9e;
+  margin-bottom: 16px;
+  min-height: 20px;
+}
+
+.pricing-price-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.pricing-currency {
+  font-size: 16px;
+  font-weight: 700;
+  color: #16364f;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+.pricing-amount {
+  font-size: 46px;
+  font-weight: 800;
+  color: #16364f;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modern-pricing-card.featured .pricing-amount {
+  color: #2187b1;
+}
+
+.pricing-period {
+  font-size: 14px;
+  color: #8c9ba5;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.pricing-features-group {
+  margin-bottom: 18px;
+}
+
+.pricing-group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #2187b1;
+  background: rgba(33, 135, 177, 0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.pricing-group-title i {
+  font-size: 15px;
+}
+
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #4b5d6e;
+  padding: 5px 0;
+  line-height: 1.4;
+}
+
+.pricing-features-list li i {
+  color: #198754;
+  font-size: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.pricing-features-list li strong {
+  color: #16364f;
+}
+
+.pricing-cta-wrap {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.pricing-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #16364f;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(22, 54, 79, 0.18);
+}
+
+.pricing-btn:hover {
+  background: #2187b1;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(33, 135, 177, 0.35);
+  transform: translateY(-2px);
+}
+
+.modern-pricing-card.featured .pricing-btn {
+  background: linear-gradient(135deg, #2187b1 0%, #16364f 100%);
+  box-shadow: 0 4px 16px rgba(33, 135, 177, 0.3);
+}
+
+.modern-pricing-card.featured .pricing-btn:hover {
+  background: linear-gradient(135deg, #3aabcd 0%, #2187b1 100%);
+  box-shadow: 0 8px 24px rgba(58, 171, 205, 0.45);
+}
+
+@media (max-width: 991px) {
+  .modern-pricing-card.featured {
+    transform: none;
+  }
+  .modern-pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Modern Feature Cards */
+.modern-feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 26px;
+  height: 100%;
+  border: 1px solid #e9eff5;
+  box-shadow: 0 4px 20px rgba(22, 54, 79, 0.05);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #2187b1;
+  box-shadow: 0 12px 30px rgba(33, 135, 177, 0.15);
+}
+
+.modern-feature-card .feature-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(33, 135, 177, 0.1);
+  color: #2187b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.modern-feature-card:hover .feature-icon-wrap {
+  background: #2187b1;
+  color: #ffffff;
+}
+
+.modern-feature-card .feature-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.modern-feature-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16364f;
+  margin-bottom: 12px;
+}
+
+.modern-feature-card p {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Modern Showcase Cards */
+.modern-showcase-card {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e9eff5;
+  box-shadow: 0 8px 30px rgba(22, 54, 79, 0.06);
+  padding: 35px 30px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.modern-showcase-card:hover {
+  box-shadow: 0 14px 40px rgba(22, 54, 79, 0.12);
+  border-color: #d0e1ed;
+}
+
+/* Modern Homepage Enhancements */
+.home-section-badge {
+  background: rgba(33, 135, 177, 0.12);
+  color: #2187b1;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.home-section-badge.light {
+  background: rgba(255, 255, 255, 0.18);
+  color: #6dd5ed;
+}
+
+/* Modern Clients Carousel / Marquee */
+.clients-carousel-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 35px 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-carousel-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 70px;
+  animation: clientsCarouselScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.clients-carousel-wrap:hover .clients-carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes clientsCarouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.client-logo-loose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 10px 15px;
+}
+
+/* Base sizing for square/compact logos (ZaraRadio, OBS, Salamandra, BUTT, SAM Broadcaster) */
+.client-logo-loose img {
+  height: 85px;
+  max-height: 90px;
+  max-width: 130px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.05));
+}
+
+/* Wide horizontal logos (vMix, VirtualDJ) - restrained height so they don't visually overpower */
+.client-logo-loose img.logo-wide {
+  height: 48px;
+  max-height: 52px;
+  max-width: 180px;
+}
+
+/* Tall vertical logos (RadioBOSS) - slightly taller for visual balance */
+.client-logo-loose img.logo-tall {
+  height: 95px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.client-logo-loose img:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 8px 20px rgba(22, 54, 79, 0.18));
+}
+
+@media (max-width: 768px) {
+  .clients-carousel-track {
+    gap: 45px;
+    animation-duration: 20s;
+  }
+  .client-logo-loose img {
+    height: 65px;
+    max-height: 70px;
+    max-width: 105px;
+  }
+  .client-logo-loose img.logo-wide {
+    height: 38px;
+    max-height: 42px;
+    max-width: 140px;
+  }
+  .client-logo-loose img.logo-tall {
+    height: 75px;
+    max-height: 80px;
+    max-width: 80px;
+  }
+}
+
+.stat-card-modern {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 22px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.stat-card-modern:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+}
+
+.stat-card-modern .stat-number {
+  font-size: 38px;
+  font-weight: 800;
+  color: #6dd5ed;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+.stat-card-modern .stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.modern-testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e9eff5;
+  box-shadow: 0 5px 25px rgba(22, 54, 79, 0.06);
+  padding: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.modern-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(22, 54, 79, 0.12);
+  border-color: #2187b1;
+}
+
+/* Trustpilot Testimonial Cards */
+.trustpilot-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e9eff5;
+  box-shadow: 0 5px 25px rgba(22, 54, 79, 0.05);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.trustpilot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 182, 122, 0.12);
+  border-color: #00b67a;
+}
+
+.trustpilot-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.trustpilot-star-box {
+  background: #00b67a;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.trustpilot-star-box i {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.trustpilot-card .review-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #16364f;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.trustpilot-card .review-body {
+  font-size: 14px;
+  color: #556270;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.trustpilot-card .review-author-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #f1f4f8;
+}
+
+.trustpilot-card .review-author-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #16364f;
+  margin: 0;
+}
+
+.trustpilot-card .review-meta {
+  font-size: 12px;
+  color: #8c98a4;
+  margin: 0;
+}
+
+/* Trustpilot Slider & Controls */
+.trustpilot-slider-wrap {
+  position: relative;
+  padding: 0 46px;
+}
+
+.trustpilot-slider {
+  padding: 12px 6px 30px 6px !important;
+  overflow: hidden;
+}
+
+.trustpilot-slider .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.trustpilot-slider .trustpilot-card {
+  width: 100%;
+}
+
+.trustpilot-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e1e7ec;
+  color: #16364f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(22, 54, 79, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trustpilot-arrow-btn:hover {
+  background: #00b67a;
+  border-color: #00b67a;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 182, 122, 0.35);
+}
+
+.trustpilot-arrow-prev {
+  left: -8px;
+}
+
+.trustpilot-arrow-next {
+  right: -8px;
+}
+
+.trustpilot-pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.trustpilot-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.trustpilot-pagination .swiper-pagination-bullet-active {
+  background: #00b67a;
+  width: 28px;
+}
+
+/* Responsive arrow handling for mobile */
+@media (max-width: 768px) {
+  .trustpilot-slider-wrap {
+    padding: 0;
+  }
+  .trustpilot-arrow-btn {
+    display: none;
+  }
+  .trustpilot-mobile-arrows {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+  }
+}
+
+.trustpilot-mobile-arrows {
+  display: none;
+}
+
+.trustpilot-mobile-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e1e7ec;
+  color: #16364f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(22, 54, 79, 0.1);
+  transition: all 0.25s ease;
+}
+
+.trustpilot-mobile-arrow:hover,
+.trustpilot-mobile-arrow:active {
+  background: #00b67a;
+  border-color: #00b67a;
   color: #fff;
 }
 
@@ -2026,6 +2720,35 @@ section {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 25px;
+  padding: 0;
+  margin: 0 0 15px 0;
+  list-style: none;
+}
+
+#footer .footer-top .footer-links-horizontal li {
+  padding: 0 !important;
+  margin: 0;
+  display: inline-flex;
+}
+
+#footer .footer-top .footer-links-horizontal a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .footer-links-horizontal a:hover {
+  color: #d9232d;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul {
