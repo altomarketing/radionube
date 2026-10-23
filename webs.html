@@ -137,6 +137,17 @@ margin:20px;
           <li><a href="webs.html" class="active">Webs</a></li>
           <li><a href="precios.html" >Precios</a></li>
           <li><a href="contacto.html" class="getstarted">Hablemos</a></li>
+          <li class="d-flex align-items-center ms-lg-2 my-2 my-lg-0">
+            <select class="currency-selector form-select form-select-sm" aria-label="Moneda" style="padding: 4px 10px; font-size: 13px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: auto;">
+              <option value="USD">🇺🇸 USD</option>
+              <option value="ARS">🇦🇷 ARS</option>
+              <option value="CL">🇨🇱 CL</option>
+              <option value="CO">🇨🇴 CO</option>
+              <option value="MX">🇲🇽 MX</option>
+              <option value="UYU">🇺🇾 UYU</option>
+              <option value="EUR">🇪🇺 EUR</option>
+            </select>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -163,7 +174,7 @@ margin:20px;
             <div class="col-lg-5">
               <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web & App PWA</span>
               <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">Limay</h3>
-              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">$19 <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span></div>
+              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="19">19</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span></div>
               <p style="color: #556270; font-size: 15px; line-height: 1.6;">
                 Una App Android + Sitio Web totalmente autoadministrable. La combinación perfecta entre presencia web moderna y aplicación móvil instalable para tus oyentes.
               </p>
@@ -200,7 +211,7 @@ margin:20px;
             <div class="col-lg-5">
               <span class="badge mb-2" style="background: #16364f; font-size: 12px; padding: 6px 14px;">★ MÁS ELEGIDO — FLASHnews</span>
               <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">FLASHnews</h3>
-              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">$9 <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ mes</span></div>
+              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="9">9</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ mes</span></div>
               <p style="color: #556270; font-size: 15px; line-height: 1.6;">
                 Desarrollo propio autoadministrable. Trae noticias automáticamente todos los días y además te permite subir tus propias noticias, notas locales, audio y enlaces a redes.
               </p>
@@ -237,7 +248,7 @@ margin:20px;
             <div class="col-lg-5">
               <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Desarrollo Exclusivo</span>
               <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">Página Web a Medida</h3>
-              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">$25 <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ mes</span></div>
+              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="25">25</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ mes</span></div>
               <p style="color: #556270; font-size: 15px; line-height: 1.6;">
                 La solución a medida para emisoras, medios periodísticos y empresas que necesitan un sitio único. Diseñado exactamente según tus requerimientos técnicos, visuales y comerciales.
               </p>
@@ -294,8 +305,8 @@ margin:20px;
                 <div class="pricing-title">Limay</div>
                 <div class="pricing-subtitle">Una App Android + Sitio Web autoadministrable</div>
                 <div class="pricing-price-box">
-                  <span class="pricing-currency">u$s</span>
-                  <span class="pricing-amount">19</span>
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="19">19</span>
                   <span class="pricing-period">/ año</span>
                 </div>
               </div>
@@ -329,8 +340,8 @@ margin:20px;
                 <div class="pricing-title">FLASHnews</div>
                 <div class="pricing-subtitle">Noticias automáticas + notas propias</div>
                 <div class="pricing-price-box">
-                  <span class="pricing-currency">u$s</span>
-                  <span class="pricing-amount">9</span>
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="9">9</span>
                   <span class="pricing-period">/ mes</span>
                 </div>
               </div>
@@ -363,8 +374,8 @@ margin:20px;
                 <div class="pricing-title">Página Web a Medida</div>
                 <div class="pricing-subtitle">Desarrollo exclusivo adaptado a tus necesidades</div>
                 <div class="pricing-price-box">
-                  <span class="pricing-currency">u$s</span>
-                  <span class="pricing-amount">25</span>
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="25">25</span>
                   <span class="pricing-period">/ mes</span>
                 </div>
               </div>
@@ -452,6 +463,7 @@ margin:20px;
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/currency.js"></script>
 
   <script>
     var acc = document.getElementsByClassName("accordion");

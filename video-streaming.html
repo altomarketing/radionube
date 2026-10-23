@@ -121,6 +121,17 @@ margin:20px;
           <li><a href="webs.html" >Webs</a></li>
           <li><a href="precios.html" >Precios</a></li>
           <li><a href="contacto.html" class="getstarted">Hablemos</a></li>
+          <li class="d-flex align-items-center ms-lg-2 my-2 my-lg-0">
+            <select class="currency-selector form-select form-select-sm" aria-label="Moneda" style="padding: 4px 10px; font-size: 13px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: auto;">
+              <option value="USD">🇺🇸 USD</option>
+              <option value="ARS">🇦🇷 ARS</option>
+              <option value="CL">🇨🇱 CL</option>
+              <option value="CO">🇨🇴 CO</option>
+              <option value="MX">🇲🇽 MX</option>
+              <option value="UYU">🇺🇾 UYU</option>
+              <option value="EUR">🇪🇺 EUR</option>
+            </select>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -254,8 +265,8 @@ margin:20px;
               <div class="pricing-title">Video Móvil</div>
               <div class="pricing-subtitle">Transmite directo desde tu celular con cero delay</div>
               <div class="pricing-price-box">
-                <span class="pricing-currency">u$s</span>
-                <span class="pricing-amount">30</span>
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="30">30</span>
                 <span class="pricing-period">/ año</span>
               </div>
             </div>
@@ -301,8 +312,8 @@ margin:20px;
               <div class="pricing-title">Streaming Power</div>
               <div class="pricing-subtitle">Emisión profesional con OBS o vMix y apps</div>
               <div class="pricing-price-box">
-                <span class="pricing-currency">u$s</span>
-                <span class="pricing-amount">150</span>
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="150">150</span>
                 <span class="pricing-period">/ año</span>
               </div>
             </div>
@@ -347,8 +358,8 @@ margin:20px;
               <div class="pricing-title">Web TV Full</div>
               <div class="pricing-subtitle">Canal de TV online 24/7 con Video DJ en la Nube</div>
               <div class="pricing-price-box">
-                <span class="pricing-currency">u$s</span>
-                <span class="pricing-amount">190</span>
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="190">190</span>
                 <span class="pricing-period">/ año</span>
               </div>
             </div>
@@ -449,6 +460,7 @@ margin:20px;
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/currency.js"></script>
 
   <script>
     var acc = document.getElementsByClassName("accordion");
