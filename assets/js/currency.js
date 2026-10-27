@@ -206,18 +206,28 @@
 
   // Función global para cambiar de idioma
   function switchLanguage(targetLang) {
-    const currentPath = window.location.pathname;
-    const isCurrentEn = currentPath.includes('/en/') || currentPath.endsWith('/en');
+    const rawPath = window.location.pathname || '/';
+    const normalized = rawPath.startsWith('/') ? rawPath : '/' + rawPath;
+    const isCurrentEn = normalized === '/en' || normalized.startsWith('/en/');
     const search = window.location.search || '';
-    let filename = currentPath.split('/').pop() || 'index.html';
-    if (filename === 'en' || !filename) {
-      filename = 'index.html';
+    const hash = window.location.hash || '';
+
+    let newPath = normalized;
+    if (targetLang === 'en') {
+      if (!isCurrentEn) {
+        newPath = normalized === '/' ? '/en/' : '/en' + normalized;
+      }
+    } else if (targetLang === 'es') {
+      if (isCurrentEn) {
+        newPath = normalized.substring(3);
+        if (!newPath || newPath === '') {
+          newPath = '/';
+        }
+      }
     }
 
-    if (targetLang === 'en' && !isCurrentEn) {
-      window.location.href = 'en/' + filename + search;
-    } else if (targetLang === 'es' && isCurrentEn) {
-      window.location.href = '../' + filename + search;
+    if (newPath !== normalized) {
+      window.location.href = newPath + search + hash;
     }
   }
   window.switchLanguage = switchLanguage;
