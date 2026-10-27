@@ -204,6 +204,24 @@
     window.moneda = _activeCurrency;
   }
 
+  // Función global para cambiar de idioma
+  function switchLanguage(targetLang) {
+    const currentPath = window.location.pathname;
+    const isCurrentEn = currentPath.includes('/en/') || currentPath.endsWith('/en');
+    const search = window.location.search || '';
+    let filename = currentPath.split('/').pop() || 'index.html';
+    if (filename === 'en' || !filename) {
+      filename = 'index.html';
+    }
+
+    if (targetLang === 'en' && !isCurrentEn) {
+      window.location.href = 'en/' + filename + search;
+    } else if (targetLang === 'es' && isCurrentEn) {
+      window.location.href = '../' + filename + search;
+    }
+  }
+  window.switchLanguage = switchLanguage;
+
   window.setCurrency = setCurrency;
   window.getCurrency = getCurrency;
   window.CURRENCY_CONFIG = CURRENCIES;
@@ -217,6 +235,23 @@
       sel.value = _activeCurrency;
       sel.addEventListener('change', function() {
         setCurrency(this.value);
+      });
+    });
+
+    // Conectar botones o links de cambio de idioma por banderas
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        switchLanguage(this.getAttribute('data-lang'));
+      });
+    });
+
+    // Conectar selector de idioma si existe como <select class="lang-selector">
+    const isEnPage = window.location.pathname.includes('/en/') || window.location.pathname.endsWith('/en');
+    document.querySelectorAll('.lang-selector').forEach(sel => {
+      sel.value = isEnPage ? 'en' : 'es';
+      sel.addEventListener('change', function() {
+        switchLanguage(this.value);
       });
     });
 

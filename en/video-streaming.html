@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Video Streaming - RadioNube</title>
+  <meta content="Professional video streaming, live mobile broadcasting, and 24/7 Cloud Web TV solutions with low latency and global CDN delivery." name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+<style>
+.about {
+background-image: url("../assets/img/15439.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.testimonials {
+background-image: url("../assets/img/map.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+#proyect {
+background-color:#16364f;padding:100px 100px 10px 100px;border-radius:50px;
+}
+
+@media screen and (max-width: 400px) {
+ #proyect {
+background-color:#16364f;
+padding:50px 10px 50px 10px;
+border-radius:25px;
+margin:20px;
+}
+}
+
+.accordion {
+  background-color: #16364f;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #16364f; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+} 
+</style>
+  <link rel="alternate" hreflang="es" href="https://radionube.com/video-streaming.html" />
+  <link rel="alternate" hreflang="en" href="https://radionube.com/en/video-streaming.html" />
+  <link rel="alternate" hreflang="x-default" href="https://radionube.com/video-streaming.html" />
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+    <!--  <h1 class="logo me-auto"><a href="index.html">Sailor</a></h1>
+       Uncomment below if you prefer to use an image logo -->
+       <a href="index.html" class="logo me-auto"><img src="https://cdnuploads.pages.dev/uploads/logos/radionube/radionube-sonicpanel.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+       
+
+        <!--    <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>-->
+          <li class="d-flex align-items-center gap-1 me-lg-2 my-2 my-lg-0 ms-3 ms-lg-0">
+            <select class="currency-selector form-select form-select-sm" aria-label="Moneda" style="padding: 4px 8px; font-size: 13px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: 105px;">
+              <option value="USD">🇺🇸 USD</option>
+              <option value="ARS">🇦🇷 ARS</option>
+              <option value="CLP">🇨🇱 CLP</option>
+              <option value="COP">🇨🇴 COP</option>
+              <option value="MXN">🇲🇽 MXN</option>
+              <option value="UYU">🇺🇾 UYU</option>
+              <option value="EUR">🇪🇺 EUR</option>
+            </select>
+            <select class="lang-selector form-select form-select-sm" aria-label="Language" style="padding: 4px 6px; font-size: 15px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: 62px;">
+              <option value="es">🇪🇸</option>
+              <option value="en" selected>🇺🇸</option>
+            </select>
+          </li>
+		     <li><a href="index.html" >Home</a></li>
+      
+          <li><a href="radio-planes-de-streaming.html">Audio</a></li>
+          <li><a href="video-streaming.html" class="active">Video</a></li>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="webs.html" >Webs</a></li>
+          <li><a href="precios.html" >Pricing</a></li>
+          <li><a href="contacto.html" class="getstarted">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main style="padding-top: 150px;" id="main">
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section  id="contact" class="contact">
+      <h2 style="text-align:center;margin-bottom:5px;color:#16364f;">3 Ways to Broadcast VIDEO STREAMING</h2>
+      <div class="container">
+       
+        <div style="margin-bottom:150px;" class="row">
+
+        <div class="col-lg-4 col-md-4 footer-links" >
+          <div style="background-color: #16364f;border-radius:25px;padding:25px;margin:10px;">
+          <img style="width: 100%;margin-bottom:10px;height:198px;max-width:368px;" src="../assets/img/filming-g55323483e_1920-e1661878317508.jpg" />
+         <h4 style="text-align: center;color:#fff;"> MOBILE VIDEO</h4>
+         <h5 style="text-align: center;color:#fff;"> Super easy from your<br/> smartphone</h5>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-4 footer-links" >
+          <div style="background-color: #16364f;border-radius:25px;padding:25px;margin:10px;">
+            <img style="width: 100%;margin-bottom:10px;height:198px;max-width:368px;"   src="../assets/img/TV-cameras-in-studio.jpg" />
+         <h4 style="text-align: center;color:#fff;"> LIVE Streaming</h4>
+         <h5 style="text-align: center;color:#fff;"> Broadcast from PC,<br/> your audience watches</h5>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-4 footer-links" >
+          <div style="background-color: #16364f;border-radius:25px;padding:25px;margin:10px;">
+            <img style="width: 100%;margin-bottom:10px;height:198px;max-width:368px;"   src="../assets/img/pexels-annam-w-1047442-min.jpg" />
+         <h4 style="text-align: center;color:#fff;"> WEB TV Streaming</h4>
+         <h5 style="text-align: center;color:#fff;"> Upload your mp4s to the Cloud 24/7</h5>
+        </div>
+      </div>
+
+      
+      </div>
+
+      
+
+         
+      <div style="margin-top:150px;margin-bottom:150px;" class="row">
+
+        <div class="col-lg-6 col-md-6 ">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/IFb2kaHEQGU?si=qaJqy-lOeNsp88gL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+      </div>  
+
+     
+   
+
+        <div  class="col-lg-6 col-md-6" >
+          <h2 style="text-align:center;color:#16364f;margin-top:25px;">MOBILE VIDEO</h2> 
+          <p>Using WebRTC technology (like Google Meet), broadcast instantly with zero delay point-to-point to your viewers.<br/>No software installation required: simply open your smartphone browser and start streaming live.</p>
+        </div>
+
+   
+
+      
+      </div>
+
+      <div style="margin-top:150px;margin-bottom:150px;" class="row">
+
+        <div class="col-lg-6 col-md-6 ">
+         <img  height="650" style="width:100%;height:auto;" src="https://serviciostreaming.com/wp-content/uploads/2023/05/obs-jpg.webp" /> 
+      </div>  
+	  
+	  
+	      <div  class="col-lg-6 col-md-6" >
+          <h2 style="text-align:center;color:#16364f;margin-top:25px;">STREAMING Live</h2> 
+             <p>
+          <strong>  Broadcast a live feed from your computer directly to our video servers</strong><br/><br/>
+          <i style="color: #16364f; font-size:1rem;"  class="bi bi-camera-video-fill"></i>  Connect any camera, e.g. for live events, concerts, or church services<br/><br/>
+          <i style="color: #16364f; font-size:1rem;"  class="bi bi-webcam-fill"></i>  Broadcast media files, recorded programs, or videos live from your PC
+          </p>
+        </div>
+
+   
+
+      
+      </div>
+	  
+	  
+	  
+	  
+	  
+	        <div style="margin-top:150px;margin-bottom:150px;" class="row">
+
+        <div class="col-lg-6 col-md-6 ">
+        <video style="width: 100%;" controls="" src="https://serviciostreaming.com/f/mp4/programarWebTV.mp4"></video>     
+      </div>  
+	  
+	  
+	      <div  class="col-lg-6 col-md-6" >
+          <h2 style="text-align:center;color:#16364f;margin-top:25px;">STREAMING WEB TV</h2> 
+           Manage your .mp4 video files in the Cloud, scheduling playlists around the clock with multi-device adaptive delivery 24/7.
+        </div>
+
+   
+
+      
+      </div>
+    </div>
+  </section><!-- End Contact Section -->
+
+  <!-- ======= Modern Pricing Section ======= -->
+  <section id="pricing" class="modern-pricing-wrapper">
+    <div class="container">
+
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Live Broadcasting & Web TV</span>
+          <h2 style="font-weight: 800; color: #16364f; font-size: 36px; margin-bottom: 10px;">Video Streaming Plans</h2>
+          <p style="color: #6c757d; font-size: 16px; margin: 0 auto; max-width: 620px;">Broadcast your events, TV channels, or live streams with high-speed servers, low latency, mobile apps, and HTML5 players compatible with every screen.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch justify-content-center">
+
+        <!-- Plan 1: Video Móvil -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="modern-pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-title">Video Móvil</div>
+              <div class="pricing-subtitle">Broadcast directly from your phone with zero delay</div>
+              <div class="pricing-price-box">
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="29">29</span>
+                <span class="pricing-period">ANNUAL</span>
+              </div>
+              <div class="pricing-monthly-sub">
+                <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="2.42">2.42</span> monthly cost)</em>
+              </div>
+              <div class="pricing-annual-badge">
+                <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="2.9">2.90</span></span>
+              </div>
+            </div>
+
+            <!-- Bloque 1: Tu Transmites -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-camera-video"></i> You Broadcast
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Live from <strong>your smartphone</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>Zero delay</strong> (Ultra-low latency)</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Direct connection with <strong>WebRTC</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>24/7</strong> unlimited broadcasting</span></li>
+              </ul>
+            </div>
+
+            <!-- Bloque 2: Te Ven -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-eye"></i> They Watch
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Up to <strong>100 simultaneous</strong> viewers</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Direct link for <strong>socials & web</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Multi-device <strong>HTML5 player</strong></span></li>
+              </ul>
+            </div>
+
+            <div class="pricing-cta-wrap">
+              <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/115?currency=USD" class="pricing-btn">
+                <i class="bi bi-cart-check-fill"></i> ORDER NOW!
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan 2: Streaming Power (Destacado) -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="modern-pricing-card featured">
+            <span class="pricing-badge-popular">★ MOST POPULAR</span>
+            <div class="pricing-header">
+              <div class="pricing-title">Streaming Power</div>
+              <div class="pricing-subtitle">Pro broadcasting with OBS, vMix & apps</div>
+              <div class="pricing-price-box">
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="67">67</span>
+                <span class="pricing-period">ANNUAL</span>
+              </div>
+              <div class="pricing-monthly-sub">
+                <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="5.58">5.58</span> monthly cost)</em>
+              </div>
+              <div class="pricing-annual-badge">
+                <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="10">10</span></span>
+              </div>
+            </div>
+
+            <!-- Bloque 1: Tu Transmites -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-camera-video"></i> You Broadcast
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Live from <strong>PC (OBS, vMix, Wirecast)</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Broadcast quality: <strong>SD (480p)</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Monthly bandwidth: <strong>100 GB</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Simulcast restream to <strong>YouTube</strong></span></li>
+              </ul>
+            </div>
+
+            <!-- Bloque 2: Te Ven -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-eye"></i> They Watch
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Simultaneous viewers: <strong>Unlimited</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>SimpleNews Website</strong> included</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>Simple Android App</strong> included</span></li>
+              </ul>
+            </div>
+
+            <div class="pricing-cta-wrap">
+              <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/129?currency=USD" class="pricing-btn">
+                <i class="bi bi-cart-check-fill"></i> ORDER NOW!
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan 3: Web TV Full -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="modern-pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-title">Web TV Full</div>
+              <div class="pricing-subtitle">24/7 Online TV Channel with Cloud Video DJ</div>
+              <div class="pricing-price-box">
+                <span class="pricing-currency" data-currency-symbol>u$s</span>
+                <span class="pricing-amount" data-price-usd="190">190</span>
+                <span class="pricing-period">ANNUAL</span>
+              </div>
+              <div class="pricing-monthly-sub">
+                <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="15.83">15.83</span> monthly cost)</em>
+              </div>
+              <div class="pricing-annual-badge">
+                <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="19">19</span></span>
+              </div>
+            </div>
+
+            <!-- Bloque 1: Tu Transmites -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-camera-video"></i> You Broadcast
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Live PC + <strong>Cloud Videos (.mp4)</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>Video DJ:</strong> 10 to 100 GB scheduled</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Broadcast quality <strong>HD (720p)</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Monthly bandwidth: <strong>1,000 GB</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Restream to <strong>YouTube & Facebook</strong></span></li>
+              </ul>
+            </div>
+
+            <!-- Bloque 2: Te Ven -->
+            <div class="pricing-features-group">
+              <div class="pricing-group-title">
+                <i class="bi bi-eye"></i> They Watch
+              </div>
+              <ul class="pricing-features-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Simultaneous viewers: <strong>Unlimited</strong></span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span><strong>Self-managed Website</strong> included</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Self-managed <strong>Android App</strong></span></li>
+              </ul>
+            </div>
+
+            <div class="pricing-cta-wrap">
+              <a target="_blank" href="https://veni.link/wasap?text=QuieroWebTVFull" class="pricing-btn">
+                <i class="bi bi-whatsapp"></i> ORDER NOW!
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Garantía y características adicionales -->
+      <div class="row justify-content-center mt-5 text-center">
+        <div class="col-lg-10">
+          <div style="background: #ffffff; border-radius: 16px; padding: 25px 30px; box-shadow: 0 5px 25px rgba(22, 54, 79, 0.05); border: 1px solid #eef2f6;">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-lightning-charge-fill" style="color: #2187b1; font-size: 24px;"></i>
+                <span style="font-weight: 600; color: #16364f; font-size: 15px;">Instant Activation</span>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-shield-check" style="color: #2187b1; font-size: 24px;"></i>
+                <span style="font-weight: 600; color: #16364f; font-size: 15px;">99.9% Server Uptime</span>
+              </div>
+              <div class="col-md-4 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-headset" style="color: #2187b1; font-size: 24px;"></i>
+                <span style="font-weight: 600; color: #16364f; font-size: 15px;">Dedicated Support Team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Modern Pricing Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="padding: 25px 0; background: #16364f;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="footer-logo">
+        <a href="index.html"><img style="height: 60px;" src="https://cdnuploads.pages.dev/uploads/logos/radionube/radionube.png" alt="RadioNube"></a>
+      </div>
+      <div>
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled gap-4 m-0 p-0">
+          <li><a href="radio-planes-de-streaming.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">AUDIO</a></li>
+          <li><a href="video-streaming.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">VIDEO</a></li>
+          <li><a href="apps.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">APPS</a></li>
+          <li><a href="webs.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">WEBS</a></li>
+          <li><a href="https://blog.radionube.online/" target="_blank" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">BLOG</a></li>
+        </ul>
+      </div>
+      <div class="copyright m-0 p-0" style="color: rgba(255,255,255,0.8); font-size: 13px;">
+        &copy; Copyright <strong><span style="color:#fff;">RadioNube</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/currency.js"></script>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+  <!-- OpenPanel Analytics -->
+  <script>
+    window.op = window.op || function() {
+      var n = [];
+      return new Proxy(function() {
+        arguments.length && n.push([].slice.call(arguments));
+      }, {
+        get: function(t, r) {
+          return "q" === r ? n : function() {
+            n.push([r].concat([].slice.call(arguments)));
+          };
+        },
+        has: function(t, r) {
+          return "q" === r;
+        }
+      });
+    }();
+
+    window.op('init', {
+      apiUrl: 'https://apidata.altomarketing.com.ar',
+      clientId: 'd01d992f-834c-4a17-b9b3-ad5c06d6206d',
+      trackScreenViews: true,
+      trackOutgoingLinks: true,
+      trackAttributes: true
+    });
+  </script>
+  <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+</body>
+
+</html>
