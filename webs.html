@@ -99,6 +99,51 @@ margin:20px;
   <link rel="alternate" hreflang="es" href="https://radionube.com/webs.html" />
   <link rel="alternate" hreflang="en" href="https://radionube.com/en/webs.html" />
   <link rel="alternate" hreflang="x-default" href="https://radionube.com/webs.html" />
+
+<style>
+/* Estilos para el showcase de Webs Simples para Radios */
+.web-preview-link img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.web-preview-link:hover img {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.14) !important;
+}
+.web-thumb-item {
+  flex: 0 0 135px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px;
+  background: #f8fafc;
+  border: 2px solid #e9eff5;
+  transition: all 0.25s ease;
+  text-align: center;
+  flex-shrink: 0;
+}
+.web-thumb-item:hover {
+  background: #ffffff;
+  border-color: #2187b1;
+  transform: translateY(-2px);
+}
+.web-thumb-item.active {
+  background: #ffffff;
+  border-color: #2187b1;
+  box-shadow: 0 4px 14px rgba(33, 135, 177, 0.2);
+  transform: translateY(-2px);
+}
+.web-thumb-item.active div:first-of-type {
+  color: #2187b1 !important;
+}
+.web-thumb-item img {
+  width: 100%;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  border: 1px solid #edf2f7;
+}
+</style>
+
 </head>
 
 <body>
@@ -166,10 +211,90 @@ margin:20px;
     <section id="paginas-noticias" style="padding: 40px 0 20px 0; background: #fbfdff;">
       <div class="container">
 
+        <!-- Banner Superior: Qué incluye cualquier Página Web -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-12">
+            <div style="background: linear-gradient(135deg, #ffffff 0%, #f4f9fd 100%); border-radius: 20px; padding: 22px 28px; box-shadow: 0 8px 30px rgba(22, 54, 79, 0.07); border: 1.5px solid #dcebf4;">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 pb-2 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge" style="background: #2187b1; font-size: 11.5px; padding: 6px 14px; letter-spacing: 0.5px; text-transform: uppercase;">
+                    <i class="bi bi-stars me-1"></i> Todo Incluido
+                  </span>
+                  <span style="font-weight: 800; color: #16364f; font-size: 17px;">
+                    Cualquier página web incluye sin costo adicional:
+                  </span>
+                </div>
+                <span class="badge bg-success-subtle text-success-emphasis fw-semibold px-3 py-1" style="font-size: 12.5px;">
+                  <i class="bi bi-check-all me-1"></i> 100% Configurado y Listo
+                </span>
+              </div>
+
+              <div class="row g-3 align-items-center text-center text-md-start">
+                <!-- Item 1: Hosting -->
+                <div class="col-6 col-md-4 col-lg d-flex align-items-center gap-2">
+                  <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-hdd-network-fill" style="color: #2187b1; font-size: 20px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; color: #16364f; font-size: 14px; line-height: 1.2;">Hosting</div>
+                    <div style="font-size: 12px; color: #6c757d;">Alta velocidad</div>
+                  </div>
+                </div>
+
+                <!-- Item 2: SSL -->
+                <div class="col-6 col-md-4 col-lg d-flex align-items-center gap-2">
+                  <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-shield-check" style="color: #2187b1; font-size: 20px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; color: #16364f; font-size: 14px; line-height: 1.2;">Certificado SSL</div>
+                    <div style="font-size: 12px; color: #6c757d;">Seguridad HTTPS</div>
+                  </div>
+                </div>
+
+                <!-- Item 3: 5 Emails con dominio propio -->
+                <div class="col-12 col-md-4 col-lg d-flex align-items-center gap-2">
+                  <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-envelope-at-fill" style="color: #2187b1; font-size: 20px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; color: #16364f; font-size: 14px; line-height: 1.2;">5 Emails Corporativos</div>
+                    <div style="font-size: 12px; color: #2187b1; font-weight: 600;">contacto@tupagina.com</div>
+                  </div>
+                </div>
+
+                <!-- Item 4: Soporte Técnico -->
+                <div class="col-6 col-md-6 col-lg d-flex align-items-center gap-2">
+                  <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-headset" style="color: #2187b1; font-size: 20px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; color: #16364f; font-size: 14px; line-height: 1.2;">Soporte Técnico</div>
+                    <div style="font-size: 12px; color: #6c757d;">Especializado</div>
+                  </div>
+                </div>
+
+                <!-- Item 5: 100% Uptime -->
+                <div class="col-6 col-md-6 col-lg d-flex align-items-center gap-2">
+                  <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-lightning-charge-fill" style="color: #2187b1; font-size: 20px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; color: #16364f; font-size: 14px; line-height: 1.2;">100% Uptime</div>
+                    <div style="font-size: 12px; color: #6c757d;">Servidores 24/7</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="row justify-content-center text-center mb-5">
           <div class="col-lg-8">
             <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Portales y Medios</span>
-            <h2 style="font-weight: 800; color: #16364f; font-size: 34px; margin-bottom: 10px;">PAGINAS con noticias</h2>
+            <h2 style="font-weight: 800; color: #16364f; font-size: 34px; margin-bottom: 10px;">PAGINAS para Medios</h2>
             <p style="color: #6c757d; font-size: 16px; margin: 0 auto; max-width: 650px;">Emisoras y portales informativos con noticias automáticas, notas locales, publicidad y reproductor de radio en vivo.</p>
           </div>
         </div>
@@ -195,7 +320,9 @@ margin:20px;
                 <li class="mb-2"><i class="bi bi-arrow-up-circle-fill text-success me-2"></i> <strong>Flexible:</strong> Puede subir de plan las 24 horas</li>
               </ul>
               <div class="text-center mb-4" style="background: #f8fafc; border-radius: 14px; padding: 12px; border: 1px solid #e9eff5;">
-                <img style="border-radius: 10px; max-height: 240px; width: 100%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.06);" src="assets/img/Facilweb.png" alt="FACILWEB">
+                <a target="_blank" href="https://facilweb.servidordeapp.net/" title="Ver Demo Online FACILWEB" class="d-block web-preview-link">
+                  <img style="border-radius: 10px; max-height: 240px; width: 100%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.06);" src="assets/img/Facilweb.png" alt="FACILWEB">
+                </a>
               </div>
               <div class="mt-auto d-flex flex-wrap gap-2 align-items-center">
                 <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/107?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 22px; font-size: 13.5px;">
@@ -227,7 +354,9 @@ margin:20px;
                 <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Hosting & SSL:</strong> Alojamiento de alta velocidad incluido</li>
               </ul>
               <div class="text-center mb-4" style="background: #f8fafc; border-radius: 14px; padding: 12px; border: 1px solid #e9eff5;">
-                <img style="border-radius: 10px; max-height: 240px; width: 100%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.06);" src="assets/img/Flashnews.png" alt="FLASHnews">
+                <a target="_blank" href="https://flashnews.servidordeapp.net" title="Ver Demo Online FLASHnews" class="d-block web-preview-link">
+                  <img style="border-radius: 10px; max-height: 240px; width: 100%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.06);" src="assets/img/Flashnews.png" alt="FLASHnews">
+                </a>
               </div>
               <div class="mt-auto d-flex flex-wrap gap-2 align-items-center">
                 <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/173?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 22px; font-size: 13.5px;">
@@ -258,42 +387,372 @@ margin:20px;
           </div>
         </div>
 
-        <!-- Showcase 1: Limay -->
-        <div class="modern-showcase-card">
-          <div class="row align-items-center gy-4">
-            <div class="col-lg-5">
-              <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web & App PWA</span>
-              <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">Limay</h3>
-              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="19">19</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span></div>
-              <p style="color: #556270; font-size: 15px; line-height: 1.6;">
-                Una App Android + Sitio Web totalmente autoadministrable. La combinación perfecta entre presencia web moderna y aplicación móvil instalable para tus oyentes.
-              </p>
-              <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Web & PWA:</strong> Web moderna y App PWA lista para instalar</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>App Android:</strong> Totalmente autoadministrable</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Manual de uso:</strong> <a href="https://veni.link/manuallimay" target="_blank" style="color: #2187b1; text-decoration: underline;">Guía paso a paso incluida</a></li>
-              </ul>
-              <div class="d-flex flex-wrap gap-2 align-items-center">
-                <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/154?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 10px 24px;">
-                  <i class="bi bi-cart-check-fill"></i> CONTRATAR
-                </a>
-                <a target="_blank" href="https://limay.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
-                  <i class="bi bi-eye"></i> VER DEMO ONLINE
-                </a>
-              </div>
+                        <!-- Showcase 1: Webs Simples para Radios (Modelos Listas) -->
+        <div class="modern-showcase-card mb-5" style="border-radius: 24px; padding: 35px 30px; box-shadow: 0 10px 35px rgba(22, 54, 79, 0.08); background: #ffffff;">
+          
+          <!-- Card Header & Navigation Controls -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3 pb-3 border-bottom">
+            <div>
+              <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px; letter-spacing: 0.5px;">Webs Simples para Radios</span>
+              <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 4px;">Modelos de Webs Listas</h3>
+              <p style="color: #6c757d; font-size: 14.5px; margin: 0;">Diseños autoadministrables con reproductor online listo. Desliza o haz clic en cualquier modelo para ver sus detalles y demo:</p>
             </div>
-            <div class="col-lg-7">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide text-center">
-                    <img style="border-radius: 12px; max-height: 270px; width: auto; max-width: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.08);" src="https://cdnuploads.pages.dev/uploads/gif/apps/Limay.gif" alt="Limay Web y App PWA">
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
+            
+            <!-- Controls: Prev / Next Buttons -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-circle d-flex align-items-center justify-content-center webs-slider-prev" style="width: 40px; height: 40px; border-color: #2187b1; color: #2187b1;" title="Anterior">
+                <i class="bi bi-chevron-left" style="font-size: 18px;"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-circle d-flex align-items-center justify-content-center webs-slider-next" style="width: 40px; height: 40px; border-color: #2187b1; color: #2187b1;" title="Siguiente">
+                <i class="bi bi-chevron-right" style="font-size: 18px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Galería de Miniaturas Superior (Scroll Horizontal) -->
+          <div class="webs-thumbnails-track-wrapper mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span style="font-size: 12.5px; font-weight: 700; color: #16364f; text-transform: uppercase; letter-spacing: 0.5px;">Galería de Modelos:</span>
+              <span style="font-size: 12px; color: #6c757d;">Desliza para ver más &rarr;</span>
+            </div>
+            <div class="webs-thumbnails-scroll d-flex gap-3 pb-2" style="overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
+              <div class="web-thumb-item active" data-slide-index="0">
+                <img src="assets/img/Limay.gif" alt="Limay">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Limay</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="19">19</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="1">
+                <img src="assets/img/webs/radioplayer21.png" alt="Radioplayer 21">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Radioplayer 21</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="15">15</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="2">
+                <img src="assets/img/webs/radioplayer20.png" alt="Radioplayer 20">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Radioplayer 20</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="11">11</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="3">
+                <img src="assets/img/webs/radioplayer19.png" alt="Radioplayer 19">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Radioplayer 19</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="11">11</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="4">
+                <img src="assets/img/webs/zafiroweb.png" alt="Zafiro">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Zafiro</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="85">85</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="5">
+                <img src="assets/img/webs/traful.png" alt="Traful">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Traful</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="75">75</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="6">
+                <img src="assets/img/webs/tatuel.png" alt="Tatuel">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Tatuel</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="84">84</span>/ año</div>
+              </div>
+              <div class="web-thumb-item " data-slide-index="7">
+                <img src="assets/img/webs/lacar.png" alt="Lacar">
+                <div style="font-size: 12.5px; font-weight: 700; color: #16364f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Lacar</div>
+                <div style="font-size: 11.5px; font-weight: 600; color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="84">84</span>/ año</div>
               </div>
             </div>
           </div>
-        </div>
+
+          <!-- Swiper Container -->
+          <div class="swiper webs-radio-slider" style="overflow: hidden; padding-bottom: 10px;">
+            <div class="swiper-wrapper">
+              <!-- Slide 1: Limay -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web & App PWA</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Limay</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="19">19</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Una App Android + Sitio Web totalmente autoadministrable. La combinación perfecta entre presencia web moderna y aplicación móvil instalable para tus oyentes.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Web & PWA:</strong> Web moderna y App PWA lista para instalar</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>App Android:</strong> Totalmente autoadministrable</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Manual de uso:</strong> <a href="https://veni.link/manuallimay" target="_blank" style="color: #2187b1; text-decoration: underline;">Guía paso a paso incluida</a></li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/154?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://limay.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://limay.servidordeapp.net" title="VER DEMO ONLINE Limay" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/Limay.gif" alt="Limay">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: Radioplayer 21 -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Simple para Radio</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Radioplayer 21</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="15">15</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Sitio web musical ultra liviano y moderno con reproductor de audio integrado, enlaces directos a redes sociales y diseño 100% adaptado a móviles.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproductor HTML5:</strong> Transmisión continua de alta velocidad sin cortes</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Redes & Contacto:</strong> Enlaces a WhatsApp, Facebook e Instagram integrados</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Velocidad Extrema:</strong> Carga instantánea y mínimo consumo de datos móviles</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/170?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://radioplayer21.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://radioplayer21.servidordeapp.net" title="VER DEMO ONLINE Radioplayer 21" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/radioplayer21.png" alt="Radioplayer 21">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: Radioplayer 20 -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Simple para Radio</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Radioplayer 20</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="11">11</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Diseño estilizado centrado en la música y la transmisión en vivo. Ideal para emisoras que buscan simpleza, elegancia y funcionalidad directa.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Enfoque Musical:</strong> Diseño limpio con foco exclusivo en tu transmisión</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Información en Vivo:</strong> Datos de la emisora, programas y contacto directo</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Compatibilidad Total:</strong> Compatible con todos los servidores de streaming de audio</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/172?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://radioplayer20.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://radioplayer20.servidordeapp.net" title="VER DEMO ONLINE Radioplayer 20" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/radioplayer20.png" alt="Radioplayer 20">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4: Radioplayer 19 -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Simple para Radio</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Radioplayer 19</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="11">11</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Página web minimalista con reproductor de alta fidelidad, botón de play instantáneo y estructura optimizada para cualquier navegador.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproductor Veloz:</strong> Diseñado para encender y escuchar al instante</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Streaming SSL:</strong> Conexión cifrada de alta estabilidad con auto-reconexión</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Personalizable:</strong> Logotipo, enlaces sociales y colores de tu emisora</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/171?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://radioplayer19.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://radioplayer19.servidordeapp.net" title="VER DEMO ONLINE Radioplayer 19" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/radioplayer19.png" alt="Radioplayer 19">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5: Zafiro -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Panel Zafiro (Sincronizada)</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Zafiro</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="85">85</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Sincroniza un único panel de control centralizado con tu Sitio Web, App Android y App Apple. Cambios inmediatos en todas tus plataformas.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Sincronización Total:</strong> Panel único para Web + App Android + App Apple</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>AutoAdministrable:</strong> Publica noticias, programas, fotos y podcasts con un clic</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Player Premium:</strong> Reproductor integrado con carátulas, títulos y streaming HD</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/153?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://zafiroweb.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://zafiroweb.servidordeapp.net" title="VER DEMO ONLINE Zafiro" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/zafiroweb.png" alt="Zafiro">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6: Traful -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Panel Zafiro (Sincronizada)</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Traful</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="75">75</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Plantilla dinámica sincronizada con el panel Zafiro para Web y Apps móviles. Diseño moderno con secciones para programas, conductores y staff.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Multiplataforma:</strong> Sincronización automática entre Web, Android e iOS</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Grilla de Programación:</strong> Sección de horarios diarios y perfiles de conductores</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Interactividad:</strong> Formularios de contacto, pedidos de canciones y redes sociales</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/158?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://traful.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://traful.servidordeapp.net" title="VER DEMO ONLINE Traful" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/traful.png" alt="Traful">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 7: Tatuel -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Panel Zafiro (Sincronizada)</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Tatuel</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="84">84</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Sitio web para radio de alto impacto visual y sincronización en tiempo real. Creado para estaciones que buscan destacar su marca.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Diseño de Vanguardia:</strong> Estilo gráfico impactante optimizado para retener oyentes</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Panel Zafiro Unificado:</strong> Actualizaciones en vivo compartidas con las aplicaciones</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Infraestructura Incluida:</strong> Alojamiento web de alta velocidad y certificado SSL</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/167?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://tatuel.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://tatuel.servidordeapp.net" title="VER DEMO ONLINE Tatuel" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/tatuel.png" alt="Tatuel">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 8: Lacar -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Web Panel Zafiro (Sincronizada)</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">Lacar</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="84">84</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ año</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      Diseño profesional para emisoras de radio y medios online con sincronización Zafiro. Navegación fluida y reproductor siempre visible.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproducción Ininterrumpida:</strong> Player flotante continuo al recorrer el sitio</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Ecosistema Conectado:</strong> Gestión centralizada para Web y Apps desde Zafiro</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Canales de Comunicación:</strong> Integración directa con WhatsApp y redes sociales</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/168?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://lacar.servidordeapp.net" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-eye"></i> VER DEMO ONLINE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://lacar.servidordeapp.net" title="VER DEMO ONLINE Lacar" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 14px; max-height: 290px; width: auto; max-width: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;" src="assets/img/webs/lacar.png" alt="Lacar">
+                      <span class="badge bg-dark bg-opacity-75 text-white position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 rounded-pill" style="font-size: 12px; backdrop-filter: blur(4px);">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Click para probar Demo en Vivo
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Showcase 3: PAGINA WEB A MEDIDA -->
@@ -582,6 +1041,48 @@ margin:20px;
     });
   </script>
   <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof Swiper !== 'undefined' && document.querySelector('.webs-radio-slider')) {
+    const websSlider = new Swiper('.webs-radio-slider', {
+      speed: 400,
+      spaceBetween: 30,
+      autoHeight: true,
+      navigation: {
+        nextEl: '.webs-slider-next',
+        prevEl: '.webs-slider-prev'
+      },
+      on: {
+        slideChange: function() {
+          updateActiveModel(websSlider.realIndex);
+        }
+      }
+    });
+
+    const thumbItems = document.querySelectorAll('.web-thumb-item');
+
+    function updateActiveModel(idx) {
+      thumbItems.forEach(function(thumb, i) {
+        if (i === idx) {
+          thumb.classList.add('active');
+          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    }
+
+    thumbItems.forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        const idx = parseInt(this.getAttribute('data-slide-index'), 10);
+        websSlider.slideTo(idx);
+      });
+    });
+  }
+});
+</script>
 
 </body>
 
