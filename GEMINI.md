@@ -5,6 +5,7 @@
 - **Correspondencia de páginas espejo (1:1):**
   - `index.html` ⇄ `en/index.html`
   - `precios.html` ⇄ `en/precios.html`
+  - `comparativa.html` ⇄ `en/comparativa.html`
   - `radio-planes-de-streaming.html` ⇄ `en/radio-planes-de-streaming.html`
   - `video-streaming.html` ⇄ `en/video-streaming.html`
   - `apps.html` ⇄ `en/apps.html`
