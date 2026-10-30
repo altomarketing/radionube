@@ -52,6 +52,21 @@
     }).format(amount);
   }
 
+  // Persistir moneda en localStorage y cookies
+  function persistCurrency(code) {
+    if (!code) return;
+    try {
+      localStorage.setItem('radionube_currency', code);
+      localStorage.setItem('currency', code);
+      localStorage.setItem('moneda', code);
+    } catch (e) {}
+    try {
+      document.cookie = 'radionube_currency=' + code + ';path=/;max-age=31536000;SameSite=Lax';
+      document.cookie = 'currency=' + code + ';path=/;max-age=31536000;SameSite=Lax';
+      document.cookie = 'moneda=' + code + ';path=/;max-age=31536000;SameSite=Lax';
+    } catch (e) {}
+  }
+
   // Actualizar todos los enlaces que apuntan a panel.altomarketing.com
   function updatePanelLinks(currencyCode) {
     document.querySelectorAll('a[href*="panel.altomarketing.com"]').forEach(link => {
@@ -72,6 +87,61 @@
         const cleanBase = base.replace(/([?&])currency=[^&]+(&|$)/, '$1').replace(/[?&]$/, '');
         const sep = cleanBase.includes('?') ? '&' : '?';
         link.href = cleanBase + sep + 'currency=' + currencyCode;
+      }
+    });
+  }
+
+  // Actualizar todos los enlaces internos del sitio para propagar ?currency=XXX entre páginas
+  function updateInternalLinks(currencyCode) {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+      if (!rawHref) return;
+
+      // Ignorar anclas locales, javascript, mailto, tel y links externos
+      if (
+        rawHref.startsWith('#') ||
+        rawHref.startsWith('javascript:') ||
+        rawHref.startsWith('mailto:') ||
+        rawHref.startsWith('tel:') ||
+        rawHref.includes('panel.altomarketing.com') ||
+        rawHref.includes('wa.me') ||
+        rawHref.includes('whatsapp') ||
+        rawHref.includes('veni.link') ||
+        rawHref.includes('apple.com') ||
+        rawHref.includes('google.com') ||
+        rawHref.includes('facebook.com') ||
+        rawHref.includes('instagram.com') ||
+        rawHref.includes('twitter.com') ||
+        rawHref.includes('x.com') ||
+        rawHref.includes('youtube.com') ||
+        rawHref.includes('trustpilot.com') ||
+        rawHref.includes('pages.dev')
+      ) {
+        return;
+      }
+
+      // Comprobar si es un enlace interno del sitio (relativo o con el mismo hostname / radionube)
+      const isRelative = !rawHref.includes('://') && !rawHref.startsWith('//');
+      const isInternalDomain = rawHref.includes('radionube.online') || rawHref.includes('radionube.com') || (link.hostname && link.hostname === window.location.hostname);
+
+      if (isRelative || isInternalDomain) {
+        try {
+          if (!link.hasAttribute('data-base-href')) {
+            link.setAttribute('data-base-href', rawHref);
+          }
+          const url = new URL(rawHref, window.location.href);
+          url.searchParams.set('currency', currencyCode);
+
+          if (isRelative && !rawHref.startsWith('/')) {
+            const pathParts = url.pathname.split('/');
+            const fileName = pathParts[pathParts.length - 1] || '';
+            const search = url.search || '';
+            const hash = url.hash || '';
+            link.setAttribute('href', fileName + search + hash);
+          } else {
+            link.setAttribute('href', url.pathname + url.search + url.hash);
+          }
+        } catch (e) {}
       }
     });
   }
@@ -114,7 +184,10 @@
     // 6. Enlaces hacia panel.altomarketing.com con ?currency=XXX
     updatePanelLinks(config.code);
 
-    // 7. Reflejar ?currency=XXX en la barra de direcciones del navegador
+    // 7. Enlaces internos del sitio para preservar ?currency=XXX en toda la navegación
+    updateInternalLinks(config.code);
+
+    // 8. Reflejar ?currency=XXX en la barra de direcciones del navegador
     try {
       const url = new URL(window.location.href);
       if (url.searchParams.get('currency') !== config.code) {
@@ -125,6 +198,9 @@
         window.history.replaceState({}, '', url.toString());
       }
     } catch (e) {}
+
+    // 9. Persistir en localStorage y Cookies
+    persistCurrency(config.code);
 
     // Disparar evento personalizado por si otros scripts lo escuchan
     try {
@@ -139,11 +215,7 @@
     const canonical = normalizeCode(code);
     _activeCurrency = canonical;
 
-    try {
-      localStorage.setItem('radionube_currency', canonical);
-      localStorage.setItem('currency', canonical);
-      localStorage.setItem('moneda', canonical);
-    } catch (e) {}
+    persistCurrency(canonical);
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => updateDOM(canonical));
@@ -165,18 +237,32 @@
       const params = new URLSearchParams(window.location.search);
       const urlCur = params.get('currency') || params.get('cur') || params.get('moneda');
       if (urlCur) {
-        return normalizeCode(urlCur);
+        const code = normalizeCode(urlCur);
+        persistCurrency(code);
+        return code;
       }
 
       // 2. localStorage
       const saved = localStorage.getItem('radionube_currency') || localStorage.getItem('currency') || localStorage.getItem('moneda');
       if (saved) {
-        return normalizeCode(saved);
+        const code = normalizeCode(saved);
+        persistCurrency(code);
+        return code;
       }
 
-      // 3. Variable global previa si fue definida antes del script
+      // 3. Cookies
+      const cookieMatch = document.cookie.match(/(?:^|;\s*)(?:radionube_currency|currency|moneda)=([A-Za-z]{2,4})/);
+      if (cookieMatch) {
+        const code = normalizeCode(cookieMatch[1]);
+        persistCurrency(code);
+        return code;
+      }
+
+      // 4. Variable global previa si fue definida antes del script
       if (window.INITIAL_CURRENCY) {
-        return normalizeCode(window.INITIAL_CURRENCY);
+        const code = normalizeCode(window.INITIAL_CURRENCY);
+        persistCurrency(code);
+        return code;
       }
     } catch (e) {}
 
@@ -293,6 +379,22 @@
           const url = new URL(rawHref, window.location.origin);
           url.searchParams.set('currency', _activeCurrency);
           link.setAttribute('href', url.toString());
+        } catch (err) {}
+        return;
+      }
+
+      // Si es enlace interno del sitio, asegurar que preserve ?currency= en la navegación
+      const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href') || '';
+      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('javascript:') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) {
+        return;
+      }
+      const isRelative = !rawHref.includes('://') && !rawHref.startsWith('//');
+      const isInternalDomain = rawHref.includes('radionube.online') || rawHref.includes('radionube.com') || (link.hostname && link.hostname === window.location.hostname);
+      if (isRelative || isInternalDomain) {
+        try {
+          const url = new URL(link.href, window.location.href);
+          url.searchParams.set('currency', _activeCurrency);
+          link.href = url.toString();
         } catch (err) {}
       }
     }, true);
