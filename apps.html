@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+  <!-- OpenAI Pixel -->
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"2pnXRskcjtmbJHFQezGr3g",debug:true});</script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -115,10 +117,249 @@ margin:20px;
   background-position: center;
   background-size: cover;
 }
+
+/* Estilos para el showcase interactivo de Apps Android */
+.android-thumb-item {
+  flex: 0 0 120px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 2px solid #e9eff5;
+  transition: all 0.25s ease;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.android-thumb-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1px 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.android-thumb-name {
+  font-size: 12.5px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.android-thumb-price {
+  font-size: 11px;
+  font-weight: 700;
+}
+.android-thumb-item img {
+  width: 100%;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #edf2f7;
+}
+
+/* Diferenciación de Color por Modelo Android */
+/* 1. Moderna (Verde / Android Clásico) */
+.android-thumb-moderna {
+  border-color: rgba(33, 135, 177, 0.2);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+.android-thumb-moderna:hover, .android-thumb-moderna.active {
+  border-color: #2187b1;
+  box-shadow: 0 6px 18px rgba(33, 135, 177, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 2. Colorado (Naranja / Teja) */
+.android-thumb-colorado {
+  border-color: rgba(230, 81, 0, 0.25);
+  background: linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
+}
+.android-thumb-colorado:hover, .android-thumb-colorado.active {
+  border-color: #e65100;
+  box-shadow: 0 6px 18px rgba(230, 81, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 3. Zafiro (Azul Zafiro) */
+.android-thumb-zafiro {
+  border-color: rgba(2, 136, 209, 0.25);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+.android-thumb-zafiro:hover, .android-thumb-zafiro.active {
+  border-color: #0288d1;
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.25);
+  transform: translateY(-3px);
+}
+
 </style>
   <link rel="alternate" hreflang="es" href="https://radionube.com/apps.html" />
   <link rel="alternate" hreflang="en" href="https://radionube.com/en/apps.html" />
   <link rel="alternate" hreflang="x-default" href="https://radionube.com/apps.html" />
+
+<style>
+/* Estilos para el showcase interactivo de Apps iPhone */
+.ios-thumb-item {
+  flex: 0 0 120px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 2px solid #e9eff5;
+  transition: all 0.25s ease;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.ios-thumb-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1px 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ios-thumb-name {
+  font-size: 12.5px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ios-thumb-price {
+  font-size: 11px;
+  font-weight: 700;
+}
+.ios-thumb-item img {
+  width: 100%;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #edf2f7;
+}
+
+/* Diferenciación de Color por Modelo */
+/* 1. Moderna (Azul Marino) */
+.ios-thumb-moderna {
+  border-color: rgba(22, 54, 79, 0.2);
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+.ios-thumb-moderna:hover, .ios-thumb-moderna.active {
+  border-color: #16364f;
+  box-shadow: 0 6px 18px rgba(22, 54, 79, 0.22);
+  transform: translateY(-3px);
+}
+
+/* 2. Colorado (Naranja / Teja) */
+.ios-thumb-colorado {
+  border-color: rgba(230, 81, 0, 0.25);
+  background: linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
+}
+.ios-thumb-colorado:hover, .ios-thumb-colorado.active {
+  border-color: #e65100;
+  box-shadow: 0 6px 18px rgba(230, 81, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 3. Zafiro (Azul Zafiro) */
+.ios-thumb-zafiro {
+  border-color: rgba(2, 136, 209, 0.25);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+.ios-thumb-zafiro:hover, .ios-thumb-zafiro.active {
+  border-color: #0288d1;
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Estilos para el showcase interactivo de Apps Android */
+.android-thumb-item {
+  flex: 0 0 120px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 2px solid #e9eff5;
+  transition: all 0.25s ease;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.android-thumb-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1px 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.android-thumb-name {
+  font-size: 12.5px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.android-thumb-price {
+  font-size: 11px;
+  font-weight: 700;
+}
+.android-thumb-item img {
+  width: 100%;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #edf2f7;
+}
+
+/* Diferenciación de Color por Modelo Android */
+/* 1. Moderna (Verde / Android Clásico) */
+.android-thumb-moderna {
+  border-color: rgba(33, 135, 177, 0.2);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+.android-thumb-moderna:hover, .android-thumb-moderna.active {
+  border-color: #2187b1;
+  box-shadow: 0 6px 18px rgba(33, 135, 177, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 2. Colorado (Naranja / Teja) */
+.android-thumb-colorado {
+  border-color: rgba(230, 81, 0, 0.25);
+  background: linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
+}
+.android-thumb-colorado:hover, .android-thumb-colorado.active {
+  border-color: #e65100;
+  box-shadow: 0 6px 18px rgba(230, 81, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 3. Zafiro (Azul Zafiro) */
+.android-thumb-zafiro {
+  border-color: rgba(2, 136, 209, 0.25);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+.android-thumb-zafiro:hover, .android-thumb-zafiro.active {
+  border-color: #0288d1;
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.25);
+  transform: translateY(-3px);
+}
+
+</style>
+
 </head>
 
 <body>
@@ -240,91 +481,357 @@ margin:20px;
 
 
     <!-- ======= App Showcase Section ======= -->
-    <section id="showcase" style="padding: 60px 0; background: #fbfdff;">
+    <section id="showcase" style="padding: 40px 0 60px 0; background: #fbfdff;">
       <div class="container">
 
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Galería y Demos</span>
-            <h2 style="font-weight: 800; color: #16364f; font-size: 34px; margin-bottom: 10px;">Conoce Nuestras Aplicaciones</h2>
-            <p style="color: #6c757d; font-size: 16px; margin: 0 auto;">Explora las capturas de pantalla reales y prueba las demos en vivo.</p>
+                <!-- Showcase 1: Modelos Android (Moderna, Colorado, Zafiro) -->
+        <div id="app-android" class="modern-showcase-card mb-5" style="scroll-margin-top: 140px; border-radius: 24px; padding: 35px 30px; box-shadow: 0 10px 35px rgba(22, 54, 79, 0.08); background: #ffffff;">
+          
+          <!-- Centered Header: Título centrado y Miniaturas con diferente color cada modelo -->
+          <div class="text-center mb-4 pb-3 border-bottom">
+            <!-- Badge & Título Centrado -->
+            <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 16px; letter-spacing: 0.5px; border-radius: 30px;">
+              <i class="bi bi-android2 me-1"></i> Google Play Store (Android)
+            </span>
+            <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 6px;">Modelos de Apps para Android</h3>
+            <p style="color: #6c757d; font-size: 14.5px; max-width: 620px; margin: 0 auto 18px auto;">Elige entre los diferentes estilos y diseños optimizados para Android publicados oficialmente en Google Play Store</p>
+
+            <!-- Fila centrada: Miniaturas con diferente color + Botones de navegación a los costados -->
+            <div class="d-flex align-items-center justify-content-center gap-2 gap-md-3 flex-wrap">
+              <!-- Botón Anterior -->
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-circle d-flex align-items-center justify-content-center android-slider-prev shadow-sm" style="width: 38px; height: 38px;" title="Anterior">
+                <i class="bi bi-chevron-left" style="font-size: 17px;"></i>
+              </button>
+
+              <!-- Tarjetas con diferente color según el modelo -->
+              <div class="d-flex align-items-center gap-2 gap-md-3 android-thumbnails-scroll" style="overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+                
+                <!-- Modelo 1: Moderna (Verde / Android Clásico) -->
+                <div class="android-thumb-item android-thumb-moderna active" data-slide-index="0">
+                  <div class="android-thumb-badge" style="background: #2187b1;">Moderna</div>
+                  <img src="assets/img/screen-playstore03.jpg" alt="App Android Moderna">
+                  <div class="android-thumb-name" style="color: #16364f;">Moderna</div>
+                  <div class="android-thumb-price" style="color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="42">42</span>/ anual</div>
+                </div>
+
+                <!-- Modelo 2: Colorado (Naranja / Fuego) -->
+                <div class="android-thumb-item android-thumb-colorado" data-slide-index="1">
+                  <div class="android-thumb-badge" style="background: #e65100;">Colorado</div>
+                  <img src="assets/img/AppColorado.png" alt="App Android Colorado">
+                  <div class="android-thumb-name" style="color: #e65100;">Colorado</div>
+                  <div class="android-thumb-price" style="color: #d84315;"><span data-currency-symbol-short>$</span><span data-price-usd="59">59</span>/ anual</div>
+                </div>
+
+                <!-- Modelo 3: Zafiro (Azul Zafiro / Cyan) -->
+                <div class="android-thumb-item android-thumb-zafiro" data-slide-index="2">
+                  <div class="android-thumb-badge" style="background: #0288d1;">Zafiro</div>
+                  <img src="assets/img/webs/zafiroweb.png" alt="App Android Zafiro">
+                  <div class="android-thumb-name" style="color: #0288d1;">Zafiro</div>
+                  <div class="android-thumb-price" style="color: #ff9800; font-weight: 700;">Próximamente</div>
+                </div>
+
+              </div>
+
+              <!-- Botón Siguiente -->
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-circle d-flex align-items-center justify-content-center android-slider-next shadow-sm" style="width: 38px; height: 38px;" title="Siguiente">
+                <i class="bi bi-chevron-right" style="font-size: 17px;"></i>
+              </button>
+            </div>
           </div>
+
+          <!-- Swiper Container -->
+          <div class="swiper android-app-slider" style="overflow: hidden; padding-bottom: 10px;">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1: Moderna -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Google Play Store</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App Android Moderna</h3>
+                    <div style="font-size: 26px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="42">42</span> <span style="font-size: 15px; font-weight: 600; color: #6c757d;">/ anual Actualizaciones</span> <span style="display: block; font-size: 18px; font-weight: 700; color: #16364f; margin-top: 4px;">+ <span data-currency-symbol-short>$</span><span data-price-usd="30">30</span> de Creación</span>
+                      <span style="display: block; font-size: 13.5px; font-weight: 600; color: #6c757d; margin-top: 2px;">(o mes a mes <span data-currency-symbol>u$s</span> <span data-price-usd="5">5</span>)</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      🌎 Disponible para todos los países en Google Play.<br>📺 Incluye Radio online, links a redes sociales, WhatsApp y temporizador de apagado.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Tiempo de entrega:</strong> 2 semanas</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproductor:</strong> Funciona en segundo plano con pantalla apagada</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Android Auto:</strong> 100% compatible para escuchar en el estéreo del auto</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/special/150?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://play.google.com/store/apps/developer?id=RadioNube&hl=en-US" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-google-play"></i> VER DEMOS PLAYSTORE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-playstore03.jpg" alt="Screen Android Moderna 3"></div>
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-playstore01.jpg" alt="Screen Android Moderna 1"></div>
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-playstore02.jpg" alt="Screen Android Moderna 2"></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Colorado -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #e65100; font-size: 12px; padding: 6px 14px;">★ NUEVO MODELO — Android</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App Android Colorado</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="59">59</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ anual</span>
+                      <span style="display: block; font-size: 13.5px; font-weight: 600; color: #6c757d; margin-top: 2px;">(o <span data-currency-symbol-short>$</span><span data-price-usd="7">7</span> / mes)</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      🔥 Nuevo diseño elegante y minimalista para Android. Gran carátula de transmisión, enlaces sociales, WhatsApp directo y controles en la barra de notificaciones.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio o Video</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Diseño Moderno:</strong> Carátula HD de canción y fondo dinámico</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Segundo Plano:</strong> Audio ininterrumpido con pantalla apagada y controles de bloqueo</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Android Auto:</strong> Compatible con las pantallas multimedia de vehículos</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://veni.link/wasap?text=QuieroAppAndroidColorado" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-whatsapp"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://play.google.com/store/apps/developer?id=RadioNube&hl=en-US" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-google-play"></i> VER DEMOS PLAYSTORE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://veni.link/wasap?text=QuieroAppAndroidColorado" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 16px; max-height: 440px; width: auto; max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease;" src="assets/img/AppColorado.png" alt="App Android Colorado">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Zafiro -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #ff9800; font-size: 12px; padding: 6px 14px; color: #fff;">Próximamente</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App Android Zafiro</h3>
+                    <div style="font-size: 24px; font-weight: 800; color: #ff9800; margin-bottom: 15px;">
+                      Próximamente
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      ✨ Sincronización en vivo con el ecosistema Zafiro. Gestión unificada de noticias, podcasts, fotos y grilla de programas compartida con tu sitio web.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Ecosistema Zafiro:</strong> Sincronizado con Web + Android + iOS</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Contenido Dinámico:</strong> Noticias, podcasts y programación en vivo</li>
+                      <li class="mb-2"><i class="bi bi-info-circle-fill text-primary me-2"></i> <strong>Estado:</strong> Lanzamiento muy pronto — ¡Consúltanos!</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://veni.link/wasap?text=ConsultaAppAndroidZafiro" class="btn" style="background: #ff9800; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-whatsapp"></i> CONSULTAR
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <div style="background: #f8fafc; border-radius: 20px; padding: 25px; border: 2px dashed #cbd5e1; display: inline-block; max-width: 90%;">
+                      <img style="border-radius: 12px; max-height: 340px; width: auto; max-width: 100%; opacity: 0.85; filter: grayscale(20%);" src="assets/img/webs/zafiroweb.png" alt="App Android Zafiro">
+                      <div class="mt-3" style="font-size: 14px; font-weight: 700; color: #ff9800;">
+                        <i class="bi bi-hourglass-split me-1"></i> Próximamente — Muy pronto disponible
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
-        <!-- Showcase 1: Android Moderna -->
-        <div id="app-android" class="modern-showcase-card" style="scroll-margin-top: 140px;">
-          <div class="row align-items-center gy-4">
-            <div class="col-lg-5">
-              <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Google Play Store</span>
-              <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">App Android Moderna</h3>
-              <div style="font-size: 26px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="42">42</span> <span style="font-size: 15px; font-weight: 600; color: #6c757d;">/ anual Actualizaciones</span> <span style="display: block; font-size: 18px; font-weight: 700; color: #16364f; margin-top: 4px;">+ <span data-currency-symbol-short>$</span><span data-price-usd="30">30</span> de Creación</span></div>
-              <p style="color: #556270; font-size: 15px; line-height: 1.6;">
-                🌎 Disponible para todos los países en Google Play.<br>
-                📺 Incluye Radio online, links a redes sociales, WhatsApp y temporizador de apagado.
-              </p>
-              <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Tiempo de entrega:</strong> 2 semanas</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproductor:</strong> Funciona en segundo plano con pantalla apagada</li>
-              </ul>
-              <div class="d-flex flex-nowrap gap-2 align-items-center">
-                <a target="_blank" href="https://panel.altomarketing.com/es/configurar/special/150?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 10px 18px; font-size: 13.5px; white-space: nowrap;">
-                  <i class="bi bi-cart-check-fill"></i> CONTRATAR
-                </a>
-                <a target="_blank" href="https://play.google.com/store/apps/developer?id=RadioNube&hl=en-US" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 18px; font-size: 13.5px; white-space: nowrap;">
-                  <i class="bi bi-google-play"></i> VER DEMOS PLAYSTORE
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-playstore03.jpg" alt="Screen Android 3"></div>
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-playstore01.jpg" alt="Screen Android 1"></div>
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-playstore02.jpg" alt="Screen Android 2"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Showcase 2: Modelos iPhone (Moderna, Colorado, Zafiro) -->
+        <div id="app-apple" class="modern-showcase-card mb-5" style="scroll-margin-top: 140px; border-radius: 24px; padding: 35px 30px; box-shadow: 0 10px 35px rgba(22, 54, 79, 0.08); background: #ffffff;">
+          
+                              <!-- Centered Header: Título centrado y Miniaturas con diferente color cada modelo -->
+          <div class="text-center mb-4 pb-3 border-bottom">
+            <!-- Badge & Título Centrado -->
+            <span class="badge mb-2" style="background: #16364f; font-size: 12px; padding: 6px 16px; letter-spacing: 0.5px; border-radius: 30px;">
+              <i class="bi bi-apple me-1"></i> Apple App Store (iOS)
+            </span>
+            <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 6px;">Modelos de Apps para iPhone</h3>
+            <p style="color: #6c757d; font-size: 14.5px; max-width: 620px; margin: 0 auto 18px auto;">Elige entre los diferentes estilos y diseños exclusivos para iOS publicados oficialmente en App Store</p>
 
-        <!-- Showcase 2: iPhone Pro -->
-        <div id="app-apple" class="modern-showcase-card" style="scroll-margin-top: 140px;">
-          <div class="row align-items-center gy-4">
-            <div class="col-lg-5">
-              <span class="badge mb-2" style="background: #333333; font-size: 12px; padding: 6px 14px;">Apple App Store (iOS)</span>
-              <h3 style="font-weight: 800; color: #16364f; font-size: 28px;">App iPhone Profesional</h3>
-              <div style="font-size: 32px; font-weight: 800; color: #2187b1; margin-bottom: 15px;"><span data-currency-symbol-short>$</span><span data-price-usd="77">77</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ anual</span></div>
-              <p style="color: #556270; font-size: 15px; line-height: 1.6;">
-                🌎 Estética premium adaptada para iPhone y iPad.<br>
-                📺 Incluye todas las gestiones y revisiones oficiales para que su aplicación sea publicada y descargada directamente desde el App Store de Apple.
-              </p>
-              <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio o Video</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Tiempo de entrega:</strong> 1 semana</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Apple Developer:</strong> Gestión técnica 100% incluida</li>
-              </ul>
-              <div class="d-flex flex-wrap gap-2 align-items-center">
-                <a target="_blank" href="https://veni.link/wasap?text=QuieroAppIphoneProfesional" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 10px 24px;">
-                  <i class="bi bi-whatsapp"></i> CONTRATAR
-                </a>
-                <a target="_blank" href="https://apps.apple.com/ar/developer/serviciostreaming-com/id1642591501?see-all=i-phone-apps" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
-                  <i class="bi bi-apple"></i> VER DEMOS APP STORE
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-playstore03a.jpg" alt="Screen iPhone 3a"></div>
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-appstore01.jpg" alt="Screen iPhone 1"></div>
-                  <div class="swiper-slide text-center"><img style="border-radius: 12px; max-height: 480px; width: auto;" src="assets/img/screen-appstore02.jpg" alt="Screen iPhone 2"></div>
+            <!-- Fila centrada: Miniaturas con diferente color + Botones de navegación a los costados -->
+            <div class="d-flex align-items-center justify-content-center gap-2 gap-md-3 flex-wrap">
+              <!-- Botón Anterior -->
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-circle d-flex align-items-center justify-content-center ios-slider-prev shadow-sm" style="width: 38px; height: 38px;" title="Anterior">
+                <i class="bi bi-chevron-left" style="font-size: 17px;"></i>
+              </button>
+
+              <!-- Tarjetas con diferente color según el modelo -->
+              <div class="d-flex align-items-center gap-2 gap-md-3 ios-thumbnails-scroll" style="overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+                
+                <!-- Modelo 1: Moderna (Azul Marino / Profesional) -->
+                <div class="ios-thumb-item ios-thumb-moderna active" data-slide-index="0">
+                  <div class="ios-thumb-badge" style="background: #16364f;">Moderna</div>
+                  <img src="assets/img/screen-playstore03a.jpg" alt="App iPhone Moderna">
+                  <div class="ios-thumb-name" style="color: #16364f;">Moderna</div>
+                  <div class="ios-thumb-price" style="color: #2187b1;"><span data-currency-symbol-short>$</span><span data-price-usd="77">77</span>/ anual</div>
                 </div>
-                <div class="swiper-pagination"></div>
+
+                <!-- Modelo 2: Colorado (Naranja / Fuego) -->
+                <div class="ios-thumb-item ios-thumb-colorado" data-slide-index="1">
+                  <div class="ios-thumb-badge" style="background: #e65100;">Colorado</div>
+                  <img src="assets/img/AppColorado.png" alt="App iPhone Colorado">
+                  <div class="ios-thumb-name" style="color: #e65100;">Colorado</div>
+                  <div class="ios-thumb-price" style="color: #d84315;"><span data-currency-symbol-short>$</span><span data-price-usd="59">59</span>/ anual</div>
+                </div>
+
+                <!-- Modelo 3: Zafiro (Azul Zafiro / Cyan) -->
+                <div class="ios-thumb-item ios-thumb-zafiro" data-slide-index="2">
+                  <div class="ios-thumb-badge" style="background: #0288d1;">Zafiro</div>
+                  <img src="assets/img/webs/zafiroweb.png" alt="App iPhone Zafiro">
+                  <div class="ios-thumb-name" style="color: #0288d1;">Zafiro</div>
+                  <div class="ios-thumb-price" style="color: #ff9800; font-weight: 700;">Próximamente</div>
+                </div>
+
               </div>
+
+              <!-- Botón Siguiente -->
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-circle d-flex align-items-center justify-content-center ios-slider-next shadow-sm" style="width: 38px; height: 38px;" title="Siguiente">
+                <i class="bi bi-chevron-right" style="font-size: 17px;"></i>
+              </button>
             </div>
           </div>
+
+          <!-- Swiper Container -->
+          <div class="swiper ios-app-slider" style="overflow: hidden; padding-bottom: 10px;">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1: Moderna -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #333333; font-size: 12px; padding: 6px 14px;">Apple App Store (iOS)</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App iPhone Moderna</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="77">77</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ anual</span>
+                      <span style="display: block; font-size: 13.5px; font-weight: 600; color: #6c757d; margin-top: 2px;">(o <span data-currency-symbol-short>$</span><span data-price-usd="8">8</span> / mes)</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      🌎 Estética premium adaptada para iPhone y iPad.<br>📺 Incluye todas las gestiones y revisiones oficiales para que su aplicación sea publicada y descargada directamente desde el App Store de Apple.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio o Video</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Tiempo de entrega:</strong> 1 semana</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Apple Developer:</strong> Gestión técnica 100% incluida</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Calidad de audio:</strong> Streaming HD con baja latencia y metadatos en vivo</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://veni.link/wasap?text=QuieroAppIphoneProfesional" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-whatsapp"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://apps.apple.com/ar/developer/serviciostreaming-com/id1642591501?see-all=i-phone-apps" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-apple"></i> VER DEMOS APP STORE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-playstore03a.jpg" alt="Screen iPhone Moderna 1"></div>
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-appstore01.jpg" alt="Screen iPhone Moderna 2"></div>
+                        <div class="swiper-slide text-center"><img style="border-radius: 14px; max-height: 440px; width: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" src="assets/img/screen-appstore02.jpg" alt="Screen iPhone Moderna 3"></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Colorado -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #e65100; font-size: 12px; padding: 6px 14px;">★ NUEVO MODELO — iOS</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App iPhone Colorado</h3>
+                    <div style="font-size: 30px; font-weight: 800; color: #2187b1; margin-bottom: 15px;">
+                      <span data-currency-symbol-short>$</span><span data-price-usd="59">59</span> <span style="font-size: 14px; font-weight: 500; color: #6c757d;">/ anual</span>
+                      <span style="display: block; font-size: 13.5px; font-weight: 600; color: #6c757d; margin-top: 2px;">(o <span data-currency-symbol-short>$</span><span data-price-usd="7">7</span> / mes)</span>
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      🔥 Nuevo diseño elegante y minimalista para iOS. Interfaz moderna con carátula de gran tamaño, reproducción en segundo plano y enlaces directos a tus redes y WhatsApp.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Requisitos:</strong> Streaming de Radio o Video</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Reproductor:</strong> Fondo continuo y control desde pantalla de bloqueo</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Apple Developer:</strong> Gestión técnica y publicación oficial incluida</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Diseño:</strong> Optimizado para los últimos modelos de iPhone</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://panel.altomarketing.com/es/configurar/special/176?currency=USD" class="btn" style="background: #16364f; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-cart-check-fill"></i> CONTRATAR
+                      </a>
+                      <a target="_blank" href="https://apps.apple.com/ar/developer/serviciostreaming-com/id1642591501?see-all=i-phone-apps" class="btn" style="border: 2px solid #16364f; color: #16364f; font-weight: 700; border-radius: 50px; padding: 8px 20px;">
+                        <i class="bi bi-apple"></i> VER DEMOS APP STORE
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <a target="_blank" href="https://panel.altomarketing.com/es/configurar/special/176?currency=USD" class="d-inline-block position-relative web-preview-link">
+                      <img style="border-radius: 16px; max-height: 440px; width: auto; max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease;" src="assets/img/AppColorado.png" alt="App iPhone Colorado">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Zafiro -->
+              <div class="swiper-slide">
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <span class="badge mb-2" style="background: #ff9800; font-size: 12px; padding: 6px 14px; color: #fff;">Próximamente</span>
+                    <h3 style="font-weight: 800; color: #16364f; font-size: 28px; margin-bottom: 8px;">App iPhone Zafiro</h3>
+                    <div style="font-size: 24px; font-weight: 800; color: #ff9800; margin-bottom: 15px;">
+                      Próximamente
+                    </div>
+                    <p style="color: #556270; font-size: 15px; line-height: 1.6;">
+                      ✨ Sincronización en tiempo real con el ecosistema Zafiro. Conecta noticias, podcasts, grilla de programación y streaming directo entre tu web y tu aplicación iPhone.
+                    </p>
+                    <ul class="list-unstyled mb-4" style="color: #4b5d6e; font-size: 14px;">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Ecosistema Zafiro:</strong> Sincronizado con Web + Android + iOS</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Contenido Dinámico:</strong> Noticias, podcasts y programación en vivo</li>
+                      <li class="mb-2"><i class="bi bi-info-circle-fill text-primary me-2"></i> <strong>Estado:</strong> Lanzamiento muy pronto — ¡Consúltanos!</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <a target="_blank" href="https://veni.link/wasap?text=ConsultaAppIphoneZafiro" class="btn" style="background: #ff9800; color: #fff; font-weight: 700; border-radius: 50px; padding: 9px 24px;">
+                        <i class="bi bi-whatsapp"></i> CONSULTAR
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 text-center">
+                    <div style="background: #f8fafc; border-radius: 20px; padding: 25px; border: 2px dashed #cbd5e1; display: inline-block; max-width: 90%;">
+                      <img style="border-radius: 12px; max-height: 340px; width: auto; max-width: 100%; opacity: 0.85; filter: grayscale(20%);" src="assets/img/webs/zafiroweb.png" alt="App iPhone Zafiro">
+                      <div class="mt-3" style="font-size: 14px; font-weight: 700; color: #ff9800;">
+                        <i class="bi bi-hourglass-split me-1"></i> Próximamente — Muy pronto disponible
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
         <!-- Showcase 3: Combo Android + iPhone -->
@@ -627,6 +1134,48 @@ margin:20px;
     });
   </script>
   <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof Swiper !== 'undefined' && document.querySelector('.ios-app-slider')) {
+    const iosSlider = new Swiper('.ios-app-slider', {
+      speed: 400,
+      spaceBetween: 30,
+      autoHeight: true,
+      navigation: {
+        nextEl: '.ios-slider-next',
+        prevEl: '.ios-slider-prev'
+      },
+      on: {
+        slideChange: function() {
+          updateActiveIosModel(iosSlider.realIndex);
+        }
+      }
+    });
+
+    const iosThumbs = document.querySelectorAll('.ios-thumb-item');
+
+    function updateActiveIosModel(idx) {
+      iosThumbs.forEach(function(thumb, i) {
+        if (i === idx) {
+          thumb.classList.add('active');
+          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    }
+
+    iosThumbs.forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        const idx = parseInt(this.getAttribute('data-slide-index'), 10);
+        iosSlider.slideTo(idx);
+      });
+    });
+  }
+});
+</script>
 
 </body>
 

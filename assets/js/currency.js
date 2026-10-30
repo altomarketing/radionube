@@ -265,10 +265,29 @@
       });
     });
 
-    // Interceptor de seguridad al hacer click en cualquier link hacia panel.altomarketing.com
+    // Interceptor al hacer click en cualquier botón de compra hacia panel.altomarketing.com o WhatsApp
     document.addEventListener('click', function(e) {
-      const link = e.target && e.target.closest ? e.target.closest('a[href*="panel.altomarketing.com"]') : null;
-      if (link) {
+      const link = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!link) return;
+
+      const href = link.getAttribute('href') || '';
+      const isPanelCheckout = href.includes('panel.altomarketing.com') && (href.includes('/configurar/') || href.includes('/carrito'));
+      const isWasapBuy = (href.includes('wasap') || href.includes('whatsapp') || href.includes('wa.me')) && /Quiero/i.test(href);
+
+      // Si es un botón de compra o inicio de checkout
+      if (isPanelCheckout || isWasapBuy) {
+        // Disparar evento de conversión OpenAI Pixel (checkout_started)
+        if (typeof window.oaiq === 'function') {
+          try {
+            window.oaiq('measure', 'checkout_started', { type: 'contents' });
+          } catch (pixelErr) {
+            console.error('Error al enviar evento OpenAI Pixel:', pixelErr);
+          }
+        }
+      }
+
+      // Si es enlace al panel, sincronizar parámetro de moneda activa
+      if (link.matches('a[href*="panel.altomarketing.com"]')) {
         try {
           const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href');
           const url = new URL(rawHref, window.location.origin);
