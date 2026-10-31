@@ -67,8 +67,54 @@
     } catch (e) {}
   }
 
+  // Lista de parámetros de marketing / tracking de campañas y clics
+  const TRACKING_PARAMS = [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_term',
+    'utm_content',
+    'gclid',
+    'fbclid',
+    'ttclid',
+    'msclkid',
+    'ref'
+  ];
+
+  // Capturar y persistir parámetros de marketing/UTMs
+  function getTrackingData() {
+    const data = {};
+    try {
+      const saved = localStorage.getItem('radionube_marketing_tracking');
+      if (saved) {
+        Object.assign(data, JSON.parse(saved));
+      }
+    } catch (e) {}
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      let updated = false;
+      TRACKING_PARAMS.forEach(key => {
+        const val = params.get(key);
+        if (val) {
+          data[key] = val;
+          updated = true;
+        }
+      });
+      if (updated) {
+        try {
+          localStorage.setItem('radionube_marketing_tracking', JSON.stringify(data));
+          sessionStorage.setItem('radionube_marketing_tracking', JSON.stringify(data));
+        } catch (e) {}
+      }
+    } catch (e) {}
+
+    return data;
+  }
+
   // Actualizar todos los enlaces que apuntan a panel.altomarketing.com
   function updatePanelLinks(currencyCode) {
+    const tracking = getTrackingData();
     document.querySelectorAll('a[href*="panel.altomarketing.com"]').forEach(link => {
       try {
         const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href');
@@ -77,6 +123,14 @@
         }
         const url = new URL(rawHref, window.location.origin);
         url.searchParams.set('currency', currencyCode);
+
+        // Propagar UTMs y parámetros de tracking al checkout
+        Object.keys(tracking).forEach(key => {
+          if (tracking[key]) {
+            url.searchParams.set(key, tracking[key]);
+          }
+        });
+
         link.setAttribute('href', url.toString());
       } catch (e) {
         // Fallback en caso de URLs atípicas
@@ -86,7 +140,13 @@
         }
         const cleanBase = base.replace(/([?&])currency=[^&]+(&|$)/, '$1').replace(/[?&]$/, '');
         const sep = cleanBase.includes('?') ? '&' : '?';
-        link.href = cleanBase + sep + 'currency=' + currencyCode;
+        let queryParams = 'currency=' + currencyCode;
+        Object.keys(tracking).forEach(key => {
+          if (tracking[key]) {
+            queryParams += '&' + encodeURIComponent(key) + '=' + encodeURIComponent(tracking[key]);
+          }
+        });
+        link.href = cleanBase + sep + queryParams;
       }
     });
   }
@@ -351,18 +411,32 @@
       });
     });
 
+    // Sincronizar UTMs con OpenPanel si está inicializado
+    if (typeof window.op === 'function') {
+      try {
+        const tracking = getTrackingData();
+        if (Object.keys(tracking).length > 0) {
+          window.op('setGlobalAttributes', tracking);
+        }
+      } catch (err) {}
+    }
+
     // Interceptor al hacer click en cualquier botón de compra hacia panel.altomarketing.com o WhatsApp
     document.addEventListener('click', function(e) {
       const link = e.target && e.target.closest ? e.target.closest('a') : null;
       if (!link) return;
 
       const href = link.getAttribute('href') || '';
-      const isPanelCheckout = href.includes('panel.altomarketing.com') && (href.includes('/configurar/') || href.includes('/carrito'));
-      const isWasapBuy = (href.includes('wasap') || href.includes('whatsapp') || href.includes('wa.me')) && /Quiero/i.test(href);
+      const isPanelCheckout = href.includes('panel.altomarketing.com') && (href.includes('/configurar/') || href.includes('/carrito') || href.includes('/cart.php'));
+      const isWasapBuy = (href.includes('wasap') || href.includes('whatsapp') || href.includes('wa.me'));
 
-      // Si es un botón de compra o inicio de checkout
+      // Si es un botón de compra o inicio de checkout / contacto
       if (isPanelCheckout || isWasapBuy) {
-        // Disparar evento de conversión OpenAI Pixel (checkout_started)
+        const tracking = getTrackingData();
+        const container = link.closest('.box, .card, .pricing-item, .feature-box, .col-lg-4, .col-md-6, .card-body, tr') || link.parentElement;
+        const planName = container ? (container.querySelector('h3, h4, h5, .title, .plan-title, strong')?.textContent?.trim() || '') : '';
+
+        // 1. Disparar evento de conversión OpenAI Pixel (checkout_started)
         if (typeof window.oaiq === 'function') {
           try {
             window.oaiq('measure', 'checkout_started', { type: 'contents' });
@@ -370,14 +444,42 @@
             console.error('Error al enviar evento OpenAI Pixel:', pixelErr);
           }
         }
+
+        // 2. Disparar evento de conversión en OpenPanel
+        if (typeof window.op === 'function') {
+          try {
+            window.op('track', isPanelCheckout ? 'checkout_started' : 'whatsapp_contact', {
+              plan: planName || undefined,
+              destination: href,
+              currency: _activeCurrency,
+              utm_source: tracking.utm_source || undefined,
+              utm_medium: tracking.utm_medium || undefined,
+              utm_campaign: tracking.utm_campaign || undefined,
+              utm_term: tracking.utm_term || undefined,
+              utm_content: tracking.utm_content || undefined,
+              gclid: tracking.gclid || undefined,
+              fbclid: tracking.fbclid || undefined
+            });
+          } catch (opErr) {
+            console.error('Error al enviar evento a OpenPanel:', opErr);
+          }
+        }
       }
 
-      // Si es enlace al panel, sincronizar parámetro de moneda activa
+      // Si es enlace al panel, sincronizar parámetro de moneda activa y propagar UTMs
       if (link.matches('a[href*="panel.altomarketing.com"]')) {
         try {
           const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href');
           const url = new URL(rawHref, window.location.origin);
           url.searchParams.set('currency', _activeCurrency);
+
+          const tracking = getTrackingData();
+          Object.keys(tracking).forEach(key => {
+            if (tracking[key]) {
+              url.searchParams.set(key, tracking[key]);
+            }
+          });
+
           link.setAttribute('href', url.toString());
         } catch (err) {}
         return;
