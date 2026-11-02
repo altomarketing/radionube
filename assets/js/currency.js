@@ -464,6 +464,24 @@
             console.error('Error al enviar evento a OpenPanel:', opErr);
           }
         }
+
+        // 3. Disparar evento de conversión Meta Pixel (InitiateCheckout / Contact)
+        if (typeof window.fbq === 'function') {
+          try {
+            if (isPanelCheckout) {
+              window.fbq('track', 'InitiateCheckout', {
+                content_name: planName || undefined,
+                currency: _activeCurrency
+              });
+            } else if (isWasapBuy) {
+              window.fbq('track', 'Contact', {
+                content_name: planName || undefined
+              });
+            }
+          } catch (fbErr) {
+            console.error('Error al enviar evento Meta Pixel:', fbErr);
+          }
+        }
       }
 
       // Si es enlace al panel, sincronizar parámetro de moneda activa y propagar UTMs
