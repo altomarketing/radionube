@@ -1,0 +1,79 @@
+# robots.txt for https://www.radionube.online
+# Permite la indexación completa para motores de búsqueda tradicionales y agentes de IA / LLMs
+
+User-agent: *
+Allow: /
+
+# ====================================================
+# AGENTES DE BÚSQUEDA Y MODELOS DE LENGUAJE (AI / LLMs)
+# ====================================================
+
+# OpenAI (ChatGPT Search, GPT-4, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude, Claude-Web)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google (Gemini, Google-Extended, Vertex AI)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Apple (Applebot & Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta (Llama, Meta AI)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (utilizado para entrenamiento de modelos abiertos)
+User-agent: CCBot
+Allow: /
+
+# ByteDance / TikTok
+User-agent: Bytespider
+Allow: /
+
+# Amazon (Alexa, Titan, Bedrock)
+User-agent: Amazonbot
+Allow: /
+
+# ====================================================
+# SITEMAPS & INFORMACIÓN ESTRUCTURADA PARA IA
+# ====================================================
+Sitemap: https://www.radionube.online/sitemap.xml
+
+# Documento de contexto para LLMs (Standard llms.txt)
+# https://www.radionube.online/llms.txt
+# https://www.radionube.online/llms-full.txt

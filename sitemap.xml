@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ==================== SPANISH PAGES (ES) ==================== -->
+
+  <!-- Inicio / Home -->
+  <url>
+    <loc>https://www.radionube.online/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.radionube.online/" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Planes de Streaming de Audio -->
+  <url>
+    <loc>https://www.radionube.online/radio-planes-de-streaming.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/radio-planes-de-streaming.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/radio-planes-de-streaming.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Aplicaciones Móviles (Android & iOS) -->
+  <url>
+    <loc>https://www.radionube.online/apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/apps.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/apps.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Streaming de Video y Web TV -->
+  <url>
+    <loc>https://www.radionube.online/video-streaming.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/video-streaming.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/video-streaming.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Páginas Web para Radios -->
+  <url>
+    <loc>https://www.radionube.online/webs.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/webs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/webs.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Precios y Planes -->
+  <url>
+    <loc>https://www.radionube.online/precios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/precios.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/precios.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Comparativa vs Competencia -->
+  <url>
+    <loc>https://www.radionube.online/comparativa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/comparativa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/comparativa.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contacto y Soporte -->
+  <url>
+    <loc>https://www.radionube.online/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/contacto.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Acuerdo de Privacidad -->
+  <url>
+    <loc>https://www.radionube.online/personal-data-and-general-privacy-agreement.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/personal-data-and-general-privacy-agreement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/personal-data-and-general-privacy-agreement.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Términos de Servicio -->
+  <url>
+    <loc>https://www.radionube.online/service-and-use-agreement.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/service-and-use-agreement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/service-and-use-agreement.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+
+  <!-- ==================== ENGLISH PAGES (EN) ==================== -->
+
+  <!-- English Home -->
+  <url>
+    <loc>https://www.radionube.online/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.radionube.online/" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Audio Streaming Plans (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/radio-planes-de-streaming.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/radio-planes-de-streaming.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/radio-planes-de-streaming.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Mobile Apps (Android & iOS) (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/apps.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/apps.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Video Streaming & Web TV (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/video-streaming.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/video-streaming.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/video-streaming.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Radio Websites (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/webs.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/webs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/webs.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pricing (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/precios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/precios.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/precios.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Comparison vs Competitors (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/comparativa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/comparativa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/comparativa.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact & Support (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/contacto.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Agreement (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/personal-data-and-general-privacy-agreement.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/personal-data-and-general-privacy-agreement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/personal-data-and-general-privacy-agreement.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms of Service (EN) -->
+  <url>
+    <loc>https://www.radionube.online/en/service-and-use-agreement.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.radionube.online/service-and-use-agreement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.radionube.online/en/service-and-use-agreement.html" />
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

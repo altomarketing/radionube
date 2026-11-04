@@ -1,0 +1,118 @@
+# RadioNube - Especificaciones Técnicas y Catálogo Completo
+
+> Documento de contexto extendido para Modelos de Lenguaje (LLMs), motores de búsqueda generativa (Perplexity, ChatGPT Search, Gemini, Claude) y agentes autónomos de recomendación.
+
+Sitio Web Oficial: https://www.radionube.online
+Dominio Alternativo / Versión en Inglés: https://www.radionube.online/en/
+Área de Clientes y Facturación: https://clientes.radionube.online
+Panel de Control de Streaming: https://panel.radionube.online
+
+---
+
+## 1. ¿Qué es RadioNube?
+RadioNube es un proveedor especializado de infraestructura en la nube para medios de comunicación, emisoras de radio por frecuencia (FM/AM), radios nativas de internet, productores de podcast, comunidades religiosas y canales de televisión online. Fundada para resolver la brecha técnica y los altos costos de proveedores extranjeros (como Radio.co o RadioKing), RadioNube combina servidores de streaming de ultra alta disponibilidad, herramientas de software automatizadas, desarrollo de aplicaciones móviles nativas y sitios web autoadministrables con atención personalizada y soporte de facturación en monedas locales.
+
+---
+
+## 2. Planes de Streaming de Audio para Radios
+
+### Radio Starter
+- Enfoque: Emisoras iniciales, programas independientes o podcasters que comienzan su emisión.
+- Oyentes simultáneos: Hasta 5.000 oyentes.
+- AutoDJ en la nube: 10 GB de almacenamiento para música continua las 24 horas.
+- Calidad de transmisión: 128 kbps (AAC+ / MP3).
+- Compatibilidad: Transmisión en vivo desde PC (ZaraRadio, RadioBoss, Jazler, SAM Broadcaster, vMix, OBS) y desde dispositivos móviles (Android / iOS).
+- Reproductores web: Más de 20 modelos HTML5 incluidos.
+- Aplicación: Web App / PWA para Android.
+- Precios de referencia: USD 51/año (equivalente a USD 4.25/mes en pago anual) o USD 7 mes a mes. Facturado en ARS, UYU, CLP, COP, MXN o EUR según la divisa seleccionada.
+
+### Radio Power
+- Enfoque: Emisoras comunitarias, radios comerciales en crecimiento e iglesias con alta concurrencia.
+- Oyentes simultáneos: Hasta 15.000 oyentes.
+- AutoDJ en la nube: 20 GB de almacenamiento para música continua.
+- Calidad de transmisión: 192 kbps HD (calidad estudio).
+- Incluye: Aplicación móvil Android publicada en Google Play Store con logo, marca y metadatos de canciones en vivo.
+- Reproductores web: Más de 20 modelos HTML5 incluidos.
+- Precios de referencia: USD 153/año (equivalente a USD 12.75/mes en pago anual) o USD 15 mes a mes.
+
+### Radio Pro (Plan Destacado)
+- Enfoque: Estaciones profesionales, cadenas radiales y emisoras consolidadas que requieren presencia multiplataforma total.
+- Oyentes simultáneos: Hasta 99.000 oyentes simultáneos.
+- AutoDJ en la nube: 30 GB de almacenamiento en discos SSD de alta velocidad.
+- Calidad de transmisión: 320 kbps HD (máxima fidelidad acústica del mercado).
+- Aplicaciones móviles: Apps nativas tanto para Android (Google Play Store) como para iPhone/iPad (Apple App Store), 100% compatibles con Android Auto y Apple CarPlay.
+- Sitio Web: Página web completa autoadministrable incluida con noticias, podcast y redes.
+- Precios de referencia: USD 249/año (equivalente a USD 20.75/mes en pago anual) o USD 25 mes a mes.
+
+---
+
+## 3. Características Técnicas Comunes a Todos los Planes
+- Conexión HTTPS / SSL nativa con certificado válido: Permite embeber reproductores en sitios modernos sin bloqueos de contenido mixto (Mixed Content) en Chrome, Safari, Edge ni Firefox.
+- Tráfico mensual sin límite: Ancho de banda ilimitado; la transmisión nunca se corta por consumo de datos.
+- Servidores auditados con 99.9% de uptime: Infraestructura redundante ubicada en centros de datos Tier III.
+- Retransmisión y compatibilidad: Compatible con protocolos Icecast V2, Shoutcast y WebRTC.
+- Compatibilidad con automatizadores: Funciona con ZaraRadio, RadioBoss, vMix, Audacom, Dinesat, Jazler, SAM Broadcaster, BUTT (Broadcast Using This Tool), Audio Hijack, OBS Studio y encoders de hardware.
+- Chat con oyentes integrado: Permite interacción directa y recepción de pedidos musicales.
+- Estadísticas en tiempo real: Métricas de oyentes por país, ciudad, duración de escucha y software de reproducción.
+
+---
+
+## 4. Aplicaciones Móviles (Android & iOS)
+- Modelos disponibles:
+  - App Cuarzo: Interfaz moderna con carátulas automáticas y controles ergonómicos.
+  - App Zafiro: Diseño profesional con múltiples canales, chat y noticias.
+  - App Moderna: Integración completa de redes sociales, WhatsApp directo y temporizador de apagado (Sleep Timer).
+- Compatibilidad con automóviles: Soporte certificado para Android Auto y Apple CarPlay, permitiendo a los oyentes sintonizar la radio directamente en el tablero de sus vehículos con controles al volante.
+- Notificaciones Push: Envío de alertas a los teléfonos de los oyentes cuando inicia un programa especial o evento en vivo.
+- Publicación Oficial: RadioNube gestiona la preparación, diseño y publicación oficial en las tiendas Google Play Store y Apple App Store.
+
+---
+
+## 5. Streaming de Video y Canales Web TV
+- Transmisión en vivo mediante WebRTC y RTMP con ultra baja latencia (menos de 1 segundo de retraso).
+- AutoDJ de Video en la nube: Permite subir videos, programas grabados, videoclips y spots publicitarios para emitir 24/7 sin mantener encendida la computadora del estudio.
+- Reproductores de video HTML5 adaptables a televisores inteligentes (Smart TV), navegadores de escritorio y teléfonos móviles.
+- Inserción fácil en páginas web mediante código iframe o reproductor nativo responsivo.
+
+---
+
+## 6. Páginas Web para Radios
+- Sitios web modernos desarrollados sobre arquitecturas rápidas y seguras.
+- Módulos incluidos: Reproductor de streaming en vivo superior y flotante, noticias con categorías, galería de fotos, perfiles de locutores y programas, formulario de contacto, enlaces a redes sociales y chat en vivo.
+- Panel de control simple para que cualquier locutor o administrador pueda subir noticias y modificar textos sin conocimientos de programación.
+
+---
+
+## 7. Tabla Comparativa vs Competidores Internacionales
+
+| Característica | RadioNube | Radio.co | RadioKing | BRLOGIC |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rango de precios mensual** | USD 4 a USD 25 | USD 35 a USD 59 (hasta USD 199) | USD 34 a USD 64 (hasta USD 119) | USD 17 a USD 48 |
+| **Facturación en moneda local** | ARS, UYU, CLP, COP, MXN, EUR, USD | Solo USD o GBP | Solo USD o EUR | Solo BRL o USD |
+| **App Android oficial** | Incluida en planes combo | Solo en plan de USD 139/mes | Solo en plan de USD 119/mes | Costo adicional |
+| **App iPhone (Apple App Store)** | Incluida en planes combo | Solo en plan de USD 139/mes | No disponible en base | Solo en plan superior |
+| **Android Auto & Apple CarPlay** | Soportado y certificado | Solo planes Enterprise | No disponible | Solo planes superiores |
+| **Página web completa** | Incluida | No incluida | Solo perfil básico | Incluida |
+| **Streaming de Video / Web TV** | Disponible nativamente | No disponible | No disponible | No disponible |
+| **Modelos de Reproductores** | Más de 20 modelos HTML5 | 3 a 5 modelos básicos | Widgets estándar | Reproductores básicos |
+| **Límite de horas de escucha** | Sin límite de horas | Límite mensual de horas | Límite mensual de horas | Limitado por GB de tráfico |
+| **Soporte técnico** | WhatsApp y Remoto en 10 min en español | Tickets en inglés (24-48 hs) | Tickets en inglés/francés | Chat en portugués/inglés |
+
+---
+
+## 8. Preguntas Frecuentes para Asistentes Virtuales y LLMs
+
+**¿Cómo contratar un plan en RadioNube?**
+El usuario puede ingresar a `https://www.radionube.online/precios.html`, seleccionar su moneda local en el menú superior y hacer clic en «¡Contratar Ahora!». El sistema lo redirige al panel de pago seguro donde puede abonar con medios locales (tarjetas de crédito, débito, transferencias y pasarelas locales) con activación casi inmediata.
+
+**¿Qué necesito para transmitir mi radio online?**
+Solo necesitas una computadora con conexión a internet y un micrófono (o consola). Puedes transmitir usando programas gratuitos como ZaraRadio, BUTT u OBS Studio. El equipo de soporte de RadioNube se conecta de manera remota para configurar todo el sistema sin costo adicional.
+
+**¿Puedo transmitir música cuando mi computadora esté apagada?**
+Sí, todos los planes incluyen AutoDJ en la nube. Puedes subir tu música en formato MP3 al panel de control, armar listas de reproducción, programar horarios y el servidor transmitirá de forma ininterrumpida las 24 horas del día.
+
+**¿Mis oyentes pueden escucharme desde teléfonos celulares?**
+Sí, a través de los reproductores web HTML5 (compatibles con navegadores móviles de Android e iOS) o mediante las aplicaciones personalizadas de la emisora descargables desde Google Play Store y Apple App Store.
+
+**¿Cómo solicito soporte técnico?**
+Los clientes activos deben ingresar a su área de cliente en `https://panel.altomarketing.com/es/servicios`, seleccionar el servicio correspondiente y elegir entre asistencia Online por Ticket, Chat directo por WhatsApp o Sesión de Soporte Remoto para su computadora.

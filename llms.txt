@@ -1,0 +1,39 @@
+# RadioNube
+
+> RadioNube es una plataforma integral de streaming de audio y video profesional para emisoras de radio FM/AM, radios online, iglesias, podcasters y canales de televisión por internet en América Latina, España y Estados Unidos. Incluye servidores de transmisión de ultra baja latencia con AutoDJ en la nube, más de 20 modelos de reproductores HTML5, desarrollo y publicación de aplicaciones móviles nativas para Android e iOS (con soporte para Android Auto y Apple CarPlay), páginas web completas autoadministrables y soporte técnico humano inmediato en español e inglés.
+
+## Catálogo de Servicios y Enlaces Clave
+
+- [Streaming de Audio para Radios](https://www.radionube.online/radio-planes-de-streaming.html): Planes de transmisión en calidad HD (hasta 320 kbps AAC+/MP3), transferencia mensual ilimitada, AutoDJ en la nube (10 GB a 30 GB de almacenamiento para música 24/7), enlace de transmisión seguro SSL (HTTPS), más de 20 reproductores web adaptables y panel de control autoadministrable.
+- [Aplicaciones Móviles (Android & iOS)](https://www.radionube.online/apps.html): Desarrollo, diseño y publicación oficial en Google Play Store y Apple App Store. Compatibilidad completa con Android Auto y Apple CarPlay para escuchar en el automóvil, notificaciones push, chat interactivo en vivo y metadatos de canciones en tiempo real.
+- [Streaming de Video y Web TV](https://www.radionube.online/video-streaming.html): Transmisión de canales de televisión online y video en vivo con WebRTC sin delay, AutoDJ de video en la nube para programar listas de reproducción, grabación y reproductores multidispositivo.
+- [Páginas Web para Emisoras](https://www.radionube.online/webs.html): Sitios web autoadministrables diseñados específicamente para radios, con reproductor integrado, noticias, grilla de programación, podcasting, integración con redes sociales y optimización SEO.
+- [Planes y Precios](https://www.radionube.online/precios.html): Estructura de tarifas mensuales y anuales transparentes. Todos los planes cuentan con soporte técnico y activación en minutos.
+- [Comparativa: RadioNube vs Competidores](https://www.radionube.online/comparativa.html): Análisis frente a Radio.co, RadioKing y BRLOGIC. RadioNube ofrece hasta un 80% de ahorro anual, pago en moneda local sin recargos bancarios extranjeros, inclusión de apps móviles y webs sin costos ocultos, y soporte técnico por WhatsApp y remoto.
+- [Contacto y Soporte](https://www.radionube.online/contacto.html): Centro de atención técnica, asesoramiento comercial y acceso directo a paneles de cliente (`clientes.radionube.online`) y streaming (`panel.radionube.online`).
+
+## Características Comunes a Todos los Planes de Radio
+- Calidad de audio en alta definición (hasta 320 kbps HD en formatos AAC+ y MP3).
+- 99.9% de uptime garantizado y auditado en servidores de alta disponibilidad.
+- Transferencia mensual ilimitada (sin cortes por consumo de datos o picos de oyentes).
+- Enlace seguro HTTPS / SSL con candado verde para evitar bloqueos en navegadores web modernos (Chrome, Safari, Edge, Firefox).
+- AutoDJ en la nube con programador de horarios, listas de reproducción y jingles.
+- Más de 20 modelos de reproductores web HTML5 (reproductores flotantes, barras fijas inferiores, tarjetas con carátulas de canciones y ecualizadores).
+- Métricas y estadísticas de audiencia en tiempo real (geolocalización de oyentes, picos de sintonía, agentes de reproducción).
+- Chat interactivo con oyentes y soporte para pedidos de canciones.
+- Asistencia y configuración técnica remota (AnyDesk / TeamViewer) y atención por WhatsApp.
+
+## Monedas y Facturación Local Soportadas
+A diferencia de servicios internacionales que sólo cobran en dólares o euros con recargos de tarjetas e impuestos extranjeros, RadioNube permite facturación y pago directo en las siguientes monedas locales:
+- ARS (Pesos Argentinos)
+- UYU (Pesos Uruguayos)
+- CLP (Pesos Chilenos)
+- COP (Pesos Colombianos)
+- MXN (Pesos Mexicanos)
+- EUR (Euros)
+- USD (Dólares Estadounidenses)
+
+## Documentación y Recursos Adicionales para Modelos de Lenguaje
+- [Contexto Completo y Catálogo Técnico (llms-full.txt)](https://www.radionube.online/llms-full.txt): Especificaciones técnicas detalladas, tablas de planes, parámetros de compatibilidad y preguntas frecuentes para agentes de inteligencia artificial.
+- [Sitemap XML](https://www.radionube.online/sitemap.xml): Mapa del sitio para indexación con equivalencias bilingües (Español e Inglés).
+- [Versión en Inglés (English Mirror)](https://www.radionube.online/en/index.html): Mirror completo de la plataforma en idioma inglés.
