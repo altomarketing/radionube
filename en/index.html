@@ -1319,23 +1319,6 @@ margin:20px;
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/currency.js"></script>
-  <!-- chat -->
-
-	<script>
-  (function(d,t) {
-    var BASE_URL="https://chat.altomarketing.com.ar";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
-      window.chatwootSDK.run({
-        websiteToken: 'yLU3kHCmDnuaHJZTJVH7Gyck',
-        baseUrl: BASE_URL
-      })
-    }
-  })(document,"script");
-</script>
 
 
   <!-- OpenPanel Analytics -->
@@ -1365,6 +1348,25 @@ margin:20px;
     });
   </script>
   <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+  <!-- Typebot -->
+  <script>
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+Typebot.initBubble({
+  typebot: "hablemos",
+  apiHost: "https://chatbot.altomarketing.com.ar",
+  previewMessage: { message: "Lo Asesoro ?", autoShowDelay: 10000 },
+  theme: {
+    button: { backgroundColor: "#0d9488", size: "large" },
+    chatWindow: { backgroundColor: "#ffffff" },
+  },
+});
+`;
+    document.body.append(typebotInitScript);
+  </script>
 
 </body>
 

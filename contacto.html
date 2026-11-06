@@ -337,7 +337,7 @@ margin:20px;
 
               <div class="pricing-cta-wrap mt-auto">
                 <a target="_blank" href="https://clientes.radionube.online" class="pricing-btn">
-                  <i class="bi bi-box-arrow-up-right"></i> INGRESAR AL PANEL
+                  <i class="bi bi-box-arrow-up-right"></i> CLIENTES.radionube.online
                 </a>
               </div>
             </div>
@@ -365,7 +365,7 @@ margin:20px;
 
               <div class="pricing-cta-wrap mt-auto">
                 <a target="_blank" href="https://panel.radionube.online" class="pricing-btn" style="background: #2187b1;">
-                  <i class="bi bi-play-circle-fill"></i> PANEL RADIONUBE
+                  <i class="bi bi-play-circle-fill"></i> PANEL.radionube.online
                 </a>
               </div>
             </div>
@@ -588,6 +588,25 @@ margin:20px;
     });
   </script>
   <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+  <!-- Typebot -->
+  <script>
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+Typebot.initBubble({
+  typebot: "hablemos",
+  apiHost: "https://chatbot.altomarketing.com.ar",
+  previewMessage: { message: "Lo Asesoro ?", autoShowDelay: 10000 },
+  theme: {
+    button: { backgroundColor: "#0d9488", size: "large" },
+    chatWindow: { backgroundColor: "#ffffff" },
+  },
+});
+`;
+    document.body.append(typebotInitScript);
+  </script>
 
 </body>
 

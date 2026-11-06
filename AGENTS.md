@@ -23,4 +23,4 @@
   - En páginas en inglés (`en/`): `<option value="es">🇪🇸</option><option value="en" selected>🇺🇸</option>`.
   - Atributos requeridos: manejado automáticamente por `assets/js/currency.js` para persistir parámetros y moneda.
 - **Atributos de Moneda:** Preservar siempre los atributos de conversión de `currency.js` (`data-price-usd`, `data-currency-symbol`, `data-currency-code`, `data-currency-symbol-short`) en ambas versiones.
-- **Analíticas y Chat:** Mantener el script de OpenPanel (`https://data.altomarketing.com.ar/op1.js`) y el widget de Chatwoot en el pie de página de todas las versiones.
+- **Analíticas y Chat:** Mantener el script de OpenPanel (`https://data.altomarketing.com.ar/op1.js`) y el widget de Typebot (`chatbot.altomarketing.com.ar`) en el pie de página de todas las versiones.

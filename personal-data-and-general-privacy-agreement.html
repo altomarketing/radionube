@@ -417,6 +417,25 @@
   </script>
   <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
 
+  <!-- Typebot -->
+  <script>
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+Typebot.initBubble({
+  typebot: "hablemos",
+  apiHost: "https://chatbot.altomarketing.com.ar",
+  previewMessage: { message: "Lo Asesoro ?", autoShowDelay: 10000 },
+  theme: {
+    button: { backgroundColor: "#0d9488", size: "large" },
+    chatWindow: { backgroundColor: "#ffffff" },
+  },
+});
+`;
+    document.body.append(typebotInitScript);
+  </script>
+
 </body>
 
 </html>
