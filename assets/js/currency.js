@@ -157,13 +157,17 @@
       const rawHref = link.getAttribute('data-base-href') || link.getAttribute('href');
       if (!rawHref) return;
 
-      // Ignorar anclas locales, javascript, mailto, tel y links externos
+      // Ignorar anclas locales, javascript, mailto, tel y links externos / subdominios independientes
       if (
         rawHref.startsWith('#') ||
         rawHref.startsWith('javascript:') ||
         rawHref.startsWith('mailto:') ||
         rawHref.startsWith('tel:') ||
         rawHref.includes('panel.altomarketing.com') ||
+        rawHref.includes('clientes.radionube.online') ||
+        rawHref.includes('panel.radionube.online') ||
+        rawHref.includes('blog.radionube.online') ||
+        rawHref.includes('status.altomarketing.com.ar') ||
         rawHref.includes('wa.me') ||
         rawHref.includes('whatsapp') ||
         rawHref.includes('veni.link') ||
@@ -182,27 +186,40 @@
 
       // Comprobar si es un enlace interno del sitio (relativo o con el mismo hostname / radionube)
       const isRelative = !rawHref.includes('://') && !rawHref.startsWith('//');
-      const isInternalDomain = rawHref.includes('radionube.online') || rawHref.includes('radionube.com') || (link.hostname && link.hostname === window.location.hostname);
-
-      if (isRelative || isInternalDomain) {
-        try {
-          if (!link.hasAttribute('data-base-href')) {
-            link.setAttribute('data-base-href', rawHref);
-          }
-          const url = new URL(rawHref, window.location.href);
-          url.searchParams.set('currency', currencyCode);
-
-          if (isRelative && !rawHref.startsWith('/')) {
-            const pathParts = url.pathname.split('/');
-            const fileName = pathParts[pathParts.length - 1] || '';
-            const search = url.search || '';
-            const hash = url.hash || '';
-            link.setAttribute('href', fileName + search + hash);
-          } else {
-            link.setAttribute('href', url.pathname + url.search + url.hash);
-          }
-        } catch (e) {}
+      
+      let parsedUrl;
+      try {
+        parsedUrl = new URL(rawHref, window.location.href);
+      } catch (e) {
+        return;
       }
+
+      const currentHost = (window.location.hostname || 'radionube.online').replace(/^www\./, '');
+      const targetHost = (parsedUrl.hostname || '').replace(/^www\./, '');
+
+      // Si tiene dominio explícito y no coincide con el host actual, no modificar
+      if (!isRelative && targetHost !== currentHost) {
+        return;
+      }
+
+      try {
+        if (!link.hasAttribute('data-base-href')) {
+          link.setAttribute('data-base-href', rawHref);
+        }
+        parsedUrl.searchParams.set('currency', currencyCode);
+
+        if (isRelative && !rawHref.startsWith('/')) {
+          const pathParts = parsedUrl.pathname.split('/');
+          const fileName = pathParts[pathParts.length - 1] || '';
+          const search = parsedUrl.search || '';
+          const hash = parsedUrl.hash || '';
+          link.setAttribute('href', fileName + search + hash);
+        } else if (isRelative) {
+          link.setAttribute('href', parsedUrl.pathname + parsedUrl.search + parsedUrl.hash);
+        } else {
+          link.setAttribute('href', parsedUrl.origin + parsedUrl.pathname + parsedUrl.search + parsedUrl.hash);
+        }
+      } catch (e) {}
     });
   }
 
