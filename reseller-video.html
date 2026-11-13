@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1078287898579310');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height=1 width=1 style=display:none
+  src="https://www.facebook.com/tr?id=1078287898579310&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- OpenAI Pixel -->
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"2pnXRskcjtmbJHFQezGr3g",debug:true});</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Revendedor de Video Streaming (VideoReseller) - RadioNube</title>
+  <meta content="Planes de revendedor de streaming de video y Web TV con MediaCP Panel marca blanca. Transmite en HD y Full HD, retransmite a redes sociales y crea tu propio negocio." name="description">
+  <meta content="revendedor streaming video, reseller video streaming, mediacp reseller, mediacp panel reseller, streaming web tv revendedor, marca blanca video streaming" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Estilos específicos para tablas comparativas */
+    .comp-table-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(22, 54, 79, 0.08);
+      border: 1px solid #e9eff5;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .comp-table-responsive {
+      overflow-x: auto;
+    }
+    .comp-table {
+      width: 100%;
+      margin-bottom: 0;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .comp-table thead th {
+      padding: 20px 16px;
+      font-size: 15.5px;
+      font-weight: 800;
+      text-align: center;
+      border-bottom: 2px solid #e9eff5;
+      vertical-align: middle;
+    }
+    .comp-table thead th.col-feature {
+      text-align: left;
+      min-width: 220px;
+      background: #fafcfe;
+      color: #16364f;
+    }
+    .comp-table thead th.col-radionube {
+      background: #16364f;
+      color: #ffffff;
+      font-size: 17px;
+      min-width: 220px;
+      position: relative;
+    }
+    .comp-table thead th.col-comp {
+      background: #f4f7fb;
+      color: #4b5d6e;
+      min-width: 165px;
+    }
+    .comp-table tbody td {
+      padding: 15px 18px;
+      font-size: 14px;
+      vertical-align: middle;
+      border-bottom: 1px solid #edf2f7;
+      text-align: center;
+      color: #556270;
+    }
+    .comp-table tbody td.col-feature {
+      text-align: left;
+      font-weight: 600;
+      color: #16364f;
+      background: #fafcfe;
+    }
+    .comp-table tbody td.col-radionube {
+      background: rgba(33, 135, 177, 0.04);
+      font-weight: 700;
+      color: #16364f;
+      border-left: 1px solid #e1ecf4;
+      border-right: 1px solid #e1ecf4;
+    }
+    .comp-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .comp-badge-pill {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .highlight-win {
+      color: #28a745;
+      font-weight: 800;
+    }
+    .accordion-btn-custom {
+      background: #ffffff;
+      color: #16364f;
+      cursor: pointer;
+      padding: 16px 20px;
+      width: 100%;
+      border: 1px solid #e9eff5;
+      border-radius: 12px;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .accordion-btn-custom:hover, .accordion-btn-custom.active {
+      background: #f0f7fb;
+      color: #2187b1;
+      border-color: #2187b1;
+    }
+    .accordion-panel-custom {
+      padding: 0 20px 16px 20px;
+      display: none;
+      background: #ffffff;
+      color: #556270;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+  </style>
+
+  <link rel="alternate" hreflang="es" href="https://radionube.com/reseller-video.html" />
+  <link rel="alternate" hreflang="en" href="https://radionube.com/en/reseller-video.html" />
+  <link rel="alternate" hreflang="x-default" href="https://radionube.com/reseller-video.html" />
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"><img src="https://cdnuploads.pages.dev/uploads/logos/radionube/radionube-sonicpanel.png" alt="RadioNube" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="d-flex align-items-center gap-1 me-lg-2 my-2 my-lg-0 ms-3 ms-lg-0">
+            <select class="currency-selector form-select form-select-sm" aria-label="Moneda" style="padding: 4px 8px; font-size: 13px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: 105px;">
+              <option value="USD">🇺🇸 USD</option>
+              <option value="ARS">🇦🇷 ARS</option>
+              <option value="CLP">🇨🇱 CLP</option>
+              <option value="COP">🇨🇴 COP</option>
+              <option value="MXN">🇲🇽 MXN</option>
+              <option value="UYU">🇺🇾 UYU</option>
+              <option value="EUR">🇪🇺 EUR</option>
+            </select>
+            <select class="lang-selector form-select form-select-sm" aria-label="Idioma" style="padding: 4px 6px; font-size: 15px; font-weight: 700; border-radius: 20px; border: 1.5px solid #2187b1; color: #16364f; background-color: #fff; cursor: pointer; width: 62px;">
+              <option value="es" selected>🇪🇸</option>
+              <option value="en">🇺🇸</option>
+            </select>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="radio-planes-de-streaming.html">Audio</a></li>
+          <li><a href="video-streaming.html">Video</a></li>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="webs.html">Webs</a></li>
+          <li><a href="locuciones.html">Locuciones</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="contacto.html" class="getstarted">Hablemos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main style="padding-top: 130px;" id="main">
+
+    <!-- ======= 1. CALCULADORA EN LA PARTE BLANCA ARRIBA DE TODO ======= -->
+    <section id="calculadora-ganancias" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); padding: 50px 0 60px 0;">
+      <div class="container">
+        
+        <div class="text-center mb-5">
+          <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 15px;">
+            <i class="bi bi-calculator-fill me-1"></i> Simulador de Ingresos
+          </span>
+          <h1 style="font-weight: 800; color: #16364f; font-size: 40px; margin-bottom: 15px; letter-spacing: -0.5px;">
+            ¿Cuánto puedes ganar revendiendo streaming?
+          </h1>
+          <p style="color: #556270; font-size: 18px; max-width: 820px; margin: 0 auto; line-height: 1.6;">
+            Tú fijas tus propios precios a tus clientes. Ajusta la tarifa mensual y mueve la barra de clientes para proyectar tus ingresos y ganancia neta mensual con tu propia empresa de streaming marca blanca.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-center">
+          
+          <!-- Columna Izquierda: Parámetros del revendedor -->
+          <div class="col-lg-6">
+            <div style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 20px; padding: 32px; box-shadow: 0 10px 30px rgba(22, 54, 79, 0.06);">
+              
+              <!-- 1. Precio cobrado por cliente -->
+              <div class="mb-4">
+                <label for="calc-client-price" style="font-size: 15px; font-weight: 700; color: #16364f; margin-bottom: 8px; display: block;">
+                  1. ¿Cuánto le cobrarás a tus clientes por mes?
+                </label>
+                <div class="input-group" style="max-width: 320px;">
+                  <span class="input-group-text" id="calc-currency-symbol" style="background: #f1f5f9; color: #2187b1; border: 1.5px solid #cbd5e1; font-weight: 800; font-size: 18px;">$</span>
+                  <input type="number" id="calc-client-price" class="form-control" value="25" min="1" step="any" style="background: #ffffff; color: #16364f; font-weight: 800; font-size: 22px; border: 1.5px solid #cbd5e1; border-radius: 0;">
+                  <span class="input-group-text" id="calc-currency-code" style="background: #f1f5f9; color: #475569; border: 1.5px solid #cbd5e1; font-size: 13px; font-weight: 600;">USD / mes</span>
+                </div>
+                <!-- Valores sugeridos de mercado -->
+                <div class="d-flex flex-wrap gap-2 mt-2 align-items-center" id="calc-presets-container">
+                  <span style="font-size: 12px; color: #64748b; font-weight: 600;">Sugeridos:</span>
+                  <button type="button" class="btn btn-sm calc-preset-btn" data-usd="15" style="background: #f8fafc; color: #334155; border: 1px solid #cbd5e1; border-radius: 15px; font-size: 12px; padding: 3px 12px; font-weight: 600;">$15</button>
+                  <button type="button" class="btn btn-sm calc-preset-btn" data-usd="20" style="background: #f8fafc; color: #334155; border: 1px solid #cbd5e1; border-radius: 15px; font-size: 12px; padding: 3px 12px; font-weight: 600;">$20</button>
+                  <button type="button" class="btn btn-sm calc-preset-btn active" data-usd="25" style="background: #2187b1; color: #fff; border: 1px solid #2187b1; border-radius: 15px; font-size: 12px; padding: 3px 12px; font-weight: 600;">$25 (Típico)</button>
+                  <button type="button" class="btn btn-sm calc-preset-btn" data-usd="35" style="background: #f8fafc; color: #334155; border: 1px solid #cbd5e1; border-radius: 15px; font-size: 12px; padding: 3px 12px; font-weight: 600;">$35 (con Web TV)</button>
+                  <button type="button" class="btn btn-sm calc-preset-btn" data-usd="50" style="background: #f8fafc; color: #334155; border: 1px solid #cbd5e1; border-radius: 15px; font-size: 12px; padding: 3px 12px; font-weight: 600;">$50 (Corporativo)</button>
+                </div>
+              </div>
+
+              <!-- 2. Slider interactivo -->
+              <div class="mb-2">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <label for="calc-clients-slider" style="font-size: 15px; font-weight: 700; color: #16364f; margin: 0;">
+                    2. Cantidad de clientes activos:
+                  </label>
+                  <span id="calc-clients-display" style="background: #2187b1; color: #ffffff; font-size: 17px; font-weight: 800; padding: 4px 14px; border-radius: 20px;">
+                    10 clientes
+                  </span>
+                </div>
+                
+                <input type="range" class="form-range" id="calc-clients-slider" min="1" max="50" value="10" step="1" style="cursor: pointer; height: 10px;">
+                
+                <div class="d-flex justify-content-between" style="font-size: 12px; color: #64748b; margin-top: 4px; font-weight: 600;">
+                  <span>1 cliente</span>
+                  <span>5 (Starter)</span>
+                  <span>15 (Power)</span>
+                  <span>50 (Full)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Tarjeta de resultados en tiempo real -->
+          <div class="col-lg-5">
+            <div style="background: #ffffff; color: #16364f; border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(22, 54, 79, 0.12); border: 2px solid #2187b1;">
+              
+              <div class="d-flex justify-content-between align-items-center pb-3 mb-3" style="border-bottom: 1px solid #edf2f7;">
+                <div>
+                  <div style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 1px; color: #6c757d; font-weight: 700;">Plan RadioNube Necesario</div>
+                  <div id="calc-plan-name" style="font-size: 18px; font-weight: 800; color: #2187b1;">VideoReseller Power (15 ctas)</div>
+                </div>
+                <span id="calc-margin-pill" class="badge" style="background: rgba(40, 167, 69, 0.15); color: #28a745; font-size: 13px; font-weight: 800; padding: 6px 12px; border-radius: 20px;">
+                  +456% Retorno
+                </span>
+              </div>
+
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-2" style="font-size: 14.5px;">
+                  <span style="color: #6c757d;">Ingresos cobrados a tus clientes:</span>
+                  <strong id="calc-gross-revenue" style="color: #16364f; font-size: 16px;">$ 250 USD</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-2" style="font-size: 14.5px;">
+                  <span style="color: #6c757d;">Costo de tu plan RadioNube:</span>
+                  <span id="calc-plan-cost" style="color: #dc3545; font-weight: 700; font-size: 15px;">- $ 44.99 USD</span>
+                </div>
+              </div>
+
+              <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 14px; padding: 18px; text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 13px; font-weight: 700; color: #166534; text-transform: uppercase; letter-spacing: 0.5px;">Tu Ganancia Neta Mensual Estimada</div>
+                <div id="calc-net-profit" style="font-size: 38px; font-weight: 900; color: #15803d; line-height: 1.1; margin: 6px 0;">+ $ 205.01 USD</div>
+                <div style="font-size: 12.5px; color: #166534;">En tu bolsillo todos los meses libres de costo</div>
+              </div>
+
+              <a id="calc-cta-btn" target="_blank" href="https://www.veni.link/wasapclientes" class="pricing-btn" style="background: #2187b1; color: #fff; width: 100%; justify-content: center; font-size: 15px;">
+                <i class="bi bi-cart-check-fill me-1"></i> CONTRATAR PLAN POWER
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= 2. TARJETA AZUL: REVENDEDOR DE VIDEO STREAMING ======= -->
+    <section id="infraestructura" style="padding: 65px 0; background: linear-gradient(135deg, #16364f 0%, #0e2435 100%); color: #ffffff;">
+      <div class="container text-center">
+        
+        <span style="background: rgba(109, 213, 237, 0.15); color: #6dd5ed; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 15px;">
+          <i class="bi bi-broadcast-pin me-1"></i> Infraestructura de Video Profesional
+        </span>
+        <h2 style="font-weight: 800; font-size: 36px; margin-bottom: 15px; color: #fff;">
+          Revendedor de Video Streaming <span style="color: #6dd5ed;">(VideoReseller)</span>
+        </h2>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 18px; max-width: 840px; margin: 0 auto 30px; line-height: 1.6;">
+          Crea tu propia empresa de Streaming de Video y Web TV. Administra clientes independientes con <strong>MediaCP Panel marca blanca</strong>, emisión en vivo desde OBS/vMix, programación 24/7 en la nube y retransmisión automática a redes sociales.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#planes" class="btn" style="background: #2187b1; color: #fff; font-weight: 700; border-radius: 50px; padding: 12px 32px; font-size: 15px; box-shadow: 0 4px 15px rgba(33, 135, 177, 0.4);">
+            <i class="bi bi-eye-fill me-1"></i> Ver Planes y Precios
+          </a>
+          <a href="#comparativa-planes" class="btn" style="background: rgba(255, 255, 255, 0.12); color: #fff; border: 1px solid rgba(255, 255, 255, 0.25); font-weight: 700; border-radius: 50px; padding: 12px 32px; font-size: 15px;">
+            <i class="bi bi-table me-1"></i> Tabla Comparativa
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Modern Pricing Section ======= -->
+    <section id="planes" class="modern-pricing-wrapper" style="padding: 50px 0 80px 0;">
+      <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Elige tu Capacidad</span>
+            <h2 style="font-weight: 800; color: #16364f; font-size: 34px; margin-bottom: 10px;">Planes Diseñados para Crecer</h2>
+            <p style="color: #6c757d; font-size: 16px; margin: 0 auto;">Cuentas independientes con usuario y contraseña individuales, sin comisiones sobre tus ventas.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch justify-content-center">
+
+          <!-- Plan 1: Starter -->
+          <div class="col-lg-4 col-md-6">
+            <div class="modern-pricing-card text-center h-100 d-flex flex-column">
+              <div class="pricing-header">
+                <div class="pricing-title">VideoReseller Starter</div>
+                <div class="pricing-subtitle">Ideal para iniciar tu cartera de clientes</div>
+                <div class="pricing-price-box">
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="19.99">19.99</span>
+                  <span class="pricing-period">MENSUAL</span>
+                </div>
+                <div class="pricing-monthly-sub" style="margin-top: 6px;">
+                  <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="3.99">3.99</span> costo por cuenta)</em>
+                </div>
+              </div>
+
+              <div class="pricing-features-group text-start">
+                <div class="pricing-features-label">Características Principales</div>
+                <ul class="pricing-features-list">
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>5 Sub-Clientes</strong> independientes</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Calidad <strong>HD 720p</strong> (hasta 2.500 kbps)</li>
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>30 GB SSD</strong> para Live Streaming</li>
+                </ul>
+              </div>
+
+              <div class="pricing-cta-wrap mt-auto">
+                <a target="_blank" href="https://www.veni.link/wasapclientes" class="pricing-btn">
+                  CONTRATAR STARTER
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 2: Power (Destacado) -->
+          <div class="col-lg-4 col-md-6">
+            <div class="modern-pricing-card featured text-center h-100 d-flex flex-column">
+              <span class="pricing-badge-popular">MÁS ELEGIDO</span>
+              <div class="pricing-header">
+                <div class="pricing-title">VideoReseller Power</div>
+                <div class="pricing-subtitle">Para productoras y agencias digitales</div>
+                <div class="pricing-price-box">
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="44.99">44.99</span>
+                  <span class="pricing-period">MENSUAL</span>
+                </div>
+                <div class="pricing-monthly-sub" style="margin-top: 6px;">
+                  <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="2.99">2.99</span> costo por cuenta)</em>
+                </div>
+              </div>
+
+              <div class="pricing-features-group text-start">
+                <div class="pricing-features-label">Características Principales</div>
+                <ul class="pricing-features-list">
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>15 Sub-Clientes</strong> independientes</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Calidad <strong>Full HD 1080p</strong> (hasta 4.096 kbps)</li>
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>150 GB SSD NVMe</strong> + <strong>TV Station (AutoDJ 24/7)</strong></li>
+                </ul>
+              </div>
+
+              <div class="pricing-cta-wrap mt-auto">
+                <a target="_blank" href="https://www.veni.link/wasapclientes" class="pricing-btn">
+                  CONTRATAR POWER
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 3: Full -->
+          <div class="col-lg-4 col-md-6">
+            <div class="modern-pricing-card text-center h-100 d-flex flex-column">
+              <div class="pricing-header">
+                <div class="pricing-title">VideoReseller Full</div>
+                <div class="pricing-subtitle">Máxima potencia para grandes revendedores</div>
+                <div class="pricing-price-box">
+                  <span class="pricing-currency" data-currency-symbol>u$s</span>
+                  <span class="pricing-amount" data-price-usd="99.99">99.99</span>
+                  <span class="pricing-period">MENSUAL</span>
+                </div>
+                <div class="pricing-monthly-sub" style="margin-top: 6px;">
+                  <em>(menos de <span data-currency-symbol>u$s</span> <span data-price-usd="2.00">2.00</span> por cuenta)</em>
+                </div>
+              </div>
+
+              <div class="pricing-features-group text-start">
+                <div class="pricing-features-label">Características Principales</div>
+                <ul class="pricing-features-list">
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>50 Sub-Clientes</strong> independientes</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Calidad <strong>FHD 60fps / 2K</strong> (hasta 6.000 kbps)</li>
+                  <li><i class="bi bi-check-circle-fill"></i> <strong>500 GB SSD NVMe</strong> + <strong>Restream Ilimitado</strong></li>
+                </ul>
+              </div>
+
+              <div class="pricing-cta-wrap mt-auto">
+                <a target="_blank" href="https://www.veni.link/wasapclientes" class="pricing-btn">
+                  CONTRATAR FULL
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="#comparativa-planes" style="display: inline-flex; align-items: center; gap: 8px; color: #2187b1; font-weight: 700; font-size: 15.5px; text-decoration: none; padding: 10px 24px; background: rgba(33, 135, 177, 0.08); border-radius: 30px; transition: all 0.3s ease;">
+            <i class="bi bi-arrow-down-circle-fill" style="font-size: 18px;"></i> Ver tabla comparativa completa con todas las especificaciones técnicas
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= TABLA COMPARATIVA ENTRE PLANES RADIONUBE ======= -->
+    <section id="comparativa-planes" style="padding: 40px 0 60px 0; background: #fbfdff;">
+      <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Detalle Técnico</span>
+            <h2 style="font-weight: 800; color: #16364f; font-size: 32px; margin-bottom: 10px;">Comparativa Detallada de Características</h2>
+            <p style="color: #6c757d; font-size: 15px; margin: 0 auto;">Revisa qué incluye cada nivel de revendedor para elegir la opción adecuada a tus clientes.</p>
+          </div>
+        </div>
+
+        <div class="comp-table-card">
+          <div class="comp-table-responsive">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th class="col-feature">Característica</th>
+                  <th class="col-comp">🟢 Starter</th>
+                  <th class="col-radionube">
+                    ⭐ Power
+                    <div><span class="comp-badge-pill" style="background: #2187b1; color: #fff;">RECOMENDADO</span></div>
+                  </th>
+                  <th class="col-comp">🟣 Full</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-feature">
+                    <strong>Sub-Clientes / Cuentas</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Accesos independientes con user/pass</div>
+                  </td>
+                  <td><strong>5 Cuentas</strong></td>
+                  <td class="col-radionube"><span class="highlight-win" style="font-size: 17px;">15 Cuentas</span></td>
+                  <td><strong>50 Cuentas</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Calidad / Bitrate Máximo</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Por cada cuenta individual</div>
+                  </td>
+                  <td>2.500 kbps (HD 720p)</td>
+                  <td class="col-radionube"><i class="bi bi-check-circle-fill text-success"></i> <strong>4.096 kbps (Full HD 1080p)</strong></td>
+                  <td><i class="bi bi-stars text-primary"></i> <strong>6.000 kbps (FHD 60fps / 2K)</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Suma de Ancho de Banda</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Total agregado para repartir</div>
+                  </td>
+                  <td>15.000 kbps (15 Mbps)</td>
+                  <td class="col-radionube"><strong>60.000 kbps (60 Mbps)</strong></td>
+                  <td><strong>250.000 kbps (250 Mbps)</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Almacenamiento SSD NVMe</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Para AutoDJ, videos y DVR</div>
+                  </td>
+                  <td>30 GB SSD</td>
+                  <td class="col-radionube"><strong>150 GB SSD NVMe</strong></td>
+                  <td><strong>500 GB SSD NVMe</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Espectadores Concurrentes</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Sin contar redes sociales</div>
+                  </td>
+                  <td>500 simultáneos</td>
+                  <td class="col-radionube"><strong>1.500 simultáneos</strong></td>
+                  <td><strong>5.000 simultáneos</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Modalidad de Emisión</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Tipos de servicio en el panel</div>
+                  </td>
+                  <td>Live Streaming (desde PC)</td>
+                  <td class="col-radionube"><strong>Live + TV Station (AutoDJ 24/7)</strong></td>
+                  <td><strong>Live + TV Station + Multibitrate</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Reenvío a Redes (Restream)</strong>
+                    <div style="font-size: 12px; color: #6c757d;">YouTube, Facebook Live, Twitch</div>
+                  </td>
+                  <td><i class="bi bi-x-circle-fill text-danger"></i> <span style="color: #6c757d;">No incluido</span></td>
+                  <td class="col-radionube"><i class="bi bi-check-circle-fill text-success"></i> <strong>Hasta 3 destinos x cuenta</strong></td>
+                  <td><i class="bi bi-check-circle-fill text-success"></i> <strong>Ilimitado / Multicanal</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Marca Blanca</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Panel neutro para tus clientes</div>
+                  </td>
+                  <td>Logo propio en panel</td>
+                  <td class="col-radionube"><strong>Dominio y Logo personalizado</strong></td>
+                  <td><strong>Marca blanca completa + DNS propios</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Reproductor HTML5 Responsive</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Compatible con iOS, Android y Smart TVs</div>
+                  </td>
+                  <td><i class="bi bi-check-circle-fill text-success"></i> Incluido con SSL</td>
+                  <td class="col-radionube"><i class="bi bi-check-circle-fill text-success"></i> <strong>Incluido con SSL</strong></td>
+                  <td><i class="bi bi-check-circle-fill text-success"></i> <strong>Incluido con SSL</strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature">
+                    <strong>Precio Mensual</strong>
+                    <div style="font-size: 12px; color: #6c757d;">Convertible a tu moneda local</div>
+                  </td>
+                  <td><strong><span data-currency-symbol-short>$</span><span data-price-usd="19.99">19.99</span></strong></td>
+                  <td class="col-radionube"><span class="highlight-win" style="font-size: 18px;"><span data-currency-symbol-short>$</span><span data-price-usd="44.99">44.99</span></span></td>
+                  <td><strong><span data-currency-symbol-short>$</span><span data-price-usd="99.99">99.99</span></strong></td>
+                </tr>
+
+                <tr>
+                  <td class="col-feature"></td>
+                  <td><a target="_blank" href="https://www.veni.link/wasapclientes" class="btn btn-sm" style="background:#16364f;color:#fff;border-radius:20px;padding:6px 16px;font-weight:700;">Elegir Starter</a></td>
+                  <td class="col-radionube"><a target="_blank" href="https://www.veni.link/wasapclientes" class="btn btn-sm" style="background:#2187b1;color:#fff;border-radius:20px;padding:8px 20px;font-weight:700;">Elegir Power</a></td>
+                  <td><a target="_blank" href="https://www.veni.link/wasapclientes" class="btn btn-sm" style="background:#16364f;color:#fff;border-radius:20px;padding:6px 16px;font-weight:700;">Elegir Full</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+
+    <!-- ======= PREGUNTAS FRECUENTES ======= -->
+    <section style="padding: 60px 0 80px 0; background: #ffffff;">
+      <div class="container" style="max-width: 860px;">
+        <div class="text-center mb-5">
+          <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Dudas Habituales</span>
+          <h2 style="font-weight: 800; color: #16364f; font-size: 32px; margin-bottom: 10px;">Preguntas Frecuentes</h2>
+        </div>
+
+        <div>
+          <button class="accordion-btn-custom">
+            <span>¿Mis clientes sabrán que revendo el servicio de RadioNube?</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="accordion-panel-custom">
+            <p><strong>No, en lo absoluto.</strong> El servicio es 100% marca blanca. Tus clientes accederán a un panel de control con tu logotipo, tus colores y un enlace neutro o tu propio dominio. Toda la facturación y comunicación la gestionas tú directamente con ellos.</p>
+          </div>
+
+          <button class="accordion-btn-custom">
+            <span>¿Qué es la función TV Station (AutoDJ de Video)?</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="accordion-panel-custom">
+            <p>Es un sistema de automatización en la nube que permite a tus clientes subir videos en formato .mp4 y programar parrillas semanales las 24 horas continuas sin necesidad de dejar una computadora encendida en su estudio o casa. Además, cuando decidan emitir en vivo desde OBS Studio o vMix, el sistema corta suavemente el AutoDJ y conmuta a la señal en vivo de forma automática.</p>
+          </div>
+
+          <button class="accordion-btn-custom">
+            <span>¿Puedo retransmitir a Facebook y YouTube al mismo tiempo?</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="accordion-panel-custom">
+            <p><strong>Sí, a partir del plan Power.</strong> Los planes <strong>Power</strong> (hasta 3 destinos por cliente) y <strong>Full</strong> (ilimitado/multicanal) incluyen la función de Reenvío (Restream). El cliente solo ingresa su clave de transmisión de Facebook Live, YouTube, Twitch o Kick en su panel, y nuestros servidores retransmiten la señal automáticamente sin consumir ancho de banda de su conexión. <em>El plan Starter no incluye Restream</em> (está enfocado exclusivamente en emisión directa hacia el reproductor web).</p>
+          </div>
+
+          <button class="accordion-btn-custom">
+            <span>¿Puedo subir de plan cuando aumenten mis clientes?</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="accordion-panel-custom">
+            <p>Sí, en cualquier momento puedes ampliar tu plan desde tu área de clientes abonando únicamente la diferencia proporcional de días restantes de tu ciclo mensual. Tus clientes existentes no experimentarán ninguna interrupción en su servicio.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="padding: 25px 0; background: #16364f;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="footer-logo">
+        <a href="index.html"><img style="height: 60px;" src="https://cdnuploads.pages.dev/uploads/logos/radionube/radionube.png" alt="RadioNube"></a>
+      </div>
+      <div>
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled gap-4 m-0 p-0">
+          <li><a href="radio-planes-de-streaming.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">AUDIO</a></li>
+          <li><a href="video-streaming.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">VIDEO</a></li>
+          <li><a href="apps.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">APPS</a></li>
+          <li><a href="webs.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">WEBS</a></li>
+          <li><a href="comparativa.html" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">RadioNube vs Competencia</a></li>
+          <li><a href="https://blog.radionube.online/" target="_blank" style="color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px;">BLOG</a></li>
+          <li><a href="https://veni.link/configuracionremota" target="_blank" title="Configuración Remota" aria-label="Configuración Remota" style="display: inline-flex; align-items: center; text-decoration: none; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="vertical-align: middle;"><path fill="#FF4018" d="M18 3C9.716 3 3 9.716 3 18s6.716 15 15 15 15-6.716 15-15S26.284 3 18 3zm0 23c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path fill="#E2121C" d="M18 9c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 17c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path d="M7.393 7.393c.481-.481.994-.907 1.519-1.309l5.031 5.031a7.975 7.975 0 0 0-1.6 1.228 7.975 7.975 0 0 0-1.228 1.6l-5.031-5.03c.402-.526.829-1.039 1.309-1.52zm1.52 22.523 5.031-5.031a7.975 7.975 0 0 1-1.6-1.228 7.975 7.975 0 0 1-1.228-1.6l-5.031 5.031c.402.526.828 1.039 1.309 1.519s.993.907 1.519 1.309zm21.003-2.829-5.031-5.031c-.336.57-.739 1.111-1.228 1.6s-1.03.892-1.6 1.228l5.031 5.031c.526-.402 1.039-.828 1.519-1.309s.907-.993 1.309-1.519zM27.087 6.084l-5.031 5.031c.57.336 1.111.739 1.6 1.228.489.489.892 1.03 1.228 1.6l5.031-5.031c-.402-.526-.828-1.039-1.309-1.519s-.993-.907-1.519-1.309z" fill="#E1E1E1"/><path fill="#E1E1E1" d="M12.66 35.014c-.503 0-.909-.03-1.126-.084-1.845-.464-3.058-1.805-4.23-3.101-.268-.295-.535-.591-.812-.878-.448-.466-.924-.908-1.397-1.35-.815-.76-1.659-1.545-2.369-2.451C.758 24.638.68 21.543 1.475 19.59c.228-.562.628-1.179 1.167-1.596a3.5 3.5 0 0 1-.988-1.192c-.988-1.895-1.175-4.909.752-7.048.51-.566 1.087-1.059 1.646-1.536.558-.476 1.085-.926 1.551-1.442.487-.54.897-1.142 1.332-1.778.627-.921 1.277-1.874 2.175-2.615 2.211-1.818 5.423-1.797 7.455-.837.622.294 1.11.668 1.44 1.093.294-.375.71-.715 1.231-.995 1.752-.943 4.78-1.205 7.282.445 1.368.903 2.309 2.296 3.138 3.525l4.14 6.138c1.307 1.936 1.409 3.884.288 5.484a3.314 3.314 0 0 1-.735.765c.358.265.677.627.926 1.065 1.22 2.144 1.007 4.707-.554 6.689-.23.292-.475.578-.72.864-.67.78-1.302 1.517-1.64 2.402-.118.312-.198.634-.279.958-.374 1.489-.798 3.176-4.422 4.173-1.823.501-5.214 1.436-7.549.149a3.645 3.645 0 0 1-1.112-.939 3.652 3.652 0 0 1-1.129.948c-.914.499-2.891.704-4.21.704zm.854-33.109c-1.309 0-2.695.367-3.768 1.25-.789.65-1.37 1.503-1.986 2.406-.435.637-.883 1.295-1.416 1.885-.509.565-1.086 1.057-1.644 1.533-.559.477-1.086.927-1.553 1.444-1.607 1.784-1.441 4.317-.607 5.916.281.538.819 1.125 1.486 1.161L4 18.5c-.69 0-1.312.76-1.6 1.466-.664 1.632-.599 4.382 1.112 6.567.662.844 1.439 1.569 2.264 2.336.487.454.975.909 1.437 1.388.283.294.559.598.832.9 1.122 1.24 2.183 2.412 3.733 2.802.527.132 3.573.04 4.614-.528.551-.3 1.106-.86 1.107-1.432l1 .001c-.001.566.55 1.124 1.095 1.425 1.979 1.092 5.117.226 6.801-.237 3.062-.843 3.366-2.053 3.718-3.453.091-.362.182-.721.314-1.07.4-1.048 1.119-1.886 1.815-2.697.235-.274.471-.549.693-.831 1.304-1.656 1.484-3.792.47-5.576-.279-.491-.802-1.027-1.434-1.062V17.5c.461-.024.944-.337 1.293-.837 1.111-1.586.451-3.242-.297-4.351l-4.14-6.138c-.815-1.208-1.658-2.457-2.86-3.25-2.157-1.424-4.757-1.206-6.256-.399-.77.413-1.211.952-1.211 1.475h-1c0-.575-.496-1.14-1.362-1.549-.726-.344-1.654-.546-2.624-.546z"/><path d="m25.611 13.218-.726.726c-.336-.57-.739-1.111-1.228-1.6s-1.03-.892-1.6-1.228l.726-.726a9.046 9.046 0 0 1 2.828 2.828zM12.343 23.657a7.975 7.975 0 0 1-1.228-1.6l-.726.726a9.056 9.056 0 0 0 2.828 2.828l.726-.726a7.975 7.975 0 0 1-1.6-1.228zm12.542-1.601c-.336.57-.739 1.111-1.228 1.6s-1.03.892-1.6 1.228l.726.726a9.056 9.056 0 0 0 2.828-2.828l-.726-.726zm-14.496-8.838.726.726c.336-.57.739-1.111 1.228-1.6s1.03-.892 1.6-1.228l-.726-.726a9.046 9.046 0 0 0-2.828 2.828z" fill="#AEB3B2"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="copyright m-0 p-0" style="color: rgba(255,255,255,0.8); font-size: 13px;">
+        &copy; Copyright <strong><span style="color:#fff;">RadioNube</span></strong>. Todos los Derechos Reservados
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/currency.js"></script>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.accordion-btn-custom').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const icon = this.querySelector('i');
+        const panel = this.nextElementSibling;
+        if (panel.style.display === 'block') {
+          panel.style.display = 'none';
+          if (icon) icon.className = 'bi bi-chevron-down';
+        } else {
+          panel.style.display = 'block';
+          if (icon) icon.className = 'bi bi-chevron-up';
+        }
+      });
+    });
+  </script>
+
+    <script>
+    // Calculadora interactiva de ganancias con soporte multimoneda
+    (function() {
+      const slider = document.getElementById("calc-clients-slider");
+      const priceInput = document.getElementById("calc-client-price");
+      const clientsDisplay = document.getElementById("calc-clients-display");
+      const planNameEl = document.getElementById("calc-plan-name");
+      const marginPillEl = document.getElementById("calc-margin-pill");
+      const grossRevenueEl = document.getElementById("calc-gross-revenue");
+      const planCostEl = document.getElementById("calc-plan-cost");
+      const netProfitEl = document.getElementById("calc-net-profit");
+      const ctaBtn = document.getElementById("calc-cta-btn");
+      const currencySymbolEl = document.getElementById("calc-currency-symbol");
+      const currencyCodeEl = document.getElementById("calc-currency-code");
+      const presetsContainer = document.getElementById("calc-presets-container");
+
+      if (!slider || !priceInput) return;
+
+      const plansConfig = [
+        { name: "VideoReseller Starter (5 ctas)", max: 5, costUSD: 19.99, baseId: 106, btnText: "CONTRATAR PLAN STARTER" },
+        { name: "VideoReseller Power (15 ctas)", max: 15, costUSD: 44.99, baseId: 104, btnText: "CONTRATAR PLAN POWER" },
+        { name: "VideoReseller Full (50 ctas)", max: 50, costUSD: 99.99, baseId: 107, btnText: "CONTRATAR PLAN FULL" }
+      ];
+
+      const presets = [
+        { usd: 15 },
+        { usd: 20 },
+        { usd: 25 },
+        { usd: 35 },
+        { usd: 50 }
+      ];
+
+      let currentBaseUSD = 25;
+
+      function getCurrencyConfig() {
+        const code = (window.getCurrency && window.getCurrency()) || "USD";
+        const config = (window.CURRENCY_CONFIG && window.CURRENCY_CONFIG[code]) || {
+          code: "USD",
+          symbol: "u$s",
+          symbolShort: "$",
+          rate: 1,
+          locale: "en-US"
+        };
+        return config;
+      }
+
+      function formatMoney(amount, config) {
+        const isInteger = Math.round(amount * 100) % 100 === 0;
+        const formatted = new Intl.NumberFormat(config.locale, {
+          minimumFractionDigits: isInteger ? 0 : 2,
+          maximumFractionDigits: isInteger ? 0 : 2
+        }).format(amount);
+        return (config.symbolShort || "$") + " " + formatted + " " + config.code;
+      }
+
+      function formatMoneyShort(amount, config) {
+        const isInteger = Math.round(amount * 100) % 100 === 0;
+        const formatted = new Intl.NumberFormat(config.locale, {
+          minimumFractionDigits: isInteger ? 0 : 2,
+          maximumFractionDigits: isInteger ? 0 : 2
+        }).format(amount);
+        return (config.symbolShort || "$") + formatted;
+      }
+
+      function updatePresetsUI(config) {
+        if (!presetsContainer) return;
+        const buttons = presetsContainer.querySelectorAll(".calc-preset-btn");
+        buttons.forEach((btn, index) => {
+          const p = presets[index];
+          if (!p) return;
+          const localVal = Math.round(p.usd * config.rate * 100) / 100;
+          btn.setAttribute("data-val", localVal);
+          
+          let tag = "";
+          if (index === 2) tag = " (Típico)";
+          else if (index === 3) tag = " (con Web TV)";
+          else if (index === 4) tag = " (Corporativo)";
+          
+          btn.textContent = formatMoneyShort(localVal, config) + tag;
+        });
+      }
+
+      function calculate() {
+        const config = getCurrencyConfig();
+        const clients = parseInt(slider.value) || 1;
+        const price = parseFloat(priceInput.value) || 0;
+
+        if (currencySymbolEl) currencySymbolEl.textContent = config.symbolShort || "$";
+        if (currencyCodeEl) currencyCodeEl.textContent = config.code + " / mes";
+
+        clientsDisplay.textContent = clients + (clients === 1 ? " cliente" : " clientes");
+
+        let selectedPlan = plansConfig[0];
+        if (clients > 15) {
+          selectedPlan = plansConfig[2];
+        } else if (clients > 5) {
+          selectedPlan = plansConfig[1];
+        }
+
+        const planCostLocal = selectedPlan.costUSD * config.rate;
+        const gross = clients * price;
+        const net = gross - planCostLocal;
+        const margin = planCostLocal > 0 ? Math.round((net / planCostLocal) * 100) : 0;
+
+        planNameEl.textContent = selectedPlan.name;
+        grossRevenueEl.textContent = formatMoney(gross, config);
+        planCostEl.textContent = "- " + formatMoney(planCostLocal, config);
+
+        if (net >= 0) {
+          netProfitEl.textContent = "+ " + formatMoney(net, config);
+          netProfitEl.style.color = "#15803d";
+          marginPillEl.textContent = "+" + margin + "% Retorno";
+          marginPillEl.style.background = "rgba(40, 167, 69, 0.15)";
+          marginPillEl.style.color = "#28a745";
+        } else {
+          netProfitEl.textContent = "- " + formatMoney(Math.abs(net), config);
+          netProfitEl.style.color = "#dc3545";
+          marginPillEl.textContent = margin + "% Margen";
+          marginPillEl.style.background = "rgba(220, 53, 69, 0.15)";
+          marginPillEl.style.color = "#dc3545";
+        }
+
+        if (ctaBtn) {
+          ctaBtn.href = "https://www.veni.link/wasapclientes";
+          ctaBtn.innerHTML = "<i class=\"bi bi-cart-check-fill me-1\"></i> " + selectedPlan.btnText;
+        }
+      }
+
+      function onCurrencyChange() {
+        const config = getCurrencyConfig();
+        const localVal = Math.round(currentBaseUSD * config.rate * 100) / 100;
+        priceInput.value = localVal;
+        updatePresetsUI(config);
+        calculate();
+      }
+
+      slider.addEventListener("input", calculate);
+      priceInput.addEventListener("input", function() {
+        const config = getCurrencyConfig();
+        const val = parseFloat(this.value) || 0;
+        if (config.rate > 0) {
+          currentBaseUSD = val / config.rate;
+        }
+        calculate();
+      });
+
+      if (presetsContainer) {
+        presetsContainer.addEventListener("click", function(e) {
+          const btn = e.target.closest(".calc-preset-btn");
+          if (!btn) return;
+          presetsContainer.querySelectorAll(".calc-preset-btn").forEach(b => {
+            b.classList.remove("active");
+            b.style.background = "#f8fafc";
+            b.style.color = "#334155";
+            b.style.borderColor = "#cbd5e1";
+          });
+          btn.classList.add("active");
+          btn.style.background = "#2187b1";
+          btn.style.color = "#ffffff";
+          btn.style.borderColor = "#2187b1";
+          priceInput.value = btn.getAttribute("data-val");
+          const config = getCurrencyConfig();
+          const val = parseFloat(priceInput.value) || 0;
+          if (config.rate > 0) {
+            currentBaseUSD = val / config.rate;
+          }
+          calculate();
+        });
+      }
+
+      window.addEventListener("currencychange", onCurrencyChange);
+
+      const initialConfig = getCurrencyConfig();
+      priceInput.value = Math.round(currentBaseUSD * initialConfig.rate * 100) / 100;
+      updatePresetsUI(initialConfig);
+      calculate();
+    })();
+  </script>
+
+  <!-- OpenPanel Analytics -->
+  <script>
+    window.op = window.op || function() {
+      var n = [];
+      return new Proxy(function() {
+        arguments.length && n.push([].slice.call(arguments));
+      }, {
+        get: function(t, r) {
+          return "q" === r ? n : function() {
+            n.push([r].concat([].slice.call(arguments)));
+          };
+        },
+        has: function(t, r) {
+          return "q" === r;
+        }
+      });
+    }();
+
+    window.op('init', {
+      apiUrl: 'https://apidata.altomarketing.com.ar',
+      clientId: 'd01d992f-834c-4a17-b9b3-ad5c06d6206d',
+      trackScreenViews: true,
+      trackOutgoingLinks: true,
+      trackAttributes: true
+    });
+  </script>
+  <script src="https://data.altomarketing.com.ar/op1.js" defer async></script>
+
+  <!-- Typebot -->
+  <script>
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+Typebot.initBubble({
+  typebot: "hablemos",
+  apiHost: "https://chatbot.altomarketing.com.ar",
+  previewMessage: { message: "Lo Asesoro ?", autoShowDelay: 10000 },
+  theme: {
+    button: { backgroundColor: "#0d9488", size: "large" },
+    chatWindow: { backgroundColor: "#ffffff" },
+  },
+});
+`;
+    document.body.append(typebotInitScript);
+  </script>
+
+</body>
+
+</html>
