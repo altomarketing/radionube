@@ -1,4 +1,94 @@
 /**
+ * Top Promo Banner (Black Friday / Special Announcements)
+ * Self-contained module with localStorage persistence
+ */
+(function() {
+  "use strict";
+
+  function initPromoBanner() {
+    if (document.getElementById('top-promo-banner')) return;
+
+    const STORAGE_KEY = 'radionube_top_promo_closed';
+    const params = new URLSearchParams(window.location.search);
+    const forceShow = params.get('promo') === '1' || params.get('top_promo') === '1';
+    const forceReset = params.get('reset_promo') === '1';
+
+    if (forceReset) {
+      try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    }
+
+    if (!forceShow) {
+      try {
+        if (localStorage.getItem(STORAGE_KEY) === 'true') {
+          return;
+        }
+      } catch(e) {}
+    }
+
+    const isEn = window.location.pathname.includes('/en/') || document.documentElement.lang === 'en';
+
+    const badgeText = 'Black Friday Promo';
+    const promoText = isEn
+      ? 'Up to November 20th <strong>30% OFF</strong> on your first purchase !'
+      : 'Hasta 20 de noviembre <strong>30% OFF</strong> en tu primer compra !';
+    const ctaText = isEn ? 'Claim on WhatsApp' : 'Reclamar por WhatsApp';
+    const closeTitle = isEn ? 'Close promo' : 'Cerrar promo';
+    const waLink = 'https://veni.link/blackfriday';
+
+    const banner = document.createElement('div');
+    banner.id = 'top-promo-banner';
+    banner.innerHTML = `
+      <div class="top-promo-content">
+        <span class="top-promo-badge"><i class="bi bi-fire"></i> ${badgeText}</span>
+        <span class="top-promo-text">${promoText}</span>
+        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="top-promo-btn">
+          <i class="bi bi-whatsapp"></i> ${ctaText}
+        </a>
+      </div>
+      <button type="button" class="top-promo-close" aria-label="${closeTitle}" title="${closeTitle}">
+        &times;
+      </button>
+    `;
+
+    document.body.prepend(banner);
+    document.body.classList.add('has-top-promo-banner');
+
+    function updateBannerHeight() {
+      const h = banner.offsetHeight;
+      if (h > 0) {
+        document.documentElement.style.setProperty('--top-promo-height', h + 'px');
+      }
+    }
+    updateBannerHeight();
+    window.addEventListener('resize', updateBannerHeight);
+
+    const closeBtn = banner.querySelector('.top-promo-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        banner.classList.add('promo-hidden');
+        document.body.classList.remove('has-top-promo-banner');
+        document.documentElement.style.removeProperty('--top-promo-height');
+        try {
+          localStorage.setItem(STORAGE_KEY, 'true');
+        } catch(e) {}
+        setTimeout(function() { banner.remove(); }, 350);
+      });
+    }
+  }
+
+  window.resetPromoBanner = function() {
+    try { localStorage.removeItem('radionube_top_promo_closed'); } catch(e) {}
+    location.reload();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPromoBanner);
+  } else {
+    initPromoBanner();
+  }
+})();
+
+/**
 * Template Name: Sailor
 * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
 * Updated: Mar 17 2024 with Bootstrap v5.3.3
@@ -99,11 +189,13 @@
   let heroCarouselIndicators = select("#hero-carousel-indicators")
   let heroCarouselItems = select('#heroCarousel .carousel-item', true)
 
-  heroCarouselItems.forEach((item, index) => {
-    (index === 0) ?
-    heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-  });
+  if (heroCarouselIndicators && heroCarouselItems && heroCarouselItems.length > 0) {
+    heroCarouselItems.forEach((item, index) => {
+      (index === 0) ?
+      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
+        heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
+    });
+  }
 
   /**
    * Porfolio isotope and filter
@@ -142,19 +234,21 @@
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  if (select('.portfolio-details-slider')) {
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  }
 
   /**
    * Initiate portfolio details lightbox 
