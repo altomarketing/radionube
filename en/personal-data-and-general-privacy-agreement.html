@@ -2,14 +2,27 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KD78R5G5"></script>
+  <!-- Google Tag (gtag.js) - Google Ads & GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KD78R5G5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('config', 'GTM-KD78R5G5');
+    gtag('config', 'AW-18583046688');
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a || !a.href) return;
+      if (a.href.indexOf('veni.link') !== -1 || a.href.indexOf('whatsapp') !== -1 || a.href.indexOf('panel.radionube.online') !== -1 || a.href.indexOf('paneldecliente.com') !== -1) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18583046688/-IFSCJGnhLsdEKCUi51F',
+          'value': 1.0,
+          'currency': 'ARS'
+        });
+      }
+    });
   </script>
-  <!-- End Google Tag Manager -->
+  <!-- End Google Tag -->
     <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)

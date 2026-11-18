@@ -2,14 +2,27 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KD78R5G5"></script>
+  <!-- Google Tag (gtag.js) - Google Ads & GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KD78R5G5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('config', 'GTM-KD78R5G5');
+    gtag('config', 'AW-18583046688');
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a || !a.href) return;
+      if (a.href.indexOf('veni.link') !== -1 || a.href.indexOf('whatsapp') !== -1 || a.href.indexOf('panel.radionube.online') !== -1 || a.href.indexOf('paneldecliente.com') !== -1) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18583046688/-IFSCJGnhLsdEKCUi51F',
+          'value': 1.0,
+          'currency': 'ARS'
+        });
+      }
+    });
   </script>
-  <!-- End Google Tag Manager -->
+  <!-- End Google Tag -->
     <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -35,18 +48,18 @@
   <title>RadioNube - Professional Cloud Audio & Video Streaming</title>
   <meta content="Broadcast your online radio station or TV stream 24/7. High-performance cloud servers, mobile apps for Android & iOS, website designs, and dedicated support." name="description">
   <meta content="radio streaming, online radio broadcasting, shoutcast, icecast, autodj, radio apps, video streaming, android auto radio, apple carplay" name="keywords">
-  <link rel="canonical" href="https://www.radionube.online/en/index.html">
+  <link rel="canonical" href="https://www.radionube.online/en/">
 
   <!-- Hreflang for multilingual indexing -->
   <link rel="alternate" hreflang="es" href="https://www.radionube.online/">
-  <link rel="alternate" hreflang="en" href="https://www.radionube.online/en/index.html">
+  <link rel="alternate" hreflang="en" href="https://www.radionube.online/en/">
   <link rel="alternate" hreflang="x-default" href="https://www.radionube.online/">
 
   <!-- Open Graph & Social Cards for LLMs and Search Engines -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="RadioNube - Professional Cloud Audio & Video Streaming">
   <meta property="og:description" content="High-fidelity audio streaming servers, cloud AutoDJ, mobile apps for Android and iPhone with CarPlay & Android Auto, and custom station websites.">
-  <meta property="og:url" content="https://www.radionube.online/en/index.html">
+  <meta property="og:url" content="https://www.radionube.online/en/">
   <meta property="og:image" content="https://cdnuploads.pages.dev/uploads/logos/radionube/radionube.png">
   <meta property="og:site_name" content="RadioNube">
   <meta property="og:locale" content="en_US">
@@ -62,7 +75,7 @@
         "@type": "Organization",
         "@id": "https://www.radionube.online/#organization",
         "name": "RadioNube",
-        "url": "https://www.radionube.online/en/index.html",
+        "url": "https://www.radionube.online/en/",
         "logo": "https://cdnuploads.pages.dev/uploads/logos/radionube/radionube.png",
         "description": "Leading cloud audio and video streaming platform, mobile apps, and websites for radio stations.",
         "sameAs": [
@@ -79,7 +92,7 @@
       {
         "@type": "WebSite",
         "@id": "https://www.radionube.online/#website",
-        "url": "https://www.radionube.online/en/index.html",
+        "url": "https://www.radionube.online/en/",
         "name": "RadioNube",
         "publisher": {
           "@id": "https://www.radionube.online/#organization"
