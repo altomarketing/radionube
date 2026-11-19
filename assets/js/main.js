@@ -33,7 +33,7 @@
       : 'Hasta 20 de noviembre <strong>30% OFF</strong> en tu primer compra !';
     const ctaText = isEn ? 'Claim on WhatsApp' : 'Reclamar por WhatsApp';
     const closeTitle = isEn ? 'Close promo' : 'Cerrar promo';
-    const waLink = 'https://veni.link/blackfriday';
+    const waLink = 'https://api.whatsapp.com/send?phone=5491171378487&text=Promo-Black-Friday';
 
     const banner = document.createElement('div');
     banner.id = 'top-promo-banner';
