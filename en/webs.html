@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <!-- Google Tag (gtag.js) - Google Ads & GTM -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KD78R5G5"></script>
   <script>
@@ -42,7 +43,6 @@
   <!-- End Meta Pixel Code -->
   <!-- OpenAI Pixel -->
   <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"2pnXRskcjtmbJHFQezGr3g",debug:true});</script>
-  <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Webs - RadioNube</title>
@@ -182,6 +182,31 @@ margin:20px;
   border-radius: 6px;
   margin-bottom: 6px;
   border: 1px solid #edf2f7;
+}
+.web-hero-nav-card {
+  background: #ffffff;
+  border: 2px solid #2187b1;
+  border-radius: 16px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(22, 54, 79, 0.06);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.web-hero-nav-card:hover {
+  background: #f0f7fb;
+  border-color: #1b6f93;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(33, 135, 177, 0.22);
+}
+.web-hero-nav-highlight {
+  background: linear-gradient(135deg, #16364f 0%, #2187b1 100%) !important;
+  border-color: #16364f !important;
+  box-shadow: 0 4px 18px rgba(22, 54, 79, 0.25);
+}
+.web-hero-nav-highlight:hover {
+  background: linear-gradient(135deg, #1b4363 0%, #299bcd 100%) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(22, 54, 79, 0.35);
 }
 </style>
 
@@ -327,12 +352,64 @@ margin:20px;
                 </div>
 
               </div>
+
+              <!-- Category Direct Access Bar (Prominent) -->
+              <div class="mt-4 pt-4 border-top">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge" style="background: #2187b1; font-size: 11.5px; padding: 6px 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+                      <i class="bi bi-grid-fill me-1"></i> Explore Our Solutions
+                    </span>
+                    <span style="font-weight: 800; color: #16364f; font-size: 15.5px;">
+                      We have ready-to-launch websites for every need:
+                    </span>
+                  </div>
+                  <span class="text-muted d-none d-md-inline" style="font-size: 13px;">
+                    <i class="bi bi-arrow-down-short"></i> Click to jump directly to section
+                  </span>
+                </div>
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <a href="#portales-medios" class="web-hero-nav-card w-100 d-flex align-items-center justify-content-center gap-3 py-3 px-3">
+                      <div class="icon-circle" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="bi bi-newspaper fs-4" style="color: #2187b1;"></i>
+                      </div>
+                      <div class="text-start">
+                        <div style="font-weight: 800; color: #16364f; font-size: 15px; line-height: 1.2;">Websites for Media</div>
+                        <div style="font-size: 12px; color: #6c757d;">News portals & online press</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <a href="#showcase" class="web-hero-nav-card w-100 d-flex align-items-center justify-content-center gap-3 py-3 px-3">
+                      <div class="icon-circle" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(33, 135, 177, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="bi bi-broadcast fs-4" style="color: #2187b1;"></i>
+                      </div>
+                      <div class="text-start">
+                        <div style="font-weight: 800; color: #16364f; font-size: 15px; line-height: 1.2;">Radio Web Models</div>
+                        <div style="font-size: 12px; color: #6c757d;">Templates & live players</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <a href="#webs-medida" class="web-hero-nav-card web-hero-nav-highlight w-100 d-flex align-items-center justify-content-center gap-3 py-3 px-3">
+                      <div class="icon-circle" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="bi bi-stars fs-4" style="color: #ffc107;"></i>
+                      </div>
+                      <div class="text-start">
+                        <div style="font-weight: 800; color: #ffffff; font-size: 15px; line-height: 1.2;">Custom Websites</div>
+                        <div style="font-size: 12px; color: rgba(255, 255, 255, 0.85);">100% bespoke development</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
 
-        <div class="row justify-content-center text-center mb-5">
+        <div id="portales-medios" style="scroll-margin-top: 100px;" class="row justify-content-center text-center mb-5">
           <div class="col-lg-8">
             <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Portals & Media</span>
             <h2 style="font-weight: 800; color: #16364f; font-size: 34px; margin-bottom: 10px;">WEBSITES for Media</h2>
@@ -417,7 +494,7 @@ margin:20px;
 
 
     <!-- ======= Web Showcase Section ======= -->
-    <section id="showcase" style="padding: 60px 0; background: #fbfdff;">
+    <section id="showcase" style="padding: 60px 0; background: #fbfdff; scroll-margin-top: 90px;">
       <div class="container">
 
         <div class="row justify-content-center text-center mb-5">
@@ -797,7 +874,7 @@ margin:20px;
         </div>
 
         <!-- Showcase 3: PAGINA WEB A MEDIDA -->
-        <div class="modern-showcase-card">
+        <div id="webs-medida" style="scroll-margin-top: 100px;" class="modern-showcase-card">
           <div class="row align-items-center gy-4">
             <div class="col-lg-5">
               <span class="badge mb-2" style="background: #2187b1; font-size: 12px; padding: 6px 14px;">Bespoke Development</span>
@@ -837,168 +914,6 @@ margin:20px;
 
       </div>
     </section><!-- End Showcase Section -->
-
-    <!-- ======= Modern Pricing Section ======= -->
-    <section id="pricing" class="modern-pricing-wrapper">
-      <div class="container">
-
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <span style="background: rgba(33, 135, 177, 0.12); color: #2187b1; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 30px; display: inline-block; margin-bottom: 12px;">Websites for Media & Broadcasters</span>
-            <h2 style="font-weight: 800; color: #16364f; font-size: 36px; margin-bottom: 10px;">Website Plans</h2>
-            <p style="color: #6c757d; font-size: 16px; margin: 0 auto; max-width: 620px;">Engineered for radio stations, TV channels, and online media. Features integrated streaming player, search optimization, and 100% self-management.</p>
-          </div>
-        </div>
-
-        <div class="row g-4 align-items-stretch justify-content-center">
-
-          <!-- Plan 1: Limay -->
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="modern-pricing-card">
-              <div class="pricing-header">
-                <div class="pricing-title">Limay</div>
-                <div class="pricing-subtitle">Self-managed Android App + Website combo</div>
-                <div class="pricing-price-box">
-                  <span class="pricing-currency" data-currency-symbol>u$s</span>
-                  <span class="pricing-amount" data-price-usd="19">19</span>
-                  <span class="pricing-period">ANNUAL</span>
-                </div>
-                <div class="pricing-monthly-sub">
-                  <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="1.58">1.58</span> monthly cost)</em>
-                </div>
-                <div class="pricing-annual-badge">
-                  <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="2">2</span></span>
-                </div>
-              </div>
-
-              <div class="pricing-features-group">
-                <div class="pricing-group-title">
-                  <i class="bi bi-window-fullscreen"></i> Modern Web & PWA App
-                </div>
-                <ul class="pricing-features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Modern website & <strong>PWA App</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Self-managed <strong>Android App</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Buttons to <strong>Socials & WhatsApp</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Step-by-step <strong>user guide</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Free hosting & <strong>SSL certificate</strong></span></li>
-                </ul>
-              </div>
-
-              <div class="pricing-cta-wrap">
-                <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/154?currency=USD" class="pricing-btn">
-                  <i class="bi bi-cart-check-fill"></i> ORDER NOW!
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Plan 2: FLASHnews (Destacado) -->
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="modern-pricing-card featured">
-              <span class="pricing-badge-popular">★ MOST POPULAR</span>
-              <div class="pricing-header">
-                <div class="pricing-title">FLASHnews</div>
-                <div class="pricing-subtitle">Automated news + custom local stories</div>
-                <div class="pricing-price-box">
-                  <span class="pricing-currency" data-currency-symbol>u$s</span>
-                  <span class="pricing-amount" data-price-usd="75">75</span>
-                  <span class="pricing-period">ANNUAL</span>
-                </div>
-                <div class="pricing-monthly-sub">
-                  <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="6.25">6.25</span> monthly cost)</em>
-                </div>
-                <div class="pricing-annual-badge">
-                  <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="9">9</span></span>
-                </div>
-              </div>
-
-              <div class="pricing-features-group">
-                <div class="pricing-group-title">
-                  <i class="bi bi-newspaper"></i> 24/7 Automated News Portal
-                </div>
-                <ul class="pricing-features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Pulls news <strong>automatically</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Publish articles & <strong>local stories</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Audio player & <strong>social links</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Live widgets for <strong>weather & rates</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Proprietary <strong>AutoAdmin</strong> system</span></li>
-                </ul>
-              </div>
-
-              <div class="pricing-cta-wrap">
-                <a target="_blank" href="https://panel.altomarketing.com/es/configurar/hosting/173?currency=USD" class="pricing-btn">
-                  <i class="bi bi-cart-check-fill"></i> ORDER NOW!
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Plan 3: Custom Tailored Website -->
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="modern-pricing-card">
-              <div class="pricing-header">
-                <div class="pricing-title">Custom Tailored Website</div>
-                <div class="pricing-subtitle">Exclusive development tailored to your goals</div>
-                <div class="pricing-price-box">
-                  <span class="pricing-currency" data-currency-symbol>u$s</span>
-                  <span class="pricing-amount" data-price-usd="250">250</span>
-                  <span class="pricing-period">ANNUAL</span>
-                </div>
-                <div class="pricing-monthly-sub">
-                  <em>(<span data-currency-symbol>u$s</span> <span data-price-usd="20.83">20.83</span> monthly cost)</em>
-                </div>
-                <div class="pricing-annual-badge">
-                  <span>or month-to-month <span data-currency-symbol>u$s</span> <span data-price-usd="25">25</span></span>
-                </div>
-              </div>
-
-              <div class="pricing-features-group">
-                <div class="pricing-group-title">
-                  <i class="bi bi-brush"></i> Bespoke Development a Medida
-                </div>
-                <ul class="pricing-features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> <span>100% <strong>custom web design</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Publish articles with <strong>photos & video</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Placements for <strong>ad banners & sponsors</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Live <strong>Radio & TV streaming player</strong></span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Advisory & <strong>priority support</strong></span></li>
-                </ul>
-              </div>
-
-              <div class="pricing-cta-wrap">
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=14708261410&text=QuieroWebPersonalizada" class="pricing-btn">
-                  <i class="bi bi-whatsapp"></i> ORDER NOW!
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Garantía y características adicionales -->
-        <div class="row justify-content-center mt-5 text-center">
-          <div class="col-lg-10">
-            <div style="background: #ffffff; border-radius: 16px; padding: 25px 30px; box-shadow: 0 5px 25px rgba(22, 54, 79, 0.05); border: 1px solid #eef2f6;">
-              <div class="row align-items-center">
-                <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center gap-2">
-                  <i class="bi bi-shield-lock-fill" style="color: #2187b1; font-size: 24px;"></i>
-                  <span style="font-weight: 600; color: #16364f; font-size: 15px;">SSL Certificate Included</span>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center gap-2">
-                  <i class="bi bi-phone-fill" style="color: #2187b1; font-size: 24px;"></i>
-                  <span style="font-weight: 600; color: #16364f; font-size: 15px;">100% Mobile Responsive</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center justify-content-center gap-2">
-                  <i class="bi bi-headset" style="color: #2187b1; font-size: 24px;"></i>
-                  <span style="font-weight: 600; color: #16364f; font-size: 15px;">Dedicated Support</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Modern Pricing Section -->
 
   </main><!-- End #main -->
 
