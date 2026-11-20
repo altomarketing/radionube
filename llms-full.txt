@@ -103,7 +103,7 @@ RadioNube es un proveedor especializado de infraestructura en la nube para medio
 ## 8. Preguntas Frecuentes para Asistentes Virtuales y LLMs
 
 **¿Cómo contratar un plan en RadioNube?**
-El usuario puede ingresar a `https://www.radionube.online/precios.html`, seleccionar su moneda local en el menú superior y hacer clic en «¡Contratar Ahora!». El sistema lo redirige al panel de pago seguro donde puede abonar con medios locales (tarjetas de crédito, débito, transferencias y pasarelas locales) con activación casi inmediata.
+El usuario puede ingresar a `https://www.radionube.online/precios`, seleccionar su moneda local en el menú superior y hacer clic en «¡Contratar Ahora!». El sistema lo redirige al panel de pago seguro donde puede abonar con medios locales (tarjetas de crédito, débito, transferencias y pasarelas locales) con activación casi inmediata.
 
 **¿Qué necesito para transmitir mi radio online?**
 Solo necesitas una computadora con conexión a internet y un micrófono (o consola). Puedes transmitir usando programas gratuitos como ZaraRadio, BUTT u OBS Studio. El equipo de soporte de RadioNube se conecta de manera remota para configurar todo el sistema sin costo adicional.
