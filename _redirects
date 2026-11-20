@@ -1,0 +1,61 @@
+# ==============================================================================
+# Cloudflare Pages 301 Permanent Redirects — radionube.online
+# Preserves SEO equity, eliminates legacy 404s, and enforces canonical routing
+# ==============================================================================
+
+# Legacy Sailor Template & Boilerplate Pages -> Canonical Destinations
+/about                              /                                       301
+/about.html                         /                                       301
+/team                               /                                       301
+/team.html                          /                                       301
+/testimonials                       /                                       301
+/testimonials.html                  /                                       301
+/blog                               https://blog.radionube.online/          301
+/blog.html                          https://blog.radionube.online/          301
+/blog-single                        https://blog.radionube.online/          301
+/blog-single.html                   https://blog.radionube.online/          301
+/contact                            /contacto                               301
+/contact.html                       /contacto                               301
+/pricing                            /precios                                301
+/pricing.html                       /precios                                301
+/services                           /radio-planes-de-streaming              301
+/services.html                      /radio-planes-de-streaming              301
+/portfolio                          /webs                                   301
+/portfolio.html                     /webs                                   301
+/portfolio-details                  /webs                                   301
+/portfolio-details.html             /webs                                   301
+/landing                            /                                       301
+/landing.html                       /                                       301
+/newsletter                         /                                       301
+/newsletter.html                    /                                       301
+/privacidad                         /personal-data-and-general-privacy-agreement 301
+/privacidad.html                    /personal-data-and-general-privacy-agreement 301
+/index-en                           /en/                                    301
+/index-en.html                      /en/                                    301
+/radio/*                            /radio-planes-de-streaming              301
+/radio                              /radio-planes-de-streaming              301
+
+# Canonical extensionless redirects (Strip .html from URLs)
+/radio-planes-de-streaming.html     /radio-planes-de-streaming              301
+/apps.html                          /apps                                   301
+/webs.html                          /webs                                   301
+/video-streaming.html               /video-streaming                        301
+/reseller-video.html                /reseller-video                         301
+/locuciones.html                    /locuciones                             301
+/precios.html                       /precios                                301
+/comparativa.html                   /comparativa                            301
+/contacto.html                      /contacto                               301
+/personal-data-and-general-privacy-agreement.html /personal-data-and-general-privacy-agreement 301
+/service-and-use-agreement.html     /service-and-use-agreement              301
+
+# English canonical extensionless redirects
+/en/radio-planes-de-streaming.html  /en/radio-planes-de-streaming           301
+/en/apps.html                       /en/apps                                301
+/en/webs.html                       /en/webs                                301
+/en/video-streaming.html            /en/video-streaming                     301
+/en/reseller-video.html             /en/reseller-video                      301
+/en/precios.html                    /en/precios                             301
+/en/comparativa.html                /en/comparativa                         301
+/en/contacto.html                   /en/contacto                            301
+/en/personal-data-and-general-privacy-agreement.html /en/personal-data-and-general-privacy-agreement 301
+/en/service-and-use-agreement.html  /en/service-and-use-agreement           301
